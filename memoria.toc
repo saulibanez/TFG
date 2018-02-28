@@ -1,0 +1,47 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Rob\IeC {\'o}tica m\IeC {\'o}vil}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Robots Submarinos}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}ROS}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Estructura de la memoria}{4}{section.1.4}
+\contentsline {chapter}{\numberline {2}Objetivos y Metodolog\IeC {\'\i }a}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Descripci\IeC {\'o}n del problema y requisitos}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}Objetivo del proyecto}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Metodolog\IeC {\'\i }a de desarrollo}{7}{section.2.3}
+\contentsline {section}{\numberline {2.4}Plan de trabajo}{8}{section.2.4}
+\contentsline {chapter}{\numberline {3}Plataforma OpenROV}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Robot Submarino OpenROV}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Estado del Arte}{10}{section.3.2}
+\contentsline {section}{\numberline {3.3}Estructura y Montaje}{11}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Estructura de OpenROV}{11}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Tapas del ch\IeC {\'a}sis}{12}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Electr\IeC {\'o}nica}{13}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Enrutamiento}{15}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Final}{15}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Conectividad OpenROV}{16}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Dise\IeC {\~n}o de Conectividad}{16}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Puesta a punto de los elementos}{20}{subsection.3.4.2}
+\contentsline {subsubsection}{C\IeC {\'a}mara}{20}{section*.18}
+\contentsline {subsubsection}{L\IeC {\'a}ser}{20}{section*.20}
+\contentsline {subsubsection}{Motores}{21}{section*.22}
+\contentsline {subsubsection}{Tubo cil\IeC {\'\i }ndrico trasparente de polimetilmetacrilato}{22}{section*.24}
+\contentsline {subsubsection}{Tapa superior}{22}{section*.26}
+\contentsline {subsection}{\numberline {3.4.3}Web/Cockpit}{23}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Mantenimiento}{28}{subsection.3.4.4}
+\contentsline {subsubsection}{Enjuagar}{28}{section*.36}
+\contentsline {subsubsection}{Mantenimiento de los motores}{28}{section*.37}
+\contentsline {subsubsection}{Secado}{28}{section*.38}
+\contentsline {subsubsection}{Carga de bater\IeC {\'\i }as}{29}{section*.39}
+\contentsline {subsection}{\numberline {3.4.5}Problemas}{29}{subsection.3.4.5}
+\contentsline {subsubsection}{Vaho}{29}{section*.40}
+\contentsline {subsubsection}{Video}{29}{section*.41}
+\contentsline {subsubsection}{Control u otros problemas miscel\IeC {\'a}neos}{29}{section*.42}
+\contentsline {subsubsection}{P\IeC {\'e}rdida aleatoria de energ\IeC {\'\i }a de la bater\IeC {\'\i }a}{30}{section*.43}
+\contentsline {subsubsection}{Enredos}{30}{section*.45}
+\contentsline {subsubsection}{Inundaci\IeC {\'o}n del tubo principal}{31}{section*.46}
+\contentsline {chapter}{\numberline {4}Integraci\IeC {\'o}n de ROS en OpenROV}{32}{chapter.4}
+\contentsline {section}{\numberline {4.1}Configuraci\IeC {\'o}n del ROV}{32}{section.4.1}
+\contentsline {section}{\numberline {4.2}Configuraci\IeC {\'o}n de ROS}{36}{section.4.2}
+\contentsline {section}{\numberline {4.3}Conexi\IeC {\'o}n de ROS en OpenROV}{38}{section.4.3}
+\contentsline {chapter}{\numberline {5}Pruebas de Campo}{42}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusiones}{43}{chapter.6}

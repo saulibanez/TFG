@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{ros_rov}
+B.~Adams, ``Ros integration with openrov,''
+  http://blog.openrov.com/ros-integration-with-openrov/, 2015.
+
+
+\bibitem{RoboticaMovil}
+Anónimo, ``Una introducción a los robots móviles,''
+  http://www.aadeca.org/pdf/CP\_monografias/monografia\_robot\_movil.pdf, 2008.
+
+
+\bibitem{ros}
+W.~Garage, ``Ros,'' http://www.ros.org/, 2010.
+
+
+\bibitem{cascada}
+W.~W. Royce, ``Modelo en cascada,''
+  https://es.wikipedia.org/wiki/Desarrollo\_en\_cascada, 1970.
+
+
+\bibitem{openrov}
+E.~Stackpole and D.~Lang, ``Openrov,'' https://openrov.dozuki.com/ , and
+  https://openrov.com, 2015.
+
+
+\bibitem{telemetria}
+D.~D. Tarascó, ``Desarrollo de sistema de telemetría para teleoperación de
+  robot submarino,'' Proyecto Fin de Carrera, Universidad Simón Bolívar,
+  2016.
+
+
+\end{thebibliography}

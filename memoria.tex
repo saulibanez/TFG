@@ -1,0 +1,212 @@
+\documentclass[twoside,a4paper,12pt,openany]{book}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{subfig}
+%\usepackage[Bjornstrup]{fncychap}
+\usepackage{a4wide}
+\usepackage{named}
+\usepackage[table]{xcolor}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{appendix}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{media9}
+%\usepackage{hyperref}
+\usepackage{cite} % para contraer referencias
+
+
+
+% From texlive-science
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+%\DeclareGraphicsExtensions{.jpg,.pdf,.png,.ps}
+\usepackage{color}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\pagestyle{headings}
+\geometry{a4paper, left=3.5cm, right=2cm, top=3cm, bottom=2cm, headsep=1.5cm}
+
+\widowpenalty=10000
+\clubpenalty=10000
+\hyphenpenalty=10000
+\tolerance=10000
+%Para que no corte las palabras al final de la linea.
+
+% Latex command para crear listas sin espacio entre
+% un item y otro.
+\newenvironment{packed_item}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+% Latex command para crear listas umeradas sin 
+% espacio entre un item y otro.
+\newenvironment{packed_enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+% Configuracion del entorno lstlistings
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C++,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+{\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+
+\lstdefinestyle{consola}
+{basicstyle=\scriptsize\bf\ttfamily,
+backgroundcolor=\color{gray75},
+}
+
+\lstdefinestyle{C}
+{language=C,
+}
+
+\makeindex
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\baselineskip 1.35\baselineskip
+
+\vspace{2cm}
+
+\begin{figure}[htb]
+  \centerline{\resizebox{.60\textwidth}{!}{\includegraphics{img/logo_urjc}}}
+\end{figure}
+
+\begin{center}
+  {\Large {\bf Grado en Ingeniería en Telemática}}
+  \vspace{5mm}
+ 
+  {\large {Escuela Técnica Superior de Ingeniería Telecomunicación}}
+  \vspace{5mm}
+
+  {\large {Curso académico 2017/2018}}
+
+  \vspace{1cm}
+
+  {\large {\bf Trabajo Fin de Grado}}
+
+  \vspace{2cm}
+
+  {\large {Robot submarino OpenROV y ROS\\[1cm] }}
+
+  \vspace{5cm}
+  {\bf Autor}: Saúl Ibáñez Cerro
+  
+  {\bf Tutor}: Francisco Martín Rico 
+\end{center}
+
+\clearpage
+\newpage{\pagestyle{empty}\cleardoublepage}
+\thispagestyle{empty}
+
+\vspace{5cm}
+\makebox[15cm][r]{
+  \begin{tabular}{ll}
+  \emph{A}
+  \end{tabular} 
+}
+
+\clearpage
+\newpage{\pagestyle{empty}\cleardoublepage}
+\thispagestyle{empty}
+
+\vspace{5cm}
+\textbf{\huge{Agradecimientos}}\\
+
+Después de un intenso período, de meses duros por fallos de hardware y sistema que han conseguido llevarme hasta el límite, pero por fin puedo escribir este apartado de agradecimientos para finalizar mi trabajo de fin de grado.
+
+Primero, quiero agradecer a mis padres todo el esfuerzo que han realizado por mi, por todos estos años de carrera apoyándome (y los años antes de empezar la carrera), muchas gracias por estar siempre ahí, por quererme y por animarme cuando más lo necesitaba.
+También quiero agradecer al enano de mi corazón, mi hermano, con el que siempre he podido hablar de mis quebraderos de cabeza.
+Por supuesto, también merece una mención especial mi pareja, Paula, no sé si hubiera podido con la presión y desánimos si no fuera por ella. Me ha ayudado más que nadie, en los momentos de un examen suspenso o una mala nota, siempre me ha apoyado y dado aliento, le debo muchísimo.
+Otro apoyo muy grande que he tenido han sido los padres de mi novia, que han estado siempre ahí cerca ayudándome.
+A mis abuelos por apoyarme y a todos los amigos y compañeros que me han ayudado durante toda esta etapa.
+Por supuesto, quiero mostrar mi gratitud a un profesor que me ha marcado. Por la forma de enseñar y mostrarnos su asignatura, el profesor de robótica, Francisco Martín, también por darme la oportunidad de hacer un TFG distinto.
+
+De verdad, muchas gracias a todos, todos los éxitos que consiga en la vida, serán en parte gracias a vosotros.
+
+\clearpage
+\newpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%%%%%%% RESUMEN %%%%%%%%
+\newpage{\pagestyle{empty}\cleardoublepage} 
+%\input{resumen}
+
+                                %\pagenumbering{roman}
+
+                                %\setcounter{page}{1}
+\frontmatter
+\tableofcontents
+
+\listoffigures
+                                %\setcounter{page}{1}
+                                %\pagenumbering{arabic}
+%\listoftables
+
+\mainmatter
+
+% Init counter page
+\setcounter{page}{1}
+
+% Capitulo 1
+\input{cap1}
+
+% Capitulo 2
+\input{cap2}
+
+% Capitulo 3
+\input{cap3}
+
+% Capitulo 4
+\input{cap4}
+
+% Capitulo 5
+\input{cap5}
+
+% Capitulo 6
+\input{cap6}
+
+%Te recomiendo leer \cite{openrov, ros, RoboticaMovil, cascada, ros_rov, telemetria}.
+
+%bibliografia
+\bibliographystyle{IEEEannot}
+\bibliography{bibliografia}
+
+
+\end{document}

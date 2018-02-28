@@ -1,0 +1,27 @@
+% /usr/local/lib/tex/bibtex/named.sty, Thu Oct 12 18:16:07 1995
+% Edit by Nelson H. F. Beebe <beebe@plot79.math.utah.edu>
+% Update to handle possible missing second argument to \citeauthoryear.
+% /usr/local/lib/tex/bibtex/named.sty, Mon Jun 29 13:16:46 1992
+% Edit by Nelson H. F. Beebe <beebe@plot79.math.utah.edu>
+%
+% This LaTeX option file is for use with bibliographies produced with
+% named.bst.
+%
+\let\@internalcite\cite
+\def\cite{\def\citeauthoryear##1##2{##1, ##2}\@internalcite}
+\def\shortcite{\def\citeauthoryear##1##2{##2}\@internalcite}
+% \def\@biblabel#1{\def\citeauthoryear##1##2{##1, ##2}[#1]\hfill}
+\def\@biblabel#1{%
+    \def\citeauthoryear##1##2{%
+      \def \@@first  {##2}%
+      \def \@@second {}%
+      \ifx \@@first \@@second
+         ##1%
+      \else
+         ##1, ##2%
+      \fi
+      \let \@@first = \relax
+      \let \@@second = \relax
+    }%
+    [#1]\hfill
+}

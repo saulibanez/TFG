@@ -1,0 +1,59 @@
+\chapter{Objetivos y Metodología}
+\label{cap:objetivos}
+Tras haber presentado el contexto en el que se desarrollará este proyecto, en este capítulo se fijarán los objetivos y se expondrán los requisitos para llegar a la solución.
+\section{Descripción del problema y requisitos}
+\label{sec:descripciondelproblema}
+
+El fondo oceánico es uno de los grandes misterios de la actualidad. La mayor parte del suelo oceánico no ha sido explorado, y eso supone un gran problema. Con este robot, podremos rozar un poco este mundo submarino tan fascinante, e intentar descubrir algunas de las magníficas maravillas que esconde.
+
+El robot contiene una cámara de alta visualización que permite realizar un análisis exhaustivo, y para entornos más oscuros precisaremos de las luces y los láseres incorporados, con ellos, podremos visualizar mejor el entorno y saber la distancia a la que se encuentren los objetos o animales. 
+
+Los requisitos indispensables para realizar el proyecto son:
+\begin{enumerate}
+\item \textbf{Robot móvil OpenROV 2.8.}
+\item \textbf{BeagleBone.} La placa en la que se instalará el software de OpenROV.
+\item \textbf{Herramientas de soldadura, montaje y sujeción.} 
+\item \textbf{Portatil.} Ejecutará el código para manejar el entorno del robot.
+\end{enumerate}
+
+\section{Objetivo del proyecto}
+\label{sec:objetivos}
+
+En este proyecto, se quiere acercar más al mundo el robot submarino OpenROV. La exploración del mundo submarino. 
+Se construirá de cero el robot submarino, utilizando los materiales dados por la comunidad de OpenROV. A la placa de OpenROV se le instalará un PLC para la comunicación del robot con el portátil y una BeagleBone, que llevará implantado el software necesario para la comunicación y funcionamiento con el robot.
+Además, se implantará una biblioteca de ROS dentro de OpenROV para que también se pueda comunicar a través del framework de robótica más famoso. Con esta biblioteca instalada y ejecutando el ROS Master en el portátil, se podrá realizar una comunicación.
+
+\section{Metodología de desarrollo}
+\label{sec:metodologiadedesarrollo}
+
+En el desarrollo del sistema descrito, el modelo de ciclo de vida utilizado ha sido el modelo Modelo en cascada.
+
+Es un proceso secuencial, fácil de desarrollo en el que los pasos de desarrollo son vistos hacia abajo (como en una cascada de agua) a través de las fases de análisis de las necesidades, el diseño, implantación, pruebas (validación), la integración, y mantenimiento. 
+
+Los principios básicos del modelo de cascada son los siguientes:
+\begin{figure} [hbtp]
+  \begin{center}
+    \includegraphics[width=11cm]{img/cap2/Waterfall_model}
+  \end{center}
+  \caption{Modelo en cascada.}
+  \label{fig:Waterfall_model}
+\end{figure}
+
+\begin{itemize}
+\item El proyecto está dividido en fases secuenciales, con cierta superposición y splashback aceptable entre fases.
+\item Se hace hincapié en la planificación, los horarios, fechas, presupuestos y ejecución de todo un sistema de una sola vez.
+\item Un estricto control se mantiene durante la vida del proyecto a través de la utilización de una amplia documentación escrita, así como a través de comentarios y aprobación.
+\end{itemize}
+
+\section{Plan de trabajo}
+\label{sec:plandetrabajo}
+
+Para poder abordar el problema se han marcado una serie de objetivos a completar. Dichos hitos son los siguientes:
+
+\begin{enumerate}
+\item Estudio, comprensión y montaje del OpenROV 2.8.
+\item Una vez terminado el montaje, se realizará la conexión del ROV para comunicarse con el portátil.
+\item \textbf{Fase de pruebas}, se probará el robot en distintos entornos para comprobar su funcionamiento.
+\item Estudio y comprensión de los paquetes de ROS roslibjs\footnote{http://wiki.ros.org/roslibjs} y rosbridge\footnote{http://wiki.ros.org/rosbridge\_suite}
+\item Integración de ROS y OpenROV.
+\end{enumerate}

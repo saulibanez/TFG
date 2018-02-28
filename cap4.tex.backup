@@ -1,0 +1,131 @@
+\chapter{Integración de ROS en OpenROV}
+\label{cap:integracionROS}
+
+En este capítulo se va a describir como se ha realizado la integración de ROS con OpenROV.
+
+\section{Configuración del ROV}
+\label{cap:Configuracion del ROV}
+La electrónica del ROV consiste en un Arduino conectado a un Beagle Bone, la cual, ejecuta el software nativo OpenROV, que utiliza node.js y se comunica mediante mensajes JSON.
+
+Como la BeagleBone tiene una computación limitada, y como el robot esta conectado al portátil, se decide implementar ROS en el portátil en vez de en el ROV. Con esta configuración, el ROS Master se ejecuta en el portátil e interactúa con los nodos de ROS que tengamos instalados (Rosbridge y gscam).
+Mientras, el ROV contendrá un nodo adicional (Roslibjs) que interactuará con Rosbridge para la comunicación de datos.
+
+Roslibjs es la biblioteca principal de JavaScript para interactuar con ROS. Utiliza WebSocket para coectarse con Rosbridge y proporciona publicación, suscripción, llamadas de servicio, TF...
+
+Rosbridge proporciona una API que puede traducir mensajes JSON en mensajes ROS. Actúa como un Nodo ROS que puede publicar o suscribirse a mensajes. Nos comunicamos con él a través de un conexión Websocket y Roslibjs.
+
+Roslibjs interactúa con JavaScript para publicar o suscribirse a los mensajes de ROS. Utiliza Websockets para comunicarse con Rosbridge.
+
+La figura a continuación muestra la estructura básica de ROS para la integración de OpenROV.
+
+\begin{figure} [hbtp]
+  \begin{center}
+    \includegraphics[width=8cm]{img/cap4/conect_ros_rov}
+  \end{center}
+  \caption{Diagrama de la conexión ROS y OpenROV}
+  \label{fig:conect_ros_rov}
+\end{figure}
+
+La configuración del ROV implica la instalación de las dependencias para el complemento OpenROV. La principal dependencia para el plugin de ROV es roslibjs, sin embargo roslibjs también tiene varias dependencias.
+
+Para empezar configuraremos la BeagleBone a través de una conexión SSH. Para ello necesitamos configurar el hardware del ROV de la siguiente manera:
+
+\begin{enumerate}
+\item Con un cable Ethernet, conectaremos el BeagleBone al router.
+\item Utilizarmeos un cable mini USB para conectar el BeagleBone al portátil, de esta forma, activaremos el hardware.
+\item Haremos un ssh hacia la BeagleBone, 
+\renewcommand{\lstlistingname}{}
+\begin{lstlisting}[caption=SSH, label={lst:ssh}]
+$ ssh rov@192.168.7.2
+\end{lstlisting}
+cuando pida la contraseña, deberemos introducir “OpenROV”.
+\end{enumerate}
+
+\begin{figure} [hbtp]
+  \begin{center}
+    \includegraphics[width=12cm]{img/cap4/ssh}
+  \end{center}
+  \caption{SSH}
+  \label{fig:ssh}
+\end{figure}
+
+Instalaremos las dependencias de Roslibjs, para ello ejecutaremos los siguientes comandos:
+
+\renewcommand{\lstlistingname}{}
+\begin{lstlisting}[caption=Dependencias Roslibjs, label={lst:roslibjs}]
+sudo apt-get update 
+sudo apt-get install libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential g++
+\end{lstlisting}
+
+\begin{figure} [hbtp]
+  \begin{center}
+    \includegraphics[width=12cm]{img/cap4/dependencias_roslibjs}
+  \end{center}
+  \caption{Dependencias Roslibjs}
+  \label{fig:Dependencias Roslibjs}
+\end{figure}
+
+Seguidamente instalaremos otras dependencias (npm) de Roslibjs.
+Para que no surjan problemas(errores del proxy), deberemos deshabilitar el proxy y realizar un reseteo del sistema. 
+\renewcommand{\lstlistingname}{}
+\begin{lstlisting}[caption=Dependencias Roslibjs, label={lst:roslibjs}]
+sudo /etc/init.d/openrov-proxy stop
+sudo /etc/init.d/openrov restart
+sudo chown -R $USER /usr/local 
+npm install canvas 
+\end{lstlisting}
+
+\newpage
+\begin{figure} [hbtp]
+  \begin{center}
+    \includegraphics[width=12cm]{img/cap4/canvas}
+  \end{center}
+  \caption{Canvas}
+  \label{fig:canvas}
+\end{figure}
+
+La última dependencia para el complemento es roslibjs, lo instalaremos usando: npm install roslib
+
+Dentro de la carpeta /opt/openrov/cockpit/src/plugins se creará una carpeta llamada ros (sudo mkdir  ros) y en ella, crearemos un fichero index.js en el cual se ejecutará la conexión con el ROS Master.
+
+\renewcommand{\lstlistingname}{}
+\begin{lstlisting}[caption=Conexión con ROS, label={lst:conection_ros}]
+function ros(name, deps) {
+  		console.log("ROS plugin started");
+
+  		// Comienza la sesion de ROS
+ 		var ROSLIB = require("roslib")
+  		var ros = new ROSLIB.Ros({
+    			url : 'ws://192.168.7.1:9090'
+  		});
+
+  		ros.on('connection', function() {
+   			console.log('ROS connected to websocket');
+  		});
+
+  		ros.on('error', function(error) {
+    			console.log('ROS error connecting to websocket');
+  		});
+
+ 		 ros.on('close', function() {
+    			console.log('ROS closed websocket connection');
+ 		});
+	};
+
+	module.exports = ros;
+\end{lstlisting}
+
+También se debe modificar el fichero hosts (sudo vim /etc/hosts) y en el realizaremos los siguientes cambios:
+
+\begin{lstlisting}[caption=hosts, label={lst:hosts}]
+sudo /etc/init.d/openrov-proxy stop
+sudo /etc/init.d/openrov restart
+sudo chown -R $USER /usr/local 
+npm install canvas 
+\end{lstlisting}
+
+\section{Configuración de ROS}
+\label{cap:Configuracion de ROS}
+
+\section{Conexión de ROS en OpenROV}
+\label{cap:Conexion de ROS en OpenROV}
