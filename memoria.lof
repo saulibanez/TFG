@@ -1,45 +1,45 @@
 \select@language {spanish}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Robots submarinos\relax }}{4}{figure.caption.4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Robots submarinos\relax }}{4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Modelo en cascada.\relax }}{7}{figure.caption.5}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Modelo en cascada.\relax }}{7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces OpenROV\relax }}{10}{figure.caption.6}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Piezas de los ch\IeC {\'a}sis.\relax }}{11}{figure.caption.7}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Chasis principal.\relax }}{12}{figure.caption.8}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Soporte de la c\IeC {\'a}mara y electr\IeC {\'o}nica\relax }}{12}{figure.caption.9}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Tapa inferior\relax }}{13}{figure.caption.10}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Raspberry Pi + PLC + BeagleBone\relax }}{14}{figure.caption.11}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Electr\IeC {\'o}nica de la c\IeC {\'a}mara\relax }}{14}{figure.caption.12}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Soldadura de cables\relax }}{16}{figure.caption.13}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces PLC externo\relax }}{17}{figure.caption.14}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces BeagleBone configurada\relax }}{18}{figure.caption.15}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Conexi\IeC {\'o}n Windows 8\relax }}{18}{figure.caption.16}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Actualizaci\IeC {\'o}n firmware\relax }}{20}{figure.caption.17}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Foco c\IeC {\'a}mara\relax }}{20}{figure.caption.19}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces L\IeC {\'a}ser\relax }}{21}{figure.caption.21}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Motores\relax }}{21}{figure.caption.23}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Tubo\relax }}{22}{figure.caption.25}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Tapa superior\relax }}{22}{figure.caption.27}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Cockpit (1)\relax }}{23}{figure.caption.28}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Cockpit (2)\relax }}{24}{figure.caption.29}
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Cockpit (3)\relax }}{24}{figure.caption.30}
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Cockpit (4)\relax }}{25}{figure.caption.31}
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Cockpit (5)\relax }}{25}{figure.caption.32}
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Ajustes\relax }}{26}{figure.caption.33}
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Diagn\IeC {\'o}stico\relax }}{27}{figure.caption.34}
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Servicios\relax }}{27}{figure.caption.35}
-\contentsline {figure}{\numberline {3.26}{\ignorespaces DB-25\relax }}{30}{figure.caption.44}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces OpenROV\relax }}{10}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Piezas de los ch\IeC {\'a}sis.\relax }}{11}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Chasis principal.\relax }}{12}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Soporte de la c\IeC {\'a}mara y electr\IeC {\'o}nica\relax }}{12}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Tapa inferior\relax }}{13}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Raspberry Pi + PLC + BeagleBone\relax }}{14}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Electr\IeC {\'o}nica de la c\IeC {\'a}mara\relax }}{14}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Soldadura de cables\relax }}{15}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces PLC externo\relax }}{17}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces BeagleBone configurada\relax }}{18}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Conexi\IeC {\'o}n Windows 8\relax }}{18}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Actualizaci\IeC {\'o}n firmware\relax }}{20}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Foco c\IeC {\'a}mara\relax }}{20}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces L\IeC {\'a}ser\relax }}{21}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Motores\relax }}{21}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Tubo\relax }}{22}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Tapa superior\relax }}{22}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Cockpit (1)\relax }}{23}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Cockpit (2)\relax }}{24}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Cockpit (3)\relax }}{24}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Cockpit (4)\relax }}{25}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Cockpit (5)\relax }}{25}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Ajustes\relax }}{26}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Diagn\IeC {\'o}stico\relax }}{27}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Servicios\relax }}{27}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces DB-25\relax }}{30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de la conexi\IeC {\'o}n ROS y OpenROV\relax }}{33}{figure.caption.47}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces SSH\relax }}{33}{figure.caption.48}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Dependencias Roslibjs\relax }}{34}{figure.caption.49}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Canvas\relax }}{35}{figure.caption.50}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Roscore\relax }}{39}{figure.caption.51}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Launch\relax }}{39}{figure.caption.52}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Conexi\IeC {\'o}n en ROV\relax }}{40}{figure.caption.53}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces rostopic list\relax }}{40}{figure.caption.54}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces rostopic info (1)\relax }}{41}{figure.caption.55}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces rostopic info (2)\relax }}{41}{figure.caption.56}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de la conexi\IeC {\'o}n ROS y OpenROV\relax }}{33}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces SSH\relax }}{33}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Dependencias Roslibjs\relax }}{34}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Canvas\relax }}{35}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Roscore\relax }}{39}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Launch\relax }}{39}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Conexi\IeC {\'o}n en ROV\relax }}{40}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces rostopic list\relax }}{40}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces rostopic info (1)\relax }}{41}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces rostopic info (2)\relax }}{41}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
