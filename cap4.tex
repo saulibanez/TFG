@@ -1,13 +1,15 @@
 \chapter{Integración de ROS en OpenROV}
 \label{cap:integracionROS}
 
-En este capítulo se va a describir como se ha realizado la integración de ROS con OpenROV.
+En este capítulo se va a describir como se ha realizado la integración de ROS con OpenROV\cite{ros_rov}.
+
+Para ello, utilizaremos las bibliotecas de ROS Rosbridge y Roslibjs, que nos proporcionarán la comunicación entre la computadora y el robot OpenROV.
 
 \section{Configuración del ROV}
 \label{cap:Configuracion del ROV}
 La electrónica del ROV consiste en un Arduino conectado a un Beagle Bone, la cual, ejecuta el software nativo OpenROV, que utiliza node.js y se comunica mediante mensajes JSON.
 
-Como la BeagleBone tiene una computación limitada, y como el robot esta conectado al portátil, se decide implementar ROS en el portátil en vez de en el ROV. Con esta configuración, el ROS Master se ejecuta en el portátil e interactúa con los nodos de ROS que tengamos instalados (Rosbridge y gscam).
+Como la BeagleBone tiene una computación limitada, y como el robot esta conectado al portátil, se decide implementar ROS en el portátil en vez de en el ROV. Con esta configuración, el ROS Master se ejecuta en el portátil e interactúa con los nodos de ROS que tengamos instalados (Rosbridge).
 Mientras, el ROV contendrá un nodo adicional (Roslibjs) que interactuará con Rosbridge para la comunicación de datos.
 
 Roslibjs es la biblioteca principal de JavaScript para interactuar con ROS. Utiliza WebSocket para coectarse con Rosbridge y proporciona publicación, suscripción, llamadas de servicio, TF...

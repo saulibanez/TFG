@@ -3,7 +3,7 @@
 
 \section{Robot Submarino OpenROV}
 \label{cap:Robot Submarino OpenROV}
-La robótica submarina lleva desarrollándose desde mediados de los años sesenta, aunque fuera una realidad desconocida para el gran público. Los robots submarinos costaban millones y tenían el tamaño de un todoterreno. Un robot con una cámara que se retransmite en directo a una página web. Su principal virtud es que OpenROV\footnote{https://www.openrov.com/} funciona con código abierto.
+La robótica submarina lleva desarrollándose desde mediados de los años sesenta, aunque fuera una realidad desconocida para el gran público. Los robots submarinos costaban millones y tenían el tamaño de un todoterreno. Un robot con una cámara que se retransmite en directo a una página web. Su principal virtud es que OpenROV\cite{openrov} funciona con código abierto.
 
 En general, sus características entran dentro de los parámetros presentados a continuación:
 
@@ -12,7 +12,7 @@ En general, sus características entran dentro de los parámetros presentados a 
   \item \textbf{Tres servomotores} Se utilizan para la movilidad del dispositivo. Son de muy bajo mantenimiento y puedan estar en contacto directamente con el agua.
   \item \textbf{Flotabilidad neutra y altamente maniobrable} El diseño compacto y ligero permite una alta maniobrabilidad utilizando un diseño de tres actuadores. Se puede sumergir a una profundidad de 100 metros.
   \item \textbf{Interfaz web fácil de usar} En ella se puede manipular la cámara, los láser, focos y motores. No necesita conexión a Internet, ni hay necesidad de instalar un software.
-  \item \textbf{Soporte de la comunidad de OpenROV} Se tiene soporte de la amplia comunidad que da soporte al proyecto OpenROV.
+  \item \textbf{Soporte de la comunidad de OpenROV}.
   \end{itemize}
 
 \begin{figure}[hbtp]
@@ -24,26 +24,10 @@ En general, sus características entran dentro de los parámetros presentados a 
   \label{fig:ROV-ej}
 \end{figure}
 
-\section{Estado del Arte}
-\label{cap:Estado del Arte}
-El mundo de los robots submarinos ROV (\textit{Remote Operated Vehicle} o vehículo de operación  remota) sigue creciendo año tras año y no debe sorprender. El 70\% por ciento de la superficie de la Tierra está cubierta de océanos. El 95\% del fondo de los océanos sigue sin mapear. De hecho, se conoce más sobre la superficie de la Luna que de las profundidades oceánicas. Tanto es así, que doce hombres han puesto pie en la Luna, pero sólo dos lo hicieron en la Fosa de las Marianas, la parte más profunda de nuestros mares, con aproximadamente 11 kilómetros de profundidad.
-
-La inherente necesidad del ser humano de ir hacia lo desconocido para expandir nuestras fronteras no tiene límite. Esto se ve reflejado en el aumento de proyectos que buscan expandir estas fronteras submarinas.
-
-En base al estudio del estado del arte, se establecieron las variables físicas necesarias para poder manipular el robot en cuestión, estas variables son las siguientes:
-  \begin{itemize}
-  \item \textbf{Aceleraciones en X, Y, Z} Permite obtener el ángulo con respecto al plano. Por odometría se puede obtener velocidad y posición estimadas.
-  \item \textbf{Velocidad angular en p, q y r (roll, pitch y yaw)} Por medio de odometría, permite estimar perturbaciones en la rotación del robot.
-  \item \textbf{Temperatura Externa} Puede utilizarse para hacer un registro de datos que permita caracterizar unmedio marino.
-  \item \textbf{Temperatura Interna} Puede proveer de alerta de sobrecalentamiento de los sistemas a bordo.
-  \item \textbf{Velocidades Lineales} En conjunto con la estimación de velocidad por odometría, puede utilizarse para compensar errores acumulativos.
-  \item \textbf{Orientación con respecto al norte magnético} Permite obtener una referencia para mantener una referencia con respecto a la tierra.
-  \item \textbf{Presión Relativa} De manera indirecta, permite conocer la profundidad.
-  \item \textbf{Carga de Baterías} Permite conocer el estado de carga de las baterías. En caso de estar en un nivel crítico, se pueden ejecutar modos de bajo consumo o de recuperación de la plataforma.
-  \end{itemize}
-
 \section{Estructura y Montaje}
 \label{cap:montaje}
+
+En esta sección se va a describir cada paso del montaje del robot, desde el montaje de cada uno de los chasis hasta la electrónica, de la cual tendremos que soldar los elementos.
 
 \subsection{Estructura de OpenROV}
 \label{subsec:EstructuraOpenROV}
@@ -117,7 +101,7 @@ Continuaremos con el BeagleBone Black (BBB), el cual, es el procesador principal
 
 El cable USB del BeagleBone lo utilizaremos más adelante.
 
-Una vez juntos el PLC, el BeagleBone y la placa del ROV, uniremos estos tres elementos para formar el hardware del robot. Se conectará primero la placa del ROV, en la que el conector RJ-45 irá conectado al hardware PLC. Una vez realizada esa conexión, procederemos a implantar en las ranuras el BeagleBone, y atornillaremos para obtener una mejor sujeción.
+Una vez juntos el PLC, el BeagleBone y la placa del ROV, uniremos estos tres elementos para formar el hardware del robot. Se conectará primero la placa del ROV, en la que el conector RJ-45 irá conectado al hardware PLC. Una vez realizada esa conexión, procederemos a implantar en las ranuras el BeagleBone, y atornillaremos para obtener una mejor sujeción, como podemos comprobar en la imagen.
 
 \begin{figure} [hbtp]
   \begin{center}
@@ -152,11 +136,13 @@ En esta fase, se va a requerir unas herramientas más específicas para realizar
 
 Empezaremos calculando la distancia de los cables y separaremos los de color verde claro y naranja, para la conexión de las baterías. Los cables verdes oscuros, rojos y azules, los utilizaremos para el montaje de los servomotores. Iremos fijando los cables con las bridas para una correcta colocación.
 
-Cada uno de los tres motores servo, lleva tres cables, los cuales soldaremos con los cables correspondientes. Una vez soldados, con una silicona especial se rellenará el espacio del cable soldado y con la pistola de calor se fijará e impermeabilizará.
+Cada uno de los tres motores servo, lleva tres cables, los cuales soldaremos con los cables correspondientes. Una vez soldados, con una silicona especial se rellenará el espacio del cable soldado y con la pistola de calor se fijará e impermeabilizará, podemos ver parte del proceso en la siguiente imagen.
+
+%\newpage
 
 \begin{figure} [hbtp]
   \begin{center}
-    \includegraphics[width=8cm]{img/cap3/3_3/soldar}
+    \includegraphics[width=5cm]{img/cap3/3_3/soldar}
   \end{center}
   \caption{Soldadura de cables}
   \label{fig:soldar}
@@ -181,10 +167,12 @@ Aislaremos el hardware con un tubo cilíndrico trasparente de polimetilmetacrila
 
 Cuando todo el montaje esté terminado, pondremos más seguridad al hardware, añadiendo una cuerda que hará presión.
 
-Además, colocaremos dos pesas de trescientos gramos en los brazos del ROV para que la sumersión sea más fácil y fiable.
+Además, colocaremos dos pesas de 300 gr. en los brazos del ROV para que la sumersión sea más fácil y fiable.
 
 \section{Conectividad OpenROV}
 \label{cap:Conectividad OpenROV}
+  
+En esta sección se marcarán las pautas necesarias para realizar el correcto funcionamiento del software del OpenROV.  
   
 \subsection{Diseño de Conectividad}
 \label{subsec:disenio}
@@ -205,7 +193,7 @@ El ROV tiene una dirección IP estática incorporada de 192.168.254.1, por lo qu
 
 Pero para poder mostrar la página, antes debemos realizar una serie de pasos, en la que necesitaremos una microSD para realizar la configuración del ROV.
   
-\begin{itemize}
+\begin{enumerate}
 \item El primer paso, es descargar la imagen más reciente de OpenROV (30.0.3), una vez descargado, se descomprime el archivo .zip, dejando en el directorio de descarga el fichero .img.
 \item Para cerciorarse de que la mircoSD esta vacía, se formatea con el programa SDFormatter, luego, con el programa Win32DiskImager, escribiremos en la tarjeta microSD el fichero .img, esperamos alrededor de 5 minutos a que se complete la escritura. Cuando haya terminado, removemos la tarjeta microSD del portátil.
 \item Conectamos  la tarjeta microSD a el Beagle Bone, y conectamos el ROV con el cable USB para encenderlo. Los LED de Usuario de la placa Beagle Bone parpadearán para mostrar que laa imagen se está aplicando a la memoria de dicha placa. El proceso dura aproximadamente 15 minutos, en ese tiempo, los cuatro led deben estar encendidos, de no ser así, habría que repetir este punto nuevamente.
@@ -236,12 +224,12 @@ Insertarla dirección IP 192.168.254.2
 
 \begin{figure} [hbtp]
 \begin{center}
-  \includegraphics[width=8cm]{img/cap3/3_4/conexion}
+  \includegraphics[width=6cm]{img/cap3/3_4/conexion}
 \end{center}
 \caption{Conexión Windows 8}
 \label{fig:w8}
 \end{figure}
-
+\newpage
 En Ubuntu la configuración de una nueva IP estática:
 
 \renewcommand{\lstlistingname}{Configuración}
@@ -279,7 +267,7 @@ En Ubuntu la configuración de una nueva IP estática:
 \item Para finalizar, deberemos actualizar el firmware, en la web, presionaremos el botón de configuración en la parte superior derecha de la pantalla y presionaremos “Cargar firmware desde la tarjeta SD a Ardruino”
 La tarjeta no microSD no debe estar en el ROV, presionaremos “Mostrar Detalles” y seguidamente, “Aplicar nuevo Firmware”.
 El proceso dura aproximadamente entre 5-10 minutos.
-Una vez que la carga sea exitosa, se desconectará el cable USB del portátil para apagar el ROV, para realizar el reinicio, volveremos a conectar el cable USB al portátil.
+Una vez que la carga sea exitosa, como el de la imagen, se desconectará el cable USB del portátil para apagar el ROV. Para realizar el reinicio, volveremos a conectar el cable USB al portátil.
 
 
 \begin{figure} [hbtp]
@@ -290,7 +278,7 @@ Una vez que la carga sea exitosa, se desconectará el cable USB del portátil pa
 \label{fig:firmware}
 \end{figure}
 
-\end{itemize}
+\end{enumerate}
   
   
   
@@ -363,7 +351,8 @@ El tubo electrónico necesita el orificio de ventilación proporcionado por el �
 \caption{Tapa superior}
 \label{fig:tapa_sup}
 \end{figure}  
-       
+
+\newpage
 \subsection{Web/Cockpit}
 \label{subsec:cockpit}
 El ROV se maneja con Cockpit que es la interfaz de usuario y los sistemas de control para cualquier vehículo o dispositivo operado a distancia.
@@ -385,7 +374,6 @@ El ROV se maneja con Cockpit que es la interfaz de usuario y los sistemas de con
 \item[\textcolor{blue}{\textbullet}]Brújula/rumbo (solo con IMU (Unidad de medición inercial))
 \end{itemize}
 
-\newpage
 \begin{figure} [hbtp]
 \begin{center}
   \includegraphics[width=12cm]{img/cap3/3_5/cockpit2}
@@ -492,6 +480,8 @@ Hay dos partes:
 \subsection{Mantenimiento}
 \label{subsec:mantenimiento}
 
+Para que la vida útil del robot sea lo máximo posible, se deben seguir unas ciertas pautas de mantenimiento.
+
 \subsubsection{Enjuagar}
 \label{subsubsec:enjuagar}
 Una vez que hayamos utilizado el robot, debemos rociarlo en agua dulce después de cada inmersión, ya que es una excelente manera de mantenerlo limpio y libre de desechos y minerales.
@@ -527,8 +517,11 @@ Mantener las baterías en grupos de seis permitirá evitar problemas. Cargaremos
 
 \subsection{Problemas}
 \label{subsec:problemas}
-\subsubsection{Vaho}
-\label{subsubsec:vaho}
+
+Durante la vida útil del OpenROV pueden surgir ciertos imprevistos, a continuación se detallan los más probables y como se puede solucionar.
+\begin{enumerate}
+\item \textbf{Vaho} durante todo el proceso de sumersión.
+
 Que el tubo principal se empañe es un problema común.
 
 Algunas veces esta es la indicación de una fuga. Si se nota que el vaho aparece repentinamente o durante una inmersión, lo mejor será salir a la superficie y verificar si hay fugas.
@@ -537,18 +530,18 @@ El vaho se puede solucionar colocando una nueva bolsa de desecante en el tubo pr
 
 Los productos químicos anti-vaho también pueden ayudar. Estos están disponibles en cualquier tienda de buceo.
 
-\subsubsection{Video}
-\label{subsubsec:video}
+\item \textbf{Video}.
+
 Muchos problemas de video pueden ocurrir durante su inmersión.
 
 El más común es un corte o "apagón" del video. Esto se puede solucionar actualizando periódicamente la imagen del software en el BeagleBone.
 
-\subsubsection{Control u otros problemas misceláneos}
-\label{subsubsec:miscelaneos}
+\item \textbf{Control u otros problemas misceláneos}.
+
 Mientras está en el campo, es posible que necesite restablecer el OpenROV para remediar los errores extraños y aleatorios. Para este procedimiento se debe desenchufar el cable USB de la caja del PLC y volver a enchufarlo. Este método también funciona para otros problemas de control.
 
-\subsubsection{Pérdida aleatoria de energía de la batería}
-\label{subsubsec:perdida_bateria}
+\item \textbf{Pérdida aleatoria de energía de la batería}.
+
 A menudo, cuando hay problemas de energía, primeramente habrá que asegúrese de que todas las baterías estén en contacto entre sí y, si corresponde, el adaptador de la batería y los terminales positivo y negativo en el tubo de la batería.
 
 Verificar el voltaje a través de los pines correspondientes del conector DB-25. Para las baterías recomendadas, esto debería ser alrededor de 9V. Se comprobara la batería positivo y negativo de los cables: Naranja / Negro-Naranja y Verde claro / Negro-Verde claro. Un pequeño trozo de alambre puede ayudar a establecer una buena conexión con el polímetro.
@@ -567,8 +560,10 @@ Se puede quitar la envoltura de plástico en la parte inferior de las baterías 
 \label{fig:db25}
 \end{figure}
 
-\subsubsection{Enredos}
-\label{subsubsec:enredos}
+\newpage
+
+\item \textbf{Enredos}.
+
 Los enredos es un problema muy comun que se encuentran en el este campo.
 
 El mejor remedio es evitar la situación en absoluto. Esto se puede hacer evitando bucear en vegetación pesada.
@@ -579,8 +574,8 @@ Hay que tener en cuenta que si se tira del OpenROV puede enredar el ROV, que es 
 
 Siempre podemos cortar y volver a soldar la correa utilizando un tubo termorretráctil si fuese necesario.
 
-\subsubsection{Inundación del tubo principal}
-\label{subsubsec:inundacion_tubo}
+\item \textbf{Inundación del tubo principal}.
+
 Este puede ser el mayor problema al que nos podemos enfrentar, por ello, lo primero que habría que realizar sería desconectar la alimentación del ROV (esto evitará que la electrólisis corroa los componentes electrónicos). Para hacer esto, desenchufamos el cable USB y retiraremos las baterías.
 
 Si el agua que inundó el tubo no era agua dulce, enjuagamos los componentes electrónicos que se mojaron en agua dulce (desionizada> destilada> agua del grifo) para diluir y eliminar los minerales del área que se inundó.
@@ -594,3 +589,4 @@ Secaremos bien cada una de las piezas de la electrónica. El aire comprimido pue
 Se colocaran todos los componentes electrónicos afectados en un lugar seco. Es útil tener una bolsa de llena de arroz o desecante.
 
 Cuando vuelva a armar todo, inspeccionamos para detectar corrosión. Si vemos alguno, a menudo se puede quitar con un cepillo de dientes. La corrosión no significa necesariamente un fallo, pero es bueno eliminar lo que se pueda.
+\end{enumerate}

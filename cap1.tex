@@ -1,43 +1,46 @@
 \chapter{Introducción}
 
-En este capítulo se ubicará el proyecto en el contexto del robot submarino OpenROV y se enumeraran los distintos problemas que se presentan.
-Se expondrá el montaje y puesta a punto del OpenROV y la integración del framework ROS a la arquitectura del robot submarino.
-Por último se comentará la estructura de la memoria y se explicarán brevemente las partes por las que está formada.
+En este capítulo se explicará el concepto de robótica móvil\cite{RoboticaMovil}.
+También se comentarán los robots submarinos, ya que en este proyecto, trataremos sobre uno de ellos, OpenROV.
+Hablaremos sobre ROS (Robot Operating System), que tiene un conjunto de herramientas y atajos que facilitan la comunicación y operabilidad de los robots porque en uno de los capítulos del proyecto, se expondrá la integración de este framework en el ROV.
+El estado del arte y la estructura de la memoria son los otros dos puntos que se tratarán en éste capítulo.
 
 \section{Robótica móvil}
 \label{cap:roboticamovil}
-Tradicionalmente las aplicaciones de la robótica estaban centradas en los sectores manufactureros más desarrollados para la producción masiva: industria del automóvil,transformaciones metálicas, etc.
+Generalmente las aplicaciones robóticas se centraban en los sectores manufactureros más desarrollados para la producción masiva: industria del automóvil, transformaciones metálicas, etc.
 
-A principios de los años sesenta se introducen en la industria, de modo significativo, los robots manipuladores como un elemento más del proceso productivo.
+A principios de los años sesenta se introducen en la industria los robots manipuladores como un elemento más del proceso productivo. Los trabajos desarrollados por los robots manipuladores consistían frecuentemente en tareas repetitivas.
 
-Los trabajos desarrollados por los robots manipuladores consistían frecuentemente en tareas repetitivas.
-
-Una definición correcta de robot móvil plantea la capacidad de movimiento sobre entornos no estructurados, de los que se posee un conocimiento incierto, mediante la interpretación de la información suministrada a través de sus sensores y del estado actual del vehículo. 
+Un robot móvil puede moverse sobre entornos no estructurados, de los cuales, no se posee conocimiento. Esto lo realiza mediante la interpretación de los datos obtenidos a través de los sensores y del estado actual del vehículo. 
 
 En general se considera que existen tres clases de robots:
 \begin{itemize}
 \item \textbf{Industriales} son los de mayor difusión en tareas de alcance económico, formados por una estructura mecánica articulada, que se mueve adoptando distintas configuraciones por las órdenes recibidas de un equipo de control basado normalmente en un microprocesador.
 \item \textbf{Medicos}  de cooperación o de rehabilitación están concebidos como prótesis inteligentes para los disminuidos físicos. Se procura que tenga la estética correspondiente a la extremidad humana.
-\item \textbf{Móviles} son dispositivos de transporte automático, es decir, una plataforma mecánica dotada de un sistema de locomoción capaz de navegar a través de un determinado ambiente de trabajo.
+\item \textbf{Móviles} tienen una plataforma mecánica dotada de un sistema de locomoción capaz de navegar a través de un determinado ambiente de trabajo.
 
-Los robots móviles operando en grandes ambientes no estructurados deben enfrentarse con significativas incertidumbres en la posición e identificación de objetos, la complejidad es tal que, trasladarse desde un punto A hasta un punto B es una actividad arriesgada para un robot móvil.
+Cuando un robot móvil opera en ambientes no estructurados se enfrenta con la incertidumbre de la posición e identificación de objetos. La complejidad es tal que, trasladarse desde un punto A hasta un punto B es una actividad arriesgada para un robot móvil.
 El principal problema a resolver en un robot móvil es generar trayectorias y guiar su movimiento.
 
 El robot móvil autónomo se caracteriza por una conexión inteligente entre las operaciones de percepción y acción, que define su comportamiento y le permite llegar a la consecución de los objetivos programados sobre entornos con cierta incertidumbre.
   \begin{itemize}
-  \item \textbf{Percepción} La capacidad de percepción del robot móvil se traduce en la síntesis de toda la información provista por los sensores, con el objeto de generar mapas globales y locales del entorno de acuerdo a los diversos niveles de control. 
-  \item \textbf{Razonamiento (acción)}  El robot móvil debe ser capaz de decidir que acciones son requeridas en cada momento, según el estado del robot y el de su entorno, para alcanzar su(s) objetivo(s).
+  \item \textbf{Percepción} La capacidad de percepción del robot móvil gestiona la información obtenida por los sensores, con el objeto de generar mapas globales y locales del entorno. 
+  \item \textbf{Actuación}  El robot móvil tiene que de decidir que acción es la idónea en cada momento, dependiendo del estado del robot y el de su entorno.
   \end{itemize}
 \end{itemize}
 
 
 \section{Robots Submarinos}
 \label{cap:Robots Submarinos}
-Durante los últimos años, el uso de vehículos robots submarinos ha aumentado rápidamente, desde que tal vehículo se puede operar en las áreas más profundas y más arriesgadas que buzos no pueden alcanzar. Entre las aplicaciones potenciales de tales vehículos tenemos el área de la pesca, control submarino de contaminación, y la manipulsación y limpieza del océano, así como de sitios nucleares.
+En este apartado, se hará una breve introducción sobre los robots submarinos (en este trabajo nos centraremos en uno de ellos, OpenROV 2.8) y donde pueden resultar de mayor utilidad.
 
-Se trata de un área de diversas aplicaciones en el mundo real, ya que permite y facilita la exploración, la búsqueda y rescate y estudios científicos en zonas muy profundas del mar, a pesar de problemas que se pueden presentar, como son la alta dinámica y la naturaleza del ruido del medio submarino, así como también la carencia de puntos de referencia y las limitaciones en las comunicaciones por efecto del agua.
+El mundo de los robots submarinos ROV (\textit{Remote Operated Vehicle} o vehículo de operación remota) sigue creciendo año tras año. El 70\% de la superficie de la Tierra está cubierta de océanos y sin embargo, el 95\% del suelo oceánico sigue sin estar mapeado.
 
-Podriamos diferenciar las diferentes áreal potenciales en las cuales tienen una aplicación como:
+Durante los últimos años, el uso de robots submarinos ha aumentado rápidamente, ya que este vehículo puede operar en áreas más profundas y más peligrosas, a los cuales los humanos no podemos llegar. Este tipo de robot se pueden utilizar para el área de la pesca, control submarino de contaminación, manipulsación y limpieza del océano, así como de sitios nucleares.
+
+Se trata de un área de diversas aplicaciones en el mundo real, ya que permite y facilita la exploración, la búsqueda y rescate y estudios científicos en zonas muy profundas del mar.
+
+Podriamos diferenciar las diferentes áreas potenciales en las cuales tienen una aplicación como:
 
   \begin{itemize}
   \item \textbf{Ciencia}
@@ -78,13 +81,26 @@ Podriamos diferenciar las diferentes áreal potenciales en las cuales tienen una
 \section{ROS}
 \label{cap:ROS}
 
-Sistema Operativo Robótico (en inglés \textit{Robot Operating System, ROS}\footnote{http://wiki.ros.org/}) es un framework para el desarrollo de software para robots que provee la funcionalidad de un sistema operativo en un clúster heterogéneo. 
+Sistema Operativo Robótico (en inglés \textit{Robot Operating System, ROS}\cite{ros}) es un framework para el desarrollo de software para robots que provee la funcionalidad de un sistema operativo en un clúster heterogéneo. 
+
+Implementaremos ROS en el robot submarino ya que es el framework por excelencia para el desarrollo de las aplicaciones robóticas. Contiene algoritmos implementados, además de proporcionar una arquitectura distribuida. No hace falta que los nodos de ROS interactuen en el mismo sistema ni que deban ser de la misma arquitectura, por eso es una gran ventaja utilizarlo en la tecnología de OpenROV. 
 
 ROS provee los servicios estándar de un sistema operativo tales como abstracción del hardware, control de dispositivos de bajo nivel, implementación de funcionalidad de uso común, paso de mensajes entre procesos y mantenimiento de paquetes. Está basado en una arquitectura de grafos donde el procesamiento toma lugar en los nodos que pueden recibir, mandar y multiplexar mensajes de sensores, control, estados, planificaciones y actuadores, entre otros.
 
-ROS tiene dos partes básicas: la parte del sistema operativo, ros, como se ha descrito anteriormente y ros-pkg, una suite de paquetes aportados por la contribución de usuarios (organizados en conjuntos llamados pilas o en inglés stacks) que implementan la funcionalidades tales como localización y mapeo simultáneo, planificación, percepción, simulación, etc.
+ROS tiene dos partes básicas: la parte del sistema operativo, ROS, y una suite de paquetes aportados por la contribución de usuarios que implementan la funcionalidad, como localización y mapeo simultáneo, planificación, percepción, simulación, etc.
 
-ROS es software libre bajo términos de licencia BSD. Esta licencia permite libertad para uso comercial e investigador. Las contribuciones de los paquetes en ros-pkg están bajo una gran variedad de licencias diferentes.
+ROS es OpenSource bajo términos de licencia BSD. Esta licencia permite libertad para uso comercial e investigador.
+
+\section{Estado del Arte}
+\label{cap:Estado del Arte}
+En base al estudio del estado del arte\cite{telemetria}, se establecen las variables necesarias para la manipulación del robot:
+  \begin{itemize}
+  \item \textbf{Aceleraciones en X, Y, Z} Obtiene el ángulo con respecto al plano. Por odometría se puede obtener la velocidad y la posición.
+  \item \textbf{Velocidad angular en p, q y r (roll, pitch y yaw)} Por odometría, permite estimar perturbaciones en la rotación del robot.
+  \item \textbf{Velocidades Lineales} Por odometría, se puede utilizar para compensar los errores acumulativos.
+  \item \textbf{Presión Relativa} Permite conocer la profundidad a la que se ha sumergido.
+  \item \textbf{Carga de Baterías} Permite conocer el estado de carga de las baterías. En caso de estar en un nivel crítico, se ejecutan modos de bajo consumo o de recuperación de la plataforma.
+  \end{itemize}
 
 \section{Estructura de la memoria}
 \label{cap:estructuradelamemoria}

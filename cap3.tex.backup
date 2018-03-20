@@ -24,26 +24,10 @@ En general, sus características entran dentro de los parámetros presentados a 
   \label{fig:ROV-ej}
 \end{figure}
 
-\section{Estado del Arte}
-\label{cap:Estado del Arte}
-El mundo de los robots submarinos ROV (\textit{Remote Operated Vehicle} o vehículo de operación  remota) sigue creciendo año tras año y no debe sorprender. El 70\% por ciento de la superficie de la Tierra está cubierta de océanos. El 95\% del fondo de los océanos sigue sin mapear. De hecho, se conoce más sobre la superficie de la Luna que de las profundidades oceánicas. Tanto es así, que doce hombres han puesto pie en la Luna, pero sólo dos lo hicieron en la Fosa de las Marianas, la parte más profunda de nuestros mares, con aproximadamente 11 kilómetros de profundidad.
-
-La inherente necesidad del ser humano de ir hacia lo desconocido para expandir nuestras fronteras no tiene límite. Esto se ve reflejado en el aumento de proyectos que buscan expandir estas fronteras submarinas.
-
-En base al estudio del estado del arte, se establecieron las variables físicas necesarias para poder manipular el robot en cuestión, estas variables son las siguientes:
-  \begin{itemize}
-  \item \textbf{Aceleraciones en X, Y, Z} Permite obtener el ángulo con respecto al plano. Por odometría se puede obtener velocidad y posición estimadas.
-  \item \textbf{Velocidad angular en p, q y r (roll, pitch y yaw)} Por medio de odometría, permite estimar perturbaciones en la rotación del robot.
-  \item \textbf{Temperatura Externa} Puede utilizarse para hacer un registro de datos que permita caracterizar unmedio marino.
-  \item \textbf{Temperatura Interna} Puede proveer de alerta de sobrecalentamiento de los sistemas a bordo.
-  \item \textbf{Velocidades Lineales} En conjunto con la estimación de velocidad por odometría, puede utilizarse para compensar errores acumulativos.
-  \item \textbf{Orientación con respecto al norte magnético} Permite obtener una referencia para mantener una referencia con respecto a la tierra.
-  \item \textbf{Presión Relativa} De manera indirecta, permite conocer la profundidad.
-  \item \textbf{Carga de Baterías} Permite conocer el estado de carga de las baterías. En caso de estar en un nivel crítico, se pueden ejecutar modos de bajo consumo o de recuperación de la plataforma.
-  \end{itemize}
-
 \section{Estructura y Montaje}
 \label{cap:montaje}
+
+En esta sección se va a describir cada paso del montaje del robot
 
 \subsection{Estructura de OpenROV}
 \label{subsec:EstructuraOpenROV}
@@ -271,8 +255,8 @@ En Ubuntu la configuración de una nueva IP estática:
 
 \subitem Reiniciamos las interfaces de red para aplicar los cambios:
 
-\renewcommand{\lstlistingname}{Reseteo}
-\begin{lstlisting}[label={lst:reset}]
+\renewcommand{\lstlistingname}{}
+\begin{lstlisting}[caption=Reinicio, label={lst:reset}]
   $ sudo /etc/init.d/networking restart
 \end{lstlisting}
 \item Abriremos el navegador Google-Chrome, y en la barra de direcciones escribiremos la IP 192.168.254.1:8080, que es la dirección IP de OpenROV. Presionaremos <enter> y en un periodo de aproximadamente 20 segundos aparecerá la interfaz de OpenROV.
@@ -458,29 +442,139 @@ Panel de configuración:
  \item Registro de Google Talk: esta pestaña permite acceder a las funciones de redes sociales del cockpit (avanzado).
 \end{itemize}
 
+\begin{figure} [hbtp]
+\begin{center}
+  \includegraphics[width=12cm]{img/cap3/3_5/diagnostico}
+\end{center}
+\caption{Diagnóstico}
+\label{fig:diagnostico}
+\end{figure}
 
-  \subsection{Mantenimiento}
-  \label{subsec:mantenimiento}
-    \subsubsection{Enjuagar}
-    \label{subsubsec:enjuagar}
-    \subsubsection{Mantenimiento de los motores}
-    \label{subsubsec:mantenimiento}
-    \subsubsection{Secado}
-    \label{subsubsec:secado}
-    \subsubsection{Carga de baterías}
-    \label{subsubsec:bateria}
+Panel de diagnósticos:
+\begin{itemize}
+ \item Probar manualmente los motores, esto se usa para hacer funcionar los motores manualmente. Este panel también sirve para invertir la dirección de un cierto motor.
+ \item Pre-Flight Check es un marcador de posición por el momento.
+ \item La calibración para la brújula y la profundidad cero también se encuentran en este panel.
+\end{itemize}
 
-   \subsection{Problemas}
-   \label{subsec:problemas}
-    \subsubsection{Vaho}
-    \label{subsubsec:vaho}
-    \subsubsection{Video}
-    \label{subsubsec:video}
-    \subsubsection{Control u otros problemas misceláneos}
-    \label{subsubsec:miscelaneos}
-    \subsubsection{Pérdida aleatoria de energía de la batería}
-    \label{subsubsec:perdida_bateria}
-    \subsubsection{Enredos}
-    \label{subsubsec:enredos}
-    \subsubsection{Inundación del tubo principal}
-    \label{subsubsec:inundacion_tubo}
+\begin{figure} [hbtp]
+\begin{center}
+  \includegraphics[width=12cm]{img/cap3/3_5/services}
+\end{center}
+\caption{Servicios}
+\label{fig:services}
+\end{figure}
+
+El panel de configuración de OpenROV se encuentra en: 192.168.254.1
+
+Hay dos partes:
+\begin{itemize}
+\item[\textcolor{red}{\textbullet}]\textbf{Servicios}: puede reiniciar la cabina, ejecutar Cloud9 para editar el código e iniciar el recurso compartido de red para acceder a los archivos en el ROV.
+\item[\textcolor{orange}{\textbullet}]\textbf{Software}: puede determinar la versión de su software así como la actualización automática cuando esté conectado a Internet (software 30.0.3 y superior).
+\end{itemize}
+
+\subsection{Mantenimiento}
+\label{subsec:mantenimiento}
+
+\subsubsection{Enjuagar}
+\label{subsubsec:enjuagar}
+Una vez que hayamos utilizado el robot, debemos rociarlo en agua dulce después de cada inmersión, ya que es una excelente manera de mantenerlo limpio y libre de desechos y minerales.
+\\Cuanto más limpia sea el agua, mejor. En orden ascendente sería:
+\begin{itemize}
+\item El agua desionizada como mejor opción.
+\item El agua destilada.
+\item El agua dulce del grifo en tercer lugar.
+\end{itemize} 
+  
+\subsubsection{Mantenimiento de los motores}
+\label{subsubsec:mantenimiento}
+La parte más importante del mantenimiento posterior a la inmersión es limpiar los motores. Los imanes expuestos tienden a corroerse fácilmente. Los rodamientos también deben lubricarse y protegerse del óxido.
+\begin{itemize}
+\item Primero, enjuagamos los motores con agua fría.
+\item Secaremos bien los motores con aire comprimido (si está disponible).
+\item Inmediatamente después, volveremos a aplicar la lubricación con spray de silicona. Moveremos los motores con las manos durante algunas rotaciones para asegurarse de que los quede todo bien lubricados. Esto debe hacerse antes y después de cada inmersión.
+\end{itemize}
+  
+\subsubsection{Secado}
+\label{subsubsec:secado}
+Debemos permitir que el OpenROV se seque completamente antes de guardarlo.
+Usar aire comprimido o enlatado puede ayudar.
+\\La apertura de los tubos de la batería y el tubo principal permitirá que el aire circule y secará la humedad que pueda haberse acumulado durante la inmersión.
+  
+\subsubsection{Carga de baterías}
+\label{subsubsec:bateria}
+Mantener las baterías en grupos de seis permitirá evitar problemas. Cargaremos los seis a la vez, y se usará todo el grupo por cada inmersión.
+\\Si alguna de las tres baterías en un tubo tiene un rendimiento bajo, se puede dañar las células. Para evitar esto, podemos comprobar las baterías con un polímetro después de que se hayan cargado para asegurarse de que se carguen completamente.
+\\Esto también permitirá saber cuándo es el momento de reemplazarlos, ya que eventualmente perderán su capacidad de cargar y descargar.
+\\Mantener las baterías secas siempre que sea posible y sin corrosión.
+
+
+\subsection{Problemas}
+\label{subsec:problemas}
+\subsubsection{Vaho}
+\label{subsubsec:vaho}
+Que el tubo principal se empañe es un problema común.
+
+Algunas veces esta es la indicación de una fuga. Si se nota que el vaho aparece repentinamente o durante una inmersión, lo mejor será salir a la superficie y verificar si hay fugas.
+
+El vaho se puede solucionar colocando una nueva bolsa de desecante en el tubo principal unas 1-2 horas antes de la inmersión.
+
+Los productos químicos anti-vaho también pueden ayudar. Estos están disponibles en cualquier tienda de buceo.
+
+\subsubsection{Video}
+\label{subsubsec:video}
+Muchos problemas de video pueden ocurrir durante su inmersión.
+
+El más común es un corte o "apagón" del video. Esto se puede solucionar actualizando periódicamente la imagen del software en el BeagleBone.
+
+\subsubsection{Control u otros problemas misceláneos}
+\label{subsubsec:miscelaneos}
+Mientras está en el campo, es posible que necesite restablecer el OpenROV para remediar los errores extraños y aleatorios. Para este procedimiento se debe desenchufar el cable USB de la caja del PLC y volver a enchufarlo. Este método también funciona para otros problemas de control.
+
+\subsubsection{Pérdida aleatoria de energía de la batería}
+\label{subsubsec:perdida_bateria}
+A menudo, cuando hay problemas de energía, primeramente habrá que asegúrese de que todas las baterías estén en contacto entre sí y, si corresponde, el adaptador de la batería y los terminales positivo y negativo en el tubo de la batería.
+
+Verificar el voltaje a través de los pines correspondientes del conector DB-25. Para las baterías recomendadas, esto debería ser alrededor de 9V. Se comprobara la batería positivo y negativo de los cables: Naranja / Negro-Naranja y Verde claro / Negro-Verde claro. Un pequeño trozo de alambre puede ayudar a establecer una buena conexión con el polímetro.
+
+Además, puede verificar cada batería individual para asegurarse de que tenga el voltaje correcto.
+
+Hay que asegurarse de mover los cables alrededor o sacudir los tubos de la batería para identificar cualquier discontinuidad.
+
+Se puede quitar la envoltura de plástico en la parte inferior de las baterías para ayudar en un buen contacto.
+
+\begin{figure} [hbtp]
+\begin{center}
+  \includegraphics[width=12cm]{img/cap3/3_5/DB-25}
+\end{center}
+\caption{DB-25}
+\label{fig:db25}
+\end{figure}
+
+\subsubsection{Enredos}
+\label{subsubsec:enredos}
+Los enredos es un problema muy comun que se encuentran en el este campo.
+
+El mejor remedio es evitar la situación en absoluto. Esto se puede hacer evitando bucear en vegetación pesada.
+
+A veces puede ser necesario tirar el OpenROV a la superficie con la correa. La correa es fuerte y puede manejar una gran cantidad de fuerza.
+
+Hay que tener en cuenta que si se tira del OpenROV puede enredar el ROV, que es mucho más grande y difícil de desenredar. Si este es el caso, conduciremos el robot hasta nosotros o al menos hacia la superficie donde se puede recuperar. Luego, desconectaremos el cable USB del PLC y se tirará del ROV.
+
+Siempre podemos cortar y volver a soldar la correa utilizando un tubo termorretráctil si fuese necesario.
+
+\subsubsection{Inundación del tubo principal}
+\label{subsubsec:inundacion_tubo}
+Este puede ser el mayor problema al que nos podemos enfrentar, por ello, lo primero que habría que realizar sería desconectar la alimentación del ROV (esto evitará que la electrólisis corroa los componentes electrónicos). Para hacer esto, desenchufamos el cable USB y retiraremos las baterías.
+
+Si el agua que inundó el tubo no era agua dulce, enjuagamos los componentes electrónicos que se mojaron en agua dulce (desionizada> destilada> agua del grifo) para diluir y eliminar los minerales del área que se inundó.
+
+Quitaremos los componentes electrónicos para exponer tantas superficies como sea posible.
+
+Se enjuagará las áreas afectadas una vez más.
+
+Secaremos bien cada una de las piezas de la electrónica. El aire comprimido puede ayudar.
+
+Se colocaran todos los componentes electrónicos afectados en un lugar seco. Es útil tener una bolsa de llena de arroz o desecante.
+
+Cuando vuelva a armar todo, inspeccionamos para detectar corrosión. Si vemos alguno, a menudo se puede quitar con un cepillo de dientes. La corrosión no significa necesariamente un fallo, pero es bueno eliminar lo que se pueda.

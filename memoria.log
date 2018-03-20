@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.27)  1 MAR 2018 12:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.2.27)  20 MAR 2018 12:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,6 +689,9 @@ LaTeX Warning: Label `lst:launch' multiply defined.
 
 LaTeX Warning: Label `fig:rostopic_info' multiply defined.
 
+
+LaTeX Warning: Label `fig:motores' multiply defined.
+
 )
 \openout1 = `memoria.aux'.
 
@@ -862,8 +865,8 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@toc=\write4
 \openout4 = `memoria.toc'.
 
-LaTeX Info: Redefining \. on input line 177.
-LaTeX Info: Redefining \% on input line 177.
+LaTeX Info: Redefining \. on input line 175.
+LaTeX Info: Redefining \% on input line 175.
  [2] (./memoria.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -873,30 +876,38 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lof=\write5
 \openout5 = `memoria.lof'.
 
-LaTeX Info: Redefining \. on input line 182.
-LaTeX Info: Redefining \% on input line 182.
+LaTeX Info: Redefining \. on input line 180.
+LaTeX Info: Redefining \% on input line 180.
  [4] (./cap1.tex
 Cap\'{\i }tulo 1.
 
-Underfull \hbox (badness 2103) in paragraph at lines 9--10
-[]\OT1/cmr/m/n/12 Tradicionalmente las apli-ca-cio-nes de la rob^^Soti-ca es-ta
--ban cen-tra-das en los
+Underfull \hbox (badness 1325) in paragraph at lines 12--13
+[]\OT1/cmr/m/n/12 A prin-ci-pios de los a~nos se-sen-ta se in-tro-du-cen en la 
+in-dus-tria los ro-bots
  []
 
 
-Underfull \vbox (badness 1314) has occurred while \output is active []
+Underfull \hbox (badness 2875) in paragraph at lines 12--13
+\OT1/cmr/m/n/12 ma-ni-pu-la-do-res co-mo un ele-men-to m^^Sas del pro-ce-so pro
+-duc-ti-vo. Los tra-ba-jos
+ []
 
- [1
+
+Underfull \hbox (badness 1092) in paragraph at lines 12--13
+\OT1/cmr/m/n/12 desa-rro-lla-dos por los ro-bots ma-ni-pu-la-do-res con-sist^^S
+^^Pan fre-cuen-te-men-te en ta-reas
+ []
+
+[1
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 27.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
 LaTeX Info: Redefining \. on input line 43.
 LaTeX Info: Redefining \% on input line 43.
  [2]
@@ -904,35 +915,30 @@ LaTeX Info: Redefining \% on input line 43.
 File: img/cap1/submarino1.jpg Graphic file (type jpg)
 
 <use img/cap1/submarino1.jpg>
-Package pdftex.def Info: img/cap1/submarino1.jpg used on input line 71.
+Package pdftex.def Info: img/cap1/submarino1.jpg used on input line 74.
 (pdftex.def)             Requested size: 170.71335pt x 142.26324pt.
 
 <img/cap1/submarino2.jpeg, id=48, 468.75125pt x 304.13625pt>
 File: img/cap1/submarino2.jpeg Graphic file (type jpg)
 
 <use img/cap1/submarino2.jpeg>
-Package pdftex.def Info: img/cap1/submarino2.jpeg used on input line 72.
+Package pdftex.def Info: img/cap1/submarino2.jpeg used on input line 75.
 (pdftex.def)             Requested size: 170.71011pt x 142.2665pt.
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
  [3]
-Underfull \hbox (badness 1297) in paragraph at lines 85--86
-\OT1/cmr/m/n/12 ha des-cri-to an-te-rior-men-te y ros-pkg, una sui-te de pa-que
--tes apor-ta-dos por la
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
- [4 <./img/cap1/submarino1.jpg> <./img/cap1/submarino2.jpeg>] (./cap2.tex
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+ [4 <./img/cap1/submarino1.jpg> <./img/cap1/submarino2.jpeg>]) (./cap2.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-
-[5]
+ [5]
 Cap\'{\i }tulo 2.
 [6
 
-] <img/cap2/Waterfall_model.png, id=65, 351.3125pt x 263.98625pt>
+] <img/cap2/Waterfall_model.png, id=63, 351.3125pt x 263.98625pt>
 File: img/cap2/Waterfall_model.png Graphic file (type png)
 
 <use img/cap2/Waterfall_model.png>
@@ -962,44 +968,33 @@ Package pdftex.def Info: img/cap3/ROV_trasera.jpg used on input line 21.
  [9
 
 ]
-Underfull \hbox (badness 1342) in paragraph at lines 39--40
-[]\OT1/cmr/bx/n/12 Velocidades Li-nea-les \OT1/cmr/m/n/12 En con-jun-to con la 
-es-ti-ma-ci^^Son de ve-lo-ci-dad por
- []
-
-LaTeX Info: Redefining \. on input line 40.
-LaTeX Info: Redefining \% on input line 40.
-[10 <./img/cap3/ROV_frontal.jpg> <./img/cap3/ROV_trasera.jpg>]
-Underfull \hbox (badness 1308) in paragraph at lines 40--41
-[]\OT1/cmr/bx/n/12 Orientaci^^Son con res-pec-to al nor-te magn^^Seti-co \OT1/c
-mr/m/n/12 Per-mi-te ob-te-ner una
- []
-
-
-Underfull \hbox (badness 1902) in paragraph at lines 53--54
+Underfull \hbox (badness 1902) in paragraph at lines 37--38
 []\OT1/cmr/m/n/12 Las he-rra-mien-tas ne-ce-sa-rias son: guan-tes, ga-fas, c^^S
 uter, ce-men-to acr^^S^^Pli-co y
  []
 
-<img/cap3/3_3/piezas.jpg, id=83, 142.6128pt x 106.9596pt>
+<img/cap3/3_3/piezas.jpg, id=80, 142.6128pt x 106.9596pt>
 File: img/cap3/3_3/piezas.jpg Graphic file (type jpg)
 
 <use img/cap3/3_3/piezas.jpg>
-Package pdftex.def Info: img/cap3/3_3/piezas.jpg used on input line 57.
+Package pdftex.def Info: img/cap3/3_3/piezas.jpg used on input line 41.
 (pdftex.def)             Requested size: 227.62204pt x 170.71938pt.
-
+LaTeX Info: Redefining \. on input line 50.
+LaTeX Info: Redefining \% on input line 50.
+ [10 <./img/cap3/ROV_frontal.jpg> <./img/cap3/ROV_trasera.jpg> <./img/cap3/3_3/
+piezas.jpg>]
 <img/cap3/3_3/chasis_ppal.jpg, id=84, 142.6128pt x 106.9596pt>
 File: img/cap3/3_3/chasis_ppal.jpg Graphic file (type jpg)
 
 <use img/cap3/3_3/chasis_ppal.jpg>
-Package pdftex.def Info: img/cap3/3_3/chasis_ppal.jpg used on input line 69.
+Package pdftex.def Info: img/cap3/3_3/chasis_ppal.jpg used on input line 53.
 (pdftex.def)             Requested size: 227.62204pt x 170.71938pt.
 
 <img/cap3/3_3/chasis_camara.jpg, id=85, 142.6128pt x 106.9596pt>
 File: img/cap3/3_3/chasis_camara.jpg Graphic file (type jpg)
 
 <use img/cap3/3_3/chasis_camara.jpg>
-Package pdftex.def Info: img/cap3/3_3/chasis_camara.jpg used on input line 79.
+Package pdftex.def Info: img/cap3/3_3/chasis_camara.jpg used on input line 63.
 (pdftex.def)             Requested size: 170.71884pt x 142.27077pt.
 
 <img/cap3/3_3/chasis_electronico.jpg, id=86, 385.44pt x 289.08pt>
@@ -1007,80 +1002,73 @@ File: img/cap3/3_3/chasis_electronico.jpg Graphic file (type jpg)
 
 <use img/cap3/3_3/chasis_electronico.jpg>
 Package pdftex.def Info: img/cap3/3_3/chasis_electronico.jpg used on input line
- 80.
+ 64.
 (pdftex.def)             Requested size: 170.71158pt x 142.26357pt.
-LaTeX Info: Redefining \. on input line 84.
-LaTeX Info: Redefining \% on input line 84.
- [11 <./img/cap3/3_3/piezas.jpg>]
-LaTeX Info: Redefining \. on input line 96.
-LaTeX Info: Redefining \% on input line 96.
-
-[12 <./img/cap3/3_3/chasis_ppal.jpg> <./img/cap3/3_3/chasis_camara.jpg> <./img/
-cap3/3_3/chasis_electronico.jpg>]
-<img/cap3/3_3/tapa_inf_desmontada.jpg, id=93, 3982.88pt x 2987.16pt>
+LaTeX Info: Redefining \. on input line 77.
+LaTeX Info: Redefining \% on input line 77.
+ [11 <./img/cap3/3_3/chasis_ppal.jpg> <./img/cap3/3_3/chasis_camara.jpg> <./img
+/cap3/3_3/chasis_electronico.jpg>]
+<img/cap3/3_3/tapa_inf_desmontada.jpg, id=90, 3982.88pt x 2987.16pt>
 File: img/cap3/3_3/tapa_inf_desmontada.jpg Graphic file (type jpg)
 
 <use img/cap3/3_3/tapa_inf_desmontada.jpg>
 Package pdftex.def Info: img/cap3/3_3/tapa_inf_desmontada.jpg used on input lin
-e 99.
+e 83.
 (pdftex.def)             Requested size: 170.71353pt x 142.25621pt.
 
-<img/cap3/3_3/tapa_inf.jpeg, id=94, 2210.2575pt x 2010.76219pt>
+<img/cap3/3_3/tapa_inf.jpeg, id=91, 2210.2575pt x 2010.76219pt>
 File: img/cap3/3_3/tapa_inf.jpeg Graphic file (type jpg)
 
 <use img/cap3/3_3/tapa_inf.jpeg>
-Package pdftex.def Info: img/cap3/3_3/tapa_inf.jpeg used on input line 100.
+Package pdftex.def Info: img/cap3/3_3/tapa_inf.jpeg used on input line 84.
 (pdftex.def)             Requested size: 170.68613pt x 142.24045pt.
-
+LaTeX Info: Redefining \. on input line 104.
+LaTeX Info: Redefining \% on input line 104.
+ [12 <./img/cap3/3_3/tapa_inf_desmontada.jpg> <./img/cap3/3_3/tapa_inf.jpeg>]
 <img/cap3/3_3/electronica.jpg, id=95, 385.44pt x 289.08pt>
 File: img/cap3/3_3/electronica.jpg Graphic file (type jpg)
 
 <use img/cap3/3_3/electronica.jpg>
-Package pdftex.def Info: img/cap3/3_3/electronica.jpg used on input line 124.
+Package pdftex.def Info: img/cap3/3_3/electronica.jpg used on input line 108.
 (pdftex.def)             Requested size: 227.62204pt x 170.71451pt.
-LaTeX Info: Redefining \. on input line 132.
-LaTeX Info: Redefining \% on input line 132.
- [13 <./img/cap3/3_3/tapa_inf_desmontada.jpg> <./img/cap3/3_3/tapa_inf.jpeg>]
-<img/cap3/3_3/electronica_camara.jpg, id=99, 142.6128pt x 106.9596pt>
+
+<img/cap3/3_3/electronica_camara.jpg, id=96, 142.6128pt x 106.9596pt>
 File: img/cap3/3_3/electronica_camara.jpg Graphic file (type jpg)
 
 <use img/cap3/3_3/electronica_camara.jpg>
 Package pdftex.def Info: img/cap3/3_3/electronica_camara.jpg used on input line
- 136.
+ 120.
 (pdftex.def)             Requested size: 227.62204pt x 170.71938pt.
-
-Underfull \vbox (badness 1655) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 146.
-LaTeX Info: Redefining \% on input line 146.
- [14 <./img/cap3/3_3/electronica.jpg> <./img/cap3/3_3/electronica_camara.jpg>]
-<img/cap3/3_3/soldar.jpg, id=103, 2232.84187pt x 2708.61937pt>
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
+ [13 <./img/cap3/3_3/electronica.jpg> <./img/cap3/3_3/electronica_camara.jpg>]
+<img/cap3/3_3/soldar.jpg, id=100, 2232.84187pt x 2708.61937pt>
 File: img/cap3/3_3/soldar.jpg Graphic file (type jpg)
 
 <use img/cap3/3_3/soldar.jpg>
-Package pdftex.def Info: img/cap3/3_3/soldar.jpg used on input line 159.
-(pdftex.def)             Requested size: 227.62204pt x 276.0854pt.
-LaTeX Info: Redefining \. on input line 169.
-LaTeX Info: Redefining \% on input line 169.
- [15 <./img/cap3/3_3/soldar.jpg>]
-<img/cap3/3_4/plc_externo.jpg, id=108, 594.22pt x 445.665pt>
+Package pdftex.def Info: img/cap3/3_3/soldar.jpg used on input line 145.
+(pdftex.def)             Requested size: 142.26378pt x 172.55338pt.
+LaTeX Info: Redefining \. on input line 153.
+LaTeX Info: Redefining \% on input line 153.
+ [14 <./img/cap3/3_3/soldar.jpg>]
+<img/cap3/3_4/plc_externo.jpg, id=104, 594.22pt x 445.665pt>
 File: img/cap3/3_4/plc_externo.jpg Graphic file (type jpg)
 
 <use img/cap3/3_4/plc_externo.jpg>
-Package pdftex.def Info: img/cap3/3_4/plc_externo.jpg used on input line 196.
+Package pdftex.def Info: img/cap3/3_4/plc_externo.jpg used on input line 184.
 (pdftex.def)             Requested size: 227.62204pt x 170.71451pt.
-LaTeX Info: Redefining \. on input line 209.
-LaTeX Info: Redefining \% on input line 209.
- [16]
-<img/cap3/3_4/BBB.jpg, id=112, 1606.0pt x 1204.5pt>
+LaTeX Info: Redefining \. on input line 192.
+LaTeX Info: Redefining \% on input line 192.
+ [15]
+<img/cap3/3_4/BBB.jpg, id=109, 1606.0pt x 1204.5pt>
 File: img/cap3/3_4/BBB.jpg Graphic file (type jpg)
  <use img/cap3/3_4/BBB.jpg>
-Package pdftex.def Info: img/cap3/3_4/BBB.jpg used on input line 219.
+Package pdftex.def Info: img/cap3/3_4/BBB.jpg used on input line 207.
 (pdftex.def)             Requested size: 227.62204pt x 170.70569pt.
-LaTeX Info: Redefining \. on input line 226.
-LaTeX Info: Redefining \% on input line 226.
+LaTeX Info: Redefining \. on input line 211.
+LaTeX Info: Redefining \% on input line 211.
 
-[17 <./img/cap3/3_4/plc_externo.jpg>]
+[16 <./img/cap3/3_4/plc_externo.jpg>]
 
 ! Package inputenc Error: Unicode char �\lst@EC�\lst@EC� (U+282F52)
 (inputenc)                not set up for use with LaTeX.
@@ -1089,7 +1077,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.232 Red y centro compartido → 
+l.220 Red y centro compartido → 
                                   (click) cambiar configuración de adaptado...
 
 Your command was ignored.
@@ -1104,7 +1092,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.232 ...rtido → (click) cambiar configuración 
+l.220 ...rtido → (click) cambiar configuración 
                                                   de adaptador → (click) e...
 
 Your command was ignored.
@@ -1119,7 +1107,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.232 ... cambiar configuración de adaptador → 
+l.220 ... cambiar configuración de adaptador → 
                                                   (click) ethernet.
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1133,7 +1121,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.233 Propiedades →(
+l.221 Propiedades →(
                       click) usar la siguiente dirección IP
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1147,7 +1135,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.233 ... →(click) usar la siguiente dirección 
+l.221 ... →(click) usar la siguiente dirección 
                                                   IP
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1161,175 +1149,177 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234 Insertarla dirección 
+l.222 Insertarla dirección 
                             IP 192.168.254.2
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<img/cap3/3_4/conexion.jpg, id=116, 803.0pt x 602.25pt>
+<img/cap3/3_4/conexion.jpg, id=113, 803.0pt x 602.25pt>
 File: img/cap3/3_4/conexion.jpg Graphic file (type jpg)
 
 <use img/cap3/3_4/conexion.jpg>
-Package pdftex.def Info: img/cap3/3_4/conexion.jpg used on input line 239.
-(pdftex.def)             Requested size: 227.62204pt x 170.71487pt.
-LaTeX Info: Redefining \. on input line 251.
-LaTeX Info: Redefining \% on input line 251.
- [18 <./img/cap3/3_4/BBB.jpg> <./img/cap3/3_4/conexion.jpg>] <img/cap3/3_4/firm
-ware.jpg, id=121, 803.0pt x 602.25pt>
+Package pdftex.def Info: img/cap3/3_4/conexion.jpg used on input line 227.
+(pdftex.def)             Requested size: 170.71652pt x 128.03845pt.
+LaTeX Info: Redefining \. on input line 232.
+LaTeX Info: Redefining \% on input line 232.
+ [17 <./img/cap3/3_4/BBB.jpg> <./img/cap3/3_4/conexion.jpg>] <img/cap3/3_4/firm
+ware.jpg, id=118, 803.0pt x 602.25pt>
 File: img/cap3/3_4/firmware.jpg Graphic file (type jpg)
 
 <use img/cap3/3_4/firmware.jpg>
-Package pdftex.def Info: img/cap3/3_4/firmware.jpg used on input line 287.
+Package pdftex.def Info: img/cap3/3_4/firmware.jpg used on input line 275.
 (pdftex.def)             Requested size: 227.62204pt x 170.71487pt.
-
+LaTeX Info: Redefining \. on input line 279.
+LaTeX Info: Redefining \% on input line 279.
+ [18]
 <img/cap3/3_4/foco.jpg, id=122, 3982.88pt x 2987.16pt>
 File: img/cap3/3_4/foco.jpg Graphic file (type jpg)
 
 <use img/cap3/3_4/foco.jpg>
-Package pdftex.def Info: img/cap3/3_4/foco.jpg used on input line 304.
+Package pdftex.def Info: img/cap3/3_4/foco.jpg used on input line 292.
 (pdftex.def)             Requested size: 227.62204pt x 170.69835pt.
-LaTeX Info: Redefining \. on input line 309.
-LaTeX Info: Redefining \% on input line 309.
- [19]
-<img/cap3/3_4/laseres.jpg, id=126, 142.6128pt x 106.9596pt>
+
+<img/cap3/3_4/laseres.jpg, id=123, 142.6128pt x 106.9596pt>
 File: img/cap3/3_4/laseres.jpg Graphic file (type jpg)
 
 <use img/cap3/3_4/laseres.jpg>
-Package pdftex.def Info: img/cap3/3_4/laseres.jpg used on input line 319.
+Package pdftex.def Info: img/cap3/3_4/laseres.jpg used on input line 307.
 (pdftex.def)             Requested size: 170.71884pt x 142.27077pt.
 
-<img/cap3/3_4/laser_camara.jpg, id=127, 142.6128pt x 106.9596pt>
+<img/cap3/3_4/laser_camara.jpg, id=124, 142.6128pt x 106.9596pt>
 File: img/cap3/3_4/laser_camara.jpg Graphic file (type jpg)
 
 <use img/cap3/3_4/laser_camara.jpg>
-Package pdftex.def Info: img/cap3/3_4/laser_camara.jpg used on input line 320.
+Package pdftex.def Info: img/cap3/3_4/laser_camara.jpg used on input line 308.
 (pdftex.def)             Requested size: 170.71884pt x 142.27077pt.
-LaTeX Info: Redefining \. on input line 325.
-LaTeX Info: Redefining \% on input line 325.
- [20 <./img/cap3/3_4/firmware.jpg> <./img/cap3/3_4/foco.jpg>] <img/cap3/3_4/mot
-ores.jpg, id=131, 594.22pt x 445.665pt>
+LaTeX Info: Redefining \. on input line 313.
+LaTeX Info: Redefining \% on input line 313.
+ [19 <./img/cap3/3_4/firmware.jpg> <./img/cap3/3_4/foco.jpg>] <img/cap3/3_4/mot
+ores.jpg, id=128, 594.22pt x 445.665pt>
 File: img/cap3/3_4/motores.jpg Graphic file (type jpg)
 
 <use img/cap3/3_4/motores.jpg>
-Package pdftex.def Info: img/cap3/3_4/motores.jpg used on input line 333.
+Package pdftex.def Info: img/cap3/3_4/motores.jpg used on input line 321.
 (pdftex.def)             Requested size: 227.62204pt x 170.71451pt.
-
+LaTeX Info: Redefining \. on input line 329.
+LaTeX Info: Redefining \% on input line 329.
+ [20 <./img/cap3/3_4/laseres.jpg> <./img/cap3/3_4/laser_camara.jpg> <./img/cap3
+/3_4/motores.jpg>]
 <img/cap3/3_4/tubo.jpg, id=132, 594.22pt x 445.665pt>
 File: img/cap3/3_4/tubo.jpg Graphic file (type jpg)
 
 <use img/cap3/3_4/tubo.jpg>
-Package pdftex.def Info: img/cap3/3_4/tubo.jpg used on input line 348.
+Package pdftex.def Info: img/cap3/3_4/tubo.jpg used on input line 336.
 (pdftex.def)             Requested size: 227.62204pt x 170.71451pt.
-LaTeX Info: Redefining \. on input line 353.
-LaTeX Info: Redefining \% on input line 353.
- [21 <./img/cap3/3_4/laseres.jpg> <./img/cap3/3_4/laser_camara.jpg> <./img/cap3
-/3_4/motores.jpg>]
-<img/cap3/3_4/tapa_superior.jpg, id=137, 142.6128pt x 106.9596pt>
+
+<img/cap3/3_4/tapa_superior.jpg, id=133, 142.6128pt x 106.9596pt>
 File: img/cap3/3_4/tapa_superior.jpg Graphic file (type jpg)
 
 <use img/cap3/3_4/tapa_superior.jpg>
-Package pdftex.def Info: img/cap3/3_4/tapa_superior.jpg used on input line 361.
+Package pdftex.def Info: img/cap3/3_4/tapa_superior.jpg used on input line 349.
 
 (pdftex.def)             Requested size: 227.62204pt x 170.71938pt.
-LaTeX Info: Redefining \. on input line 371.
-LaTeX Info: Redefining \% on input line 371.
- [22 <./img/cap3/3_4/tubo.jpg> <./img/cap3/3_4/tapa_superior.jpg>]
-<img/cap3/3_5/cockpit1.jpeg, id=141, 1017.04968pt x 547.2947pt>
+LaTeX Info: Redefining \. on input line 355.
+LaTeX Info: Redefining \% on input line 355.
+ [21 <./img/cap3/3_4/tubo.jpg>]
+<img/cap3/3_5/cockpit1.jpeg, id=138, 1017.04968pt x 547.2947pt>
 File: img/cap3/3_5/cockpit1.jpeg Graphic file (type jpg)
 
 <use img/cap3/3_5/cockpit1.jpeg>
-Package pdftex.def Info: img/cap3/3_5/cockpit1.jpeg used on input line 374.
+Package pdftex.def Info: img/cap3/3_5/cockpit1.jpeg used on input line 363.
 (pdftex.def)             Requested size: 426.79134pt x 229.66177pt.
-LaTeX Info: Redefining \. on input line 388.
-LaTeX Info: Redefining \% on input line 388.
- [23 <./img/cap3/3_5/cockpit1.jpeg>]
-<img/cap3/3_5/cockpit2.jpg, id=145, 1027.58907pt x 548.0475pt>
+LaTeX Info: Redefining \. on input line 374.
+LaTeX Info: Redefining \% on input line 374.
+ [22 <./img/cap3/3_4/tapa_superior.jpg> <./img/cap3/3_5/cockpit1.jpeg>]
+<img/cap3/3_5/cockpit2.jpg, id=142, 1027.58907pt x 548.0475pt>
 File: img/cap3/3_5/cockpit2.jpg Graphic file (type jpg)
 
 <use img/cap3/3_5/cockpit2.jpg>
-Package pdftex.def Info: img/cap3/3_5/cockpit2.jpg used on input line 391.
+Package pdftex.def Info: img/cap3/3_5/cockpit2.jpg used on input line 379.
 (pdftex.def)             Requested size: 341.43306pt x 182.09389pt.
 
-<img/cap3/3_5/cockpit3.jpeg, id=146, 1017.04968pt x 547.2947pt>
+<img/cap3/3_5/cockpit3.jpeg, id=143, 1017.04968pt x 547.2947pt>
 File: img/cap3/3_5/cockpit3.jpeg Graphic file (type jpg)
 
 <use img/cap3/3_5/cockpit3.jpeg>
-Package pdftex.def Info: img/cap3/3_5/cockpit3.jpeg used on input line 404.
+Package pdftex.def Info: img/cap3/3_5/cockpit3.jpeg used on input line 392.
 (pdftex.def)             Requested size: 341.43306pt x 183.73108pt.
-LaTeX Info: Redefining \. on input line 416.
-LaTeX Info: Redefining \% on input line 416.
- [24 <./img/cap3/3_5/cockpit2.jpg> <./img/cap3/3_5/cockpit3.jpeg>]
-<img/cap3/3_5/cockpit4.jpeg, id=150, 1017.04968pt x 547.2947pt>
+LaTeX Info: Redefining \. on input line 404.
+LaTeX Info: Redefining \% on input line 404.
+ [23 <./img/cap3/3_5/cockpit2.jpg> <./img/cap3/3_5/cockpit3.jpeg>]
+<img/cap3/3_5/cockpit4.jpeg, id=147, 1017.04968pt x 547.2947pt>
 File: img/cap3/3_5/cockpit4.jpeg Graphic file (type jpg)
 
 <use img/cap3/3_5/cockpit4.jpeg>
-Package pdftex.def Info: img/cap3/3_5/cockpit4.jpeg used on input line 419.
+Package pdftex.def Info: img/cap3/3_5/cockpit4.jpeg used on input line 407.
 (pdftex.def)             Requested size: 341.43306pt x 183.73108pt.
 
-<img/cap3/3_5/cockpit5.jpeg, id=151, 1017.04968pt x 547.2947pt>
+<img/cap3/3_5/cockpit5.jpeg, id=148, 1017.04968pt x 547.2947pt>
 File: img/cap3/3_5/cockpit5.jpeg Graphic file (type jpg)
 
 <use img/cap3/3_5/cockpit5.jpeg>
-Package pdftex.def Info: img/cap3/3_5/cockpit5.jpeg used on input line 433.
+Package pdftex.def Info: img/cap3/3_5/cockpit5.jpeg used on input line 421.
 (pdftex.def)             Requested size: 341.43306pt x 183.73108pt.
 
-Underfull \hbox (badness 1509) in paragraph at lines 440--441
+Underfull \hbox (badness 1509) in paragraph at lines 428--429
 []\OT1/cmr/m/n/12 En la par-te de arri-ba se pue-den ver los in-di-ca-do-res de
  pro-fun-di-dad y
  []
 
-LaTeX Info: Redefining \. on input line 441.
-LaTeX Info: Redefining \% on input line 441.
-[25 <./img/cap3/3_5/cockpit4.jpeg> <./img/cap3/3_5/cockpit5.jpeg>]
-<img/cap3/3_5/setting.jpg, id=155, 1028.34187pt x 578.16pt>
+LaTeX Info: Redefining \. on input line 429.
+LaTeX Info: Redefining \% on input line 429.
+[24 <./img/cap3/3_5/cockpit4.jpeg> <./img/cap3/3_5/cockpit5.jpeg>]
+<img/cap3/3_5/setting.jpg, id=152, 1028.34187pt x 578.16pt>
 File: img/cap3/3_5/setting.jpg Graphic file (type jpg)
 
 <use img/cap3/3_5/setting.jpg>
-Package pdftex.def Info: img/cap3/3_5/setting.jpg used on input line 445.
+Package pdftex.def Info: img/cap3/3_5/setting.jpg used on input line 433.
 (pdftex.def)             Requested size: 341.43306pt x 191.9667pt.
 
-Underfull \hbox (badness 3428) in paragraph at lines 454--455
+Underfull \hbox (badness 3428) in paragraph at lines 442--443
 []\OT1/cmr/m/n/12 Agregar com-ple-men-tos nue-vos: es-to es pa-ra usua-rios que
  desean usar
  []
 
-<img/cap3/3_5/diagnostico.jpg, id=156, 1028.34187pt x 578.16pt>
+<img/cap3/3_5/diagnostico.jpg, id=153, 1028.34187pt x 578.16pt>
 File: img/cap3/3_5/diagnostico.jpg Graphic file (type jpg)
 
 <use img/cap3/3_5/diagnostico.jpg>
-Package pdftex.def Info: img/cap3/3_5/diagnostico.jpg used on input line 463.
+Package pdftex.def Info: img/cap3/3_5/diagnostico.jpg used on input line 451.
 (pdftex.def)             Requested size: 341.43306pt x 191.9667pt.
-LaTeX Info: Redefining \. on input line 472.
-LaTeX Info: Redefining \% on input line 472.
- [26 <./img/cap3/3_5/setting.jpg>]
-<img/cap3/3_5/services.jpeg, id=160, 1017.04968pt x 560.8453pt>
+LaTeX Info: Redefining \. on input line 460.
+LaTeX Info: Redefining \% on input line 460.
+ [25 <./img/cap3/3_5/setting.jpg>]
+<img/cap3/3_5/services.jpeg, id=157, 1017.04968pt x 560.8453pt>
 File: img/cap3/3_5/services.jpeg Graphic file (type jpg)
 
 <use img/cap3/3_5/services.jpeg>
-Package pdftex.def Info: img/cap3/3_5/services.jpeg used on input line 478.
+Package pdftex.def Info: img/cap3/3_5/services.jpeg used on input line 466.
 (pdftex.def)             Requested size: 341.43306pt x 188.28014pt.
-LaTeX Info: Redefining \. on input line 489.
-LaTeX Info: Redefining \% on input line 489.
- [27 <./img/cap3/3_5/diagnostico.jpg> <./img/cap3/3_5/services.jpeg>]
-LaTeX Info: Redefining \. on input line 526.
-LaTeX Info: Redefining \% on input line 526.
- [28]
-Underfull \vbox (badness 2080) has occurred while \output is active []
+LaTeX Info: Redefining \. on input line 477.
+LaTeX Info: Redefining \% on input line 477.
+ [26 <./img/cap3/3_5/diagnostico.jpg> <./img/cap3/3_5/services.jpeg>]
+LaTeX Info: Redefining \. on input line 510.
+LaTeX Info: Redefining \% on input line 510.
+ [27]
+Underfull \hbox (badness 2922) in paragraph at lines 531--532
+[]\OT1/cmr/m/n/12 Los pro-duc-tos qu^^S^^Pmi-cos anti-vaho tam-bi^^Sen pue-den 
+ayu-dar. Es-tos est^^San
+ []
 
-LaTeX Info: Redefining \. on input line 554.
-LaTeX Info: Redefining \% on input line 554.
- [29]
-<img/cap3/3_5/DB-25.jpg, id=171, 803.0pt x 602.25pt>
+LaTeX Info: Redefining \. on input line 543.
+LaTeX Info: Redefining \% on input line 543.
+[28] <img/cap3/3_5/DB-25.jpg, id=168, 803.0pt x 602.25pt>
 File: img/cap3/3_5/DB-25.jpg Graphic file (type jpg)
 
 <use img/cap3/3_5/DB-25.jpg>
-Package pdftex.def Info: img/cap3/3_5/DB-25.jpg used on input line 564.
+Package pdftex.def Info: img/cap3/3_5/DB-25.jpg used on input line 557.
 (pdftex.def)             Requested size: 341.43306pt x 256.07692pt.
-LaTeX Info: Redefining \. on input line 576.
-LaTeX Info: Redefining \% on input line 576.
- [30 <./img/cap3/3_5/DB-25.jpg>]
-Underfull \hbox (badness 2334) in paragraph at lines 580--581
+LaTeX Info: Redefining \. on input line 563.
+LaTeX Info: Redefining \% on input line 563.
+ [29 <./img/cap3/3_5/DB-25.jpg>]
+Underfull \hbox (badness 1237) in paragraph at lines 575--576
 []\OT1/cmr/m/n/12 Siempre po-de-mos cor-tar y vol-ver a sol-dar la co-rrea uti-
 li-zan-do un tu-bo
  []
@@ -1337,111 +1327,157 @@ li-zan-do un tu-bo
 ) (./cap4.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [31]
+ [30]
 Cap\'{\i }tulo 4.
-<img/cap4/conect_ros_rov.jpeg, id=178, 644.4075pt x 362.85562pt>
+<img/cap4/conect_ros_rov.jpeg, id=175, 644.4075pt x 362.85562pt>
 File: img/cap4/conect_ros_rov.jpeg Graphic file (type jpg)
 
 <use img/cap4/conect_ros_rov.jpeg>
-Package pdftex.def Info: img/cap4/conect_ros_rov.jpeg used on input line 23.
+Package pdftex.def Info: img/cap4/conect_ros_rov.jpeg used on input line 25.
 (pdftex.def)             Requested size: 227.62204pt x 128.16962pt.
- [32
+ [31
 
 ]
-<img/cap4/ssh.png, id=182, 514.92375pt x 192.72pt>
+<img/cap4/ssh.png, id=179, 514.92375pt x 192.72pt>
 File: img/cap4/ssh.png Graphic file (type png)
  <use img/cap4/ssh.png>
-Package pdftex.def Info: img/cap4/ssh.png used on input line 46.
+Package pdftex.def Info: img/cap4/ssh.png used on input line 48.
 (pdftex.def)             Requested size: 341.43306pt x 127.7896pt.
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
 
-<img/cap4/dependencias_roslibjs.png, id=183, 546.54187pt x 350.81062pt>
+[32 <./img/cap4/conect_ros_rov.jpeg> <./img/cap4/ssh.png>]
+<img/cap4/dependencias_roslibjs.png, id=184, 546.54187pt x 350.81062pt>
 File: img/cap4/dependencias_roslibjs.png Graphic file (type png)
 
 <use img/cap4/dependencias_roslibjs.png>
 Package pdftex.def Info: img/cap4/dependencias_roslibjs.png used on input line 
-62.
+64.
 (pdftex.def)             Requested size: 341.43306pt x 219.15973pt.
-LaTeX Info: Redefining \. on input line 66.
-LaTeX Info: Redefining \% on input line 66.
- [33 <./img/cap4/conect_ros_rov.jpeg> <./img/cap4/ssh.png>]
-LaTeX Info: Redefining \. on input line 78.
-LaTeX Info: Redefining \% on input line 78.
- [34 <./img/cap4/dependencias_roslibjs.png>]
-<img/cap4/canvas.png, id=193, 551.05875pt x 560.0925pt>
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
+ [33 <./img/cap4/dependencias_roslibjs.png>] <img/cap4/canvas.png, id=190, 551.
+05875pt x 560.0925pt>
 File: img/cap4/canvas.png Graphic file (type png)
 
 <use img/cap4/canvas.png>
-Package pdftex.def Info: img/cap4/canvas.png used on input line 81.
+Package pdftex.def Info: img/cap4/canvas.png used on input line 83.
 (pdftex.def)             Requested size: 341.43306pt x 347.0401pt.
-LaTeX Info: Redefining \. on input line 107.
-LaTeX Info: Redefining \% on input line 107.
- [35 <./img/cap4/canvas.png>]
+LaTeX Info: Redefining \. on input line 109.
+LaTeX Info: Redefining \% on input line 109.
+ [34 <./img/cap4/canvas.png>]
 Underfull \vbox (badness 4060) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 150.
-LaTeX Info: Redefining \% on input line 150.
- [36]
-LaTeX Info: Redefining \. on input line 197.
-LaTeX Info: Redefining \% on input line 197.
+LaTeX Info: Redefining \. on input line 152.
+LaTeX Info: Redefining \% on input line 152.
+ [35]
+LaTeX Info: Redefining \. on input line 199.
+LaTeX Info: Redefining \% on input line 199.
 
-[37] <img/cap4/roscore.png, id=204, 548.80031pt x 389.95688pt>
+[36] <img/cap4/roscore.png, id=201, 548.80031pt x 389.95688pt>
 File: img/cap4/roscore.png Graphic file (type png)
 
 <use img/cap4/roscore.png>
-Package pdftex.def Info: img/cap4/roscore.png used on input line 227.
+Package pdftex.def Info: img/cap4/roscore.png used on input line 229.
 (pdftex.def)             Requested size: 312.9803pt x 222.39673pt.
-LaTeX Info: Redefining \. on input line 232.
-LaTeX Info: Redefining \% on input line 232.
- [38]
-<img/cap4/launch.png, id=208, 682.04813pt x 485.56406pt>
+LaTeX Info: Redefining \. on input line 234.
+LaTeX Info: Redefining \% on input line 234.
+ [37]
+<img/cap4/launch.png, id=205, 682.04813pt x 485.56406pt>
 File: img/cap4/launch.png Graphic file (type png)
 
 <use img/cap4/launch.png>
-Package pdftex.def Info: img/cap4/launch.png used on input line 242.
+Package pdftex.def Info: img/cap4/launch.png used on input line 244.
 (pdftex.def)             Requested size: 312.9803pt x 222.8213pt.
 
-<img/cap4/conexion_ROV.png, id=209, 904.1278pt x 375.65344pt>
+<img/cap4/conexion_ROV.png, id=206, 904.1278pt x 375.65344pt>
 File: img/cap4/conexion_ROV.png Graphic file (type png)
 
 <use img/cap4/conexion_ROV.png>
-Package pdftex.def Info: img/cap4/conexion_ROV.png used on input line 252.
+Package pdftex.def Info: img/cap4/conexion_ROV.png used on input line 254.
 (pdftex.def)             Requested size: 341.43306pt x 141.85559pt.
-LaTeX Info: Redefining \. on input line 259.
-LaTeX Info: Redefining \% on input line 259.
- [39 <./img/cap4/roscore.png> <./img/cap4/launch.png>] <img/cap4/rostopic_list.
-png, id=216, 828.84656pt x 146.79843pt>
+LaTeX Info: Redefining \. on input line 261.
+LaTeX Info: Redefining \% on input line 261.
+ [38 <./img/cap4/roscore.png> <./img/cap4/launch.png>] <img/cap4/rostopic_list.
+png, id=212, 828.84656pt x 146.79843pt>
 File: img/cap4/rostopic_list.png Graphic file (type png)
 
 <use img/cap4/rostopic_list.png>
-Package pdftex.def Info: img/cap4/rostopic_list.png used on input line 267.
+Package pdftex.def Info: img/cap4/rostopic_list.png used on input line 269.
 (pdftex.def)             Requested size: 341.43306pt x 60.46997pt.
 
-<img/cap4/info1.png, id=217, 766.36313pt x 490.83376pt>
+<img/cap4/info1.png, id=213, 766.36313pt x 490.83376pt>
 File: img/cap4/info1.png Graphic file (type png)
 
 <use img/cap4/info1.png>
-Package pdftex.def Info: img/cap4/info1.png used on input line 280.
+Package pdftex.def Info: img/cap4/info1.png used on input line 282.
 (pdftex.def)             Requested size: 341.43306pt x 218.67871pt.
 
-<img/cap4/info2.png, id=218, 782.17218pt x 490.83376pt>
+<img/cap4/info2.png, id=214, 782.17218pt x 490.83376pt>
 File: img/cap4/info2.png Graphic file (type png)
 
 <use img/cap4/info2.png>
-Package pdftex.def Info: img/cap4/info2.png used on input line 287.
+Package pdftex.def Info: img/cap4/info2.png used on input line 289.
 (pdftex.def)             Requested size: 341.43306pt x 214.2599pt.
 ) (./cap5.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [40 <./img/cap4/conexion_ROV.png> <./img/cap4/rostopic_list.png>]
+ [39 <./img/cap4/conexion_ROV.png> <./img/cap4/rostopic_list.png>]
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [41 <./img/cap4/info1.png> <./img/cap4/info2.png>]
+ [40 <./img/cap4/info1.png> <./img/cap4/info2.png>]
 Cap\'{\i }tulo 5.
-) (./cap6.tex [42
+<img/cap5/motores.jpeg, id=227, 197.98969pt x 197.23688pt>
+File: img/cap5/motores.jpeg Graphic file (type jpg)
 
-]
+<use img/cap5/motores.jpeg>
+Package pdftex.def Info: img/cap5/motores.jpeg used on input line 12.
+(pdftex.def)             Requested size: 199.16928pt x 198.41612pt.
+ [41
+
+ <./img/cap5/motores.jpeg>]
+<img/cap5/banera.jpeg, id=231, 203.25937pt x 189.70876pt>
+File: img/cap5/banera.jpeg Graphic file (type jpg)
+
+<use img/cap5/banera.jpeg>
+Package pdftex.def Info: img/cap5/banera.jpeg used on input line 26.
+(pdftex.def)             Requested size: 199.16928pt x 185.89882pt.
+
+<img/cap5/lago1.jpeg, id=232, 283.0575pt x 209.28188pt>
+File: img/cap5/lago1.jpeg Graphic file (type jpg)
+
+<use img/cap5/lago1.jpeg>
+Package pdftex.def Info: img/cap5/lago1.jpeg used on input line 42.
+(pdftex.def)             Requested size: 199.16928pt x 147.26271pt.
+LaTeX Info: Redefining \. on input line 49.
+LaTeX Info: Redefining \% on input line 49.
+ [42 <./img/cap5/banera.jpeg> <./img/cap5/lago1.jpeg>] <img/cap5/navegacion.jpe
+g, id=236, 279.29344pt x 193.47281pt>
+File: img/cap5/navegacion.jpeg Graphic file (type jpg)
+
+<use img/cap5/navegacion.jpeg>
+Package pdftex.def Info: img/cap5/navegacion.jpeg used on input line 56.
+(pdftex.def)             Requested size: 199.16928pt x 137.97185pt.
+
+<img/cap5/emersion.jpeg, id=237, 213.79875pt x 174.6525pt>
+File: img/cap5/emersion.jpeg Graphic file (type jpg)
+
+<use img/cap5/emersion.jpeg>
+Package pdftex.def Info: img/cap5/emersion.jpeg used on input line 68.
+(pdftex.def)             Requested size: 199.16928pt x 162.7023pt.
+ [43 <./img/cap5/navegacion.jpeg> <./img/cap5/emersion.jpeg>] <img/cap5/web.jpe
+g, id=241, 381.67593pt x 231.11343pt>
+File: img/cap5/web.jpeg Graphic file (type jpg)
+
+<use img/cap5/web.jpeg>
+Package pdftex.def Info: img/cap5/web.jpeg used on input line 81.
+(pdftex.def)             Requested size: 199.16928pt x 120.59932pt.
+) (./cap6.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [44 <./img/cap5/web.jpeg>]
 Cap\'{\i }tulo 6.
-) (./memoria.bbl [43
+) (./memoria.bbl [45
 
 ]
 Underfull \hbox (badness 5105) in paragraph at lines 22--24
@@ -1467,7 +1503,7 @@ Underfull \hbox (badness 1701) in paragraph at lines 41--43
 uki.com/ , and
  []
 
-) [44
+) [46
 
 ] (./memoria.aux
 LaTeX Info: Redefining \. on input line 6.
@@ -1478,13 +1514,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9390 strings out of 493029
- 133344 string characters out of 6136234
- 248383 words of memory out of 5000000
- 12667 multiletter control sequences out of 15000+600000
+ 9419 strings out of 493029
+ 133947 string characters out of 6136234
+ 247383 words of memory out of 5000000
+ 12690 multiletter control sequences out of 15000+600000
  13576 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,8n,58p,631b,1944s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,8n,58p,563b,1866s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
@@ -1495,10 +1531,10 @@ pe1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmtt10.pfb>
-Output written on memoria.pdf (54 pages, 13002746 bytes).
+Output written on memoria.pdf (56 pages, 13064674 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
+ 287 PDF objects out of 1000 (max. 8388607)
+ 157 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 

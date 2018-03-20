@@ -10,10 +10,10 @@ El robot contiene una cámara de alta visualización que permite realizar un an�
 
 Los requisitos indispensables para realizar el proyecto son:
 \begin{enumerate}
-\item \textbf{Robot móvil OpenROV 2.8.}
-\item \textbf{BeagleBone.} La placa en la que se instalará el software de OpenROV.
-\item \textbf{Herramientas de soldadura, montaje y sujeción.} 
-\item \textbf{Portatil.} Ejecutará el código para manejar el entorno del robot.
+\item \textbf{Impermeabilidad} durante todo el proceso de sumersión
+\item \textbf{Conectividad.} El robot puede alcanzar una distancia de 100m sin que pierda señal.
+\item \textbf{Duración de las baterías.} El robot debe permanecer activo durante 6 horas. 
+\item \textbf{Web Cockpit.} Control del funcionamiento del robot.
 \end{enumerate}
 
 \section{Objetivo del proyecto}
@@ -26,7 +26,7 @@ Además, se implantará una biblioteca de ROS dentro de OpenROV para que tambié
 \section{Metodología de desarrollo}
 \label{sec:metodologiadedesarrollo}
 
-En el desarrollo del sistema descrito, el modelo de ciclo de vida utilizado ha sido el modelo Modelo en cascada.
+En el desarrollo del sistema descrito, el modelo de ciclo de vida utilizado ha sido el modelo Modelo en cascada\cite{cascada}.
 
 Es un proceso secuencial, fácil de desarrollo en el que los pasos de desarrollo son vistos hacia abajo (como en una cascada de agua) a través de las fases de análisis de las necesidades, el diseño, implantación, pruebas (validación), la integración, y mantenimiento. 
 
@@ -40,9 +40,9 @@ Los principios básicos del modelo de cascada son los siguientes:
 \end{figure}
 
 \begin{itemize}
-\item El proyecto está dividido en fases secuenciales, con cierta superposición y splashback aceptable entre fases.
+\item El proyecto está dividido en fases secuenciales.
 \item Se hace hincapié en la planificación, los horarios, fechas, presupuestos y ejecución de todo un sistema de una sola vez.
-\item Un estricto control se mantiene durante la vida del proyecto a través de la utilización de una amplia documentación escrita, así como a través de comentarios y aprobación.
+\item Se mantiene un estricto control durante la vida del proyecto a través de la utilización de una amplia documentación escrita.
 \end{itemize}
 
 \section{Plan de trabajo}
