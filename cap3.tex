@@ -187,21 +187,21 @@ Para encender el ROV, necesitaremos el cable mini USB y el cable ethernet debida
 \label{fig:plc_ext}
 \end{figure}
   
-El conector USB actúa como el interruptor de encendido/apagado para el ROV.
+El conector USB actúa como interruptor de encendido/apagado del robot.
 
-El ROV tiene una dirección IP estática incorporada de 192.168.254.1, por lo que para conectarse con ella, la dirección IP de ethernet de su computadora debe estar en la misma subred, es decir, 192.168.254.2. La máscara de subred debe establecerse en 255.255.255.0.
+El ROV tiene una dirección IP estática 192.168.254.1. Para conectarnos a la web del robot, la dirección ethernet de nuestro ordenador debe pertenecer a la misma subred, es decir, 192.168.254.2. La máscara de subred se establece en la dirección 255.255.255.0.
 
-Pero para poder mostrar la página, antes debemos realizar una serie de pasos, en la que necesitaremos una microSD para realizar la configuración del ROV.
+Pero para poder mostrar la página, antes debemos realizar una serie de pasos, en la que necesitaremos una tarjeta microSD para realizar la configuración del ROV.
   
 \begin{enumerate}
-\item El primer paso, es descargar la imagen más reciente de OpenROV (30.0.3), una vez descargado, se descomprime el archivo .zip, dejando en el directorio de descarga el fichero .img.
-\item Para cerciorarse de que la mircoSD esta vacía, se formatea con el programa SDFormatter, luego, con el programa Win32DiskImager, escribiremos en la tarjeta microSD el fichero .img, esperamos alrededor de 5 minutos a que se complete la escritura. Cuando haya terminado, removemos la tarjeta microSD del portátil.
-\item Conectamos  la tarjeta microSD a el Beagle Bone, y conectamos el ROV con el cable USB para encenderlo. Los LED de Usuario de la placa Beagle Bone parpadearán para mostrar que laa imagen se está aplicando a la memoria de dicha placa. El proceso dura aproximadamente 15 minutos, en ese tiempo, los cuatro led deben estar encendidos, de no ser así, habría que repetir este punto nuevamente.
+\item Se descarga la imagen más reciente de OpenROV 2.8, en este caso, la versión es 30.0.3. Una vez descargado, se descomprime el archivo .zip, dejando en el directorio de descarga un ficherom con la extensión .img.
+\item Formateamos la tarjeta microSD, y montaremos la imagen descargada en la tarjeta. Una vez terminado el proceso, quitaremos la tarjeta del portátil.
+\item Conectamos la tarjeta microSD a el Beagle Bone, y conectamos el ROV con el cable USB para encenderlo. Los LED de la placa Beagle Bone parpadearán para mostrar que la imagen se está aplicando a la memoria de la placa. El proceso termina cuando los cuatro led se queden encendidos, si pasado un tiempo los cuatro leds no lucen, habría que repetir este punto.
 
 Cuando esté completo, retiraremos el cable USB del portátil para desconectar el ROV y retiraremos la tarjeta microSD de la placa Beagle Bone.
 
 Terminado este proceso, volveremos a conectar la tarjeta en el portátil.
-
+\newpage
 \begin{figure} [hbtp]
 \begin{center}
   \includegraphics[width=8cm]{img/cap3/3_4/BBB}
@@ -209,7 +209,7 @@ Terminado este proceso, volveremos a conectar la tarjeta en el portátil.
 \caption{BeagleBone configurada}
 \label{fig:bbb}
 \end{figure}
-\item Como se mencionó al principio del apartado, el ROV tiene una dirección IP estática incorporada de 192.168.254.1, por lo que para conectarse con ella, el ordenador debe tener una dirección similar pero con el último número configurado  distinto de 1, por ejemplo, podemos usar la dirección "192.168.254.2". La máscara de subred debe establecerse en 255.255.255.0.
+\item Como se mencionó al principio del apartado, el ROV tiene una dirección IP estática incorporada de 192.168.254.1. Para conectarnos, configuraremos nuestro ordenador con la dirección IP 192.168.254.2 y con la máscara de subred en la dirección 255.255.255.0.
 
 En Windows 8 la configuración sería:
 
@@ -263,11 +263,10 @@ En Ubuntu la configuración de una nueva IP estática:
 \begin{lstlisting}[caption=Reinicio, label={lst:reset}]
   $ sudo /etc/init.d/networking restart
 \end{lstlisting}
-\item Abriremos el navegador Google-Chrome, y en la barra de direcciones escribiremos la IP 192.168.254.1:8080, que es la dirección IP de OpenROV. Presionaremos <enter> y en un periodo de aproximadamente 20 segundos aparecerá la interfaz de OpenROV.
+\item Abriremos el navegador Google-Chrome, y en la barra de direcciones escribiremos la IP 192.168.254.1:8080, que es la dirección IP de OpenROV. Accederemos a la web, que es la interfaz de OpenROV.
 \item Para finalizar, deberemos actualizar el firmware, en la web, presionaremos el botón de configuración en la parte superior derecha de la pantalla y presionaremos “Cargar firmware desde la tarjeta SD a Ardruino”
-La tarjeta no microSD no debe estar en el ROV, presionaremos “Mostrar Detalles” y seguidamente, “Aplicar nuevo Firmware”.
-El proceso dura aproximadamente entre 5-10 minutos.
-Una vez que la carga sea exitosa, como el de la imagen, se desconectará el cable USB del portátil para apagar el ROV. Para realizar el reinicio, volveremos a conectar el cable USB al portátil.
+La tarjeta microSD no debe estar en el ROV, presionaremos “Mostrar Detalles” y seguidamente, “Aplicar nuevo Firmware”.
+Una vez que la carga sea exitosa, como el de la imagen, se retirará el cable USB del portátil para desconectar el ROV. Volveremos a conectar el cable USB al portátil para realizar el reinicio.
 
 
 \begin{figure} [hbtp]
@@ -286,7 +285,7 @@ Una vez que la carga sea exitosa, como el de la imagen, se desconectará el cabl
 \label{subsec:elementos}
   \subsubsection{Cámara}
   \label{subsubsec:camara}
-Ajustaremos el foco de la lente de la cámara hasta que la imagen pueda verse con total nitidez.
+Ajustaremos el foco de la lente de la cámara hasta que la imagen pueda verse con nitidez.
 \begin{figure} [hbtp]
 \begin{center}
   \includegraphics[width=8cm]{img/cap3/3_4/foco}
@@ -297,11 +296,10 @@ Ajustaremos el foco de la lente de la cámara hasta que la imagen pueda verse co
     
   \subsubsection{Láser}
   \label{subsubsec:laser}
-El ROV llega incorporado dos láser, los cuales tendremos que montar en el chasis de la cámara. Anteriormente estos dos láseres ya han sido soldados en la placa de la cámara, con lo que el proceso que llevaremos a cabo será su calibración y pegado.
-Los puntos siempre estarán a diez centímetros de distancia uno del otro, actuando como una escala para mediciones subacuáticas.
-En un papel pondremos dos “X” separados entre si diez centímetros, y colocaremos la hoja de calibración entre tres y cuatro metros de distancia de los láseres. El ROV y el folio deben colocarse a la misma altura.
-Presionamos la tecla L en la web de OpenROV para encender los láseres (si volvemos a presionar esa tecla, los láseres serán desactivados).
-Una vez este todo calibrado,  pegaremos con Super Glue los láseres al chasis de la cámara.
+El ROV lleva incorporado dos láser, que hemos soldado previamente a la placa de la cámara. El proceso que llevaremos a cabo será su calibración y pegado en el chásis.
+En un papel dibujaremos dos “X” separadas entre si diez centímetros, y colocaremos esa hoja a una distancia de entre tres y cuatro metros del robot, el cual, debe estar a la misma altura que el folio.
+Si pesionamos la tecla L en la web, encenderemos los láseres. Para apagarlos, simplemente hay que volver a pulsar la tecla L.
+Una vez este todo calibrado, pegaremos con Super Glue los láseres al chasis de la cámara.
  \begin{figure}[hbtp]
   \begin{center}
     \subfigure[Distancia de los laseres]{\includegraphics[width=6cm,height=5cm]{img/cap3/3_4/laseres}}
@@ -313,7 +311,7 @@ Una vez este todo calibrado,  pegaremos con Super Glue los láseres al chasis de
   
 \subsubsection{Motores}
 \label{subsubsec:motores}
-En este punto, se comprobará si las hélices giran en la dirección correcta. En la web, presionaremos la tecla de “flecha arriba” mientras miramos en que dirección giran los motores.
+En este punto, se realizará una comprobación de las hélices. Para ver si su rotación es la correcta presionaremos la tecla de “flecha arriba”, y observaremos en que dirección giran los motores.
 El motor izquierdo (amarillo) debe funcionar en sentido contrario a las agujas del reloj.
 El motor derecho (azul) debe funcionar en sentido a las agujas del reloj.
 \begin{figure} [hbtp]
@@ -324,13 +322,20 @@ El motor derecho (azul) debe funcionar en sentido a las agujas del reloj.
 \label{fig:motores}
 \end{figure}
 
-Si el giro fuera incorrecto, podemos invertirlo en la parte de “diagnóstico” de la esquina superior derecha del Cockpit. Seleccionamos la opción “inversa” del motor que queramos modificar.
-%\url{https://www.youtube.com/watch?v=pck8Bpla-5w} 
+Si el giro es incorrecto, invertiremos su rotación en la parte de “diagnóstico” de la web. Seleccionaremos la opción “invertir” del motor o motores que queramos modificar.
+
+\begin{figure} [hbtp]
+\begin{center}
+  \includegraphics[width=7cm]{img/cap3/3_4/diagnostic}
+\end{center}
+\caption{Diagnostics}
+\label{fig:diagnostics}
+\end{figure} 
+
 \subsubsection{Tubo cilíndrico trasparente de polimetilmetacrilato}
 \label{subsubsec:tubo}
 El tubo cilíndrico contendrá todo el sistema hardware y software del ROV.
-Lijaremos los bordes interiores del tubo principal utilizando un papel de lija de grano mediano para que la junta se ajuste en el tubo.
-Limpiamos todo el polvo sobrante del proceso de lijado.
+Para una mejor fijación, lijaremos los bordes interiores para que la junta se ajuste al tubo.
 \begin{figure} [hbtp]
 \begin{center}
   \includegraphics[width=8cm]{img/cap3/3_4/tubo}
@@ -341,9 +346,8 @@ Limpiamos todo el polvo sobrante del proceso de lijado.
 
 \subsubsection{Tapa superior}
 \label{subsubsec:tapa}
-Las juntas son muy importantes para garantizar que los componentes electrónicos permanezcan secos.
-Después de instalar el tubo, nos aseguramos  de que la junta se enganche a lo largo de todo el perímetro interior del tubo.
-El tubo electrónico necesita el orificio de ventilación proporcionado por el émbolo para igualar la presión cuando se colocan las tapas.
+Una vez instalado el tubo, verificamos de que la junta esté bien introducida a lo largo de todo el perímetro interior del tubo.
+La tapa superior contiene un orificio de ventilación para igualar la presión al colocar las tapas.
 \begin{figure} [hbtp]
 \begin{center}
   \includegraphics[width=8cm]{img/cap3/3_4/tapa_superior}
@@ -355,100 +359,78 @@ El tubo electrónico necesita el orificio de ventilación proporcionado por el �
 \newpage
 \subsection{Web/Cockpit}
 \label{subsec:cockpit}
-El ROV se maneja con Cockpit que es la interfaz de usuario y los sistemas de control para cualquier vehículo o dispositivo operado a distancia.
-\\Funciona con Linux incorporado y microcontroladores para proporcionar el control tele-robot.
+El manejo del ROV se consigue gracias a la web Cockpit, que es la interfaz de usuario y contiene todos los sistemas de control de cualquier vehículo o dispositivo operado a distancia.
 
 \begin{figure} [hbtp]
 \begin{center}
-  \includegraphics[width=15cm]{img/cap3/3_5/cockpit1}
+  \includegraphics[width=15cm]{img/cap3/3_5/cockpit1_v2}
 \end{center}
 \caption{Cockpit (1)}
 \label{fig:cockpit1}
 \end{figure}
 
 \begin{itemize}
-\item[\textcolor{red}{\textbullet}]Conectividad (verde = conectado)
-\item[\textcolor{orange}{\textbullet}]Latencia (si hubiera algún problema mostraría +999)
-\item[\textcolor{yellow}{\textbullet}]Consumo de corriente (solo los componentes electrónicos, sin incluir motores)
-\item[\textcolor{green}{\textbullet}]Voltaje de la batería (para las baterías LiFe-PO4 nominales es alrededor de 9.2V, el ícono puede mostrarse medio lleno, lo cual es normal)
-\item[\textcolor{blue}{\textbullet}]Brújula/rumbo (solo con IMU (Unidad de medición inercial))
+\item[\textcolor{red}{\textbullet}]Configuración de potencia de los motores (1, la más baja y 5, la más alta).
+\item[\textcolor{yellow}{\textbullet}]Conectividad (verde = conectado).
+\item[\textcolor{orange}{\textbullet}]Brújula.
+\item[\textcolor{blue}{\textbullet}]Latencia (si hubiera algún problema mostraría +999).
+\item[\textcolor{purple}{\textbullet}]Intensidad de corriente los componentes electrónicos en Amperios.
+\item[\textcolor{green}{\textbullet}]Potencia de las baterías.
 \end{itemize}
 
 \begin{figure} [hbtp]
 \begin{center}
-  \includegraphics[width=12cm]{img/cap3/3_5/cockpit2}
+  \includegraphics[width=15cm]{img/cap3/3_5/cockpit2_v2}
 \end{center}
 \caption{Cockpit (2)}
 \label{fig:cockpit2}
 \end{figure}
 
 \begin{itemize}
-\item[\textcolor{red}{\textbullet}]Pulsamos el botón señalado en rojo (el icono del teclado) para obtener los comandos de uso del robot.
+\item[\textcolor{red}{\textbullet}]Pulsando el botón señalado en rojo (el icono del teclado) se obtienen los comandos de uso del robot.
+\item[\textcolor{orange}{\textbullet}]Indicador de la cámara.
+\item[\textcolor{green}{\textbullet}]Indicador de nivel de luz.
+\item[\textcolor{blue}{\textbullet}]Indicador de encendido/apagado del láser.
+\item[\textcolor{yellow}{\textbullet}]Indicadores de profundidad y rumbo. Se alternan entre activo/desactivo para mantener la profundidad actual y/o el rumbo.
 \end{itemize}
 
-
-\begin{figure} [hbtp]
-\begin{center}
-  \includegraphics[width=12cm]{img/cap3/3_5/cockpit3}
-\end{center}
-\caption{Cockpit (3)}
-\label{fig:cockpit3}
-\end{figure}
-
-\begin{itemize}
-\item[\textcolor{red}{\textbullet}]Indicador de la cámara
-\item[\textcolor{orange}{\textbullet}]Indicador de nivel de luz LED
-\item[\textcolor{yellow}{\textbullet}]Indicador de encendido/apagado del láser
-\end{itemize}
 
 \newpage
 \begin{figure} [hbtp]
 \begin{center}
-  \includegraphics[width=12cm]{img/cap3/3_5/cockpit4}
+  \includegraphics[width=15cm]{img/cap3/3_5/cockpit3_v2}
 \end{center}
-\caption{Cockpit (4)}
-\label{fig:cockpit4}
+\caption{Cockpit (3)}
+\label{fig:cockpit3}
 \end{figure}
 \begin{itemize}
-\item[\textcolor{red}{\textbullet}]Rumbo (brújula). Esto se basa en la dirección que obtiene OpenROV al inicio. Se puede calibrar alineando el ROV al norte al inicio.
-\item[\textcolor{orange}{\textbullet}]Valor de empuje del motor (IMU no es necesario)
-\item[\textcolor{yellow}{\textbullet}]Profundidad
-\item[\textcolor{green}{\textbullet}]Horizonte artificial
+\item[\textcolor{yellow}{\textbullet}]Fuerza de empuje del motor.
+\item[\textcolor{red}{\textbullet}]Horizonte artificial.
+\item[\textcolor{green}{\textbullet}]Profundidad.
 \end{itemize}
 
 \begin{figure} [hbtp]
 \begin{center}
-  \includegraphics[width=12cm]{img/cap3/3_5/cockpit5}
-\end{center}
-\caption{Cockpit (5)}
-\label{fig:cockpit5}
-\end{figure}
-\begin{itemize}
-\item[\textcolor{red}{\textbullet}]La configuración de empuje (1, la más baja y 5, la más alta) cambia la potencia otorgada a los motores. El uso típico es 2-3. El uso intensivo de nivel 5 agotará las baterías rápidamente y solo se recomienda para retiros rápidos y uso intermitente.
-\item[\textcolor{orange}{\textbullet}]En la parte de arriba se pueden ver los indicadores de profundidad y rumbo. Estos se alternan entre activar/desactivar para mantener la profundidad actual y/o el rumbo actual. Esta función solo funciona con la actualización profundidad/rumbo/IMU.
-\end{itemize}
-
-\begin{figure} [hbtp]
-\begin{center}
-  \includegraphics[width=12cm]{img/cap3/3_5/setting}
+  \includegraphics[width=15cm]{img/cap3/3_5/setting}
 \end{center}
 \caption{Ajustes}
 \label{fig:settting}
 \end{figure}
-
+\newpage
 Panel de configuración:
 \begin{itemize}
- \item Configuración de entrada: aquí puede cambiar y personalizar las combinaciones de teclas y botones.
- \item Agregar complementos nuevos: esto es para usuarios que desean usar complementos de 3ra parte (avanzados).
- \item Complementos para habilitar/deshabilitar: activa y desactiva los complementos cargados en el punto anterior (avanzado).
- \item Actualización de software: se recomendamos que siempre actualice su software. Esto también le muestra la versión de software actual.
- \item Configuración de la batería: en este punto es donde establece los voltajes mínimo y máximo de la batería.
- \item Registro de Google Talk: esta pestaña permite acceder a las funciones de redes sociales del cockpit (avanzado).
-\end{itemize}
+ \item[\textcolor{red}{\textbullet}] Configuración de entrada: personalizar las comandos de uso del robot.
+ \item[\textcolor{orange}{\textbullet}] Agregar nuevos complementos.
+ \item[\textcolor{yellow}{\textbullet}] Habilitar/deshabilitar complementos: activa y desactiva los complementos agregados en el punto anterior.
+ \item[\textcolor{green}{\textbullet}] Actualización de software.
+ \item[\textcolor{blue}{\textbullet}] Actualización del firmware.
+ \item[\textcolor{purple}{\textbullet}] Configuración de la batería: Se establece el voltaje mínimo y máximo de la batería.
+ \item[\textcolor{black}{\textbullet}] Registro de Google Talk: Permite el acceso a las de redes sociales de la web.
+ \end{itemize}
 
 \begin{figure} [hbtp]
 \begin{center}
-  \includegraphics[width=12cm]{img/cap3/3_5/diagnostico}
+  \includegraphics[width=15cm]{img/cap3/3_5/diagnostico}
 \end{center}
 \caption{Diagnóstico}
 \label{fig:diagnostico}
@@ -456,14 +438,14 @@ Panel de configuración:
 
 Panel de diagnósticos:
 \begin{itemize}
- \item Probar manualmente los motores, esto se usa para hacer funcionar los motores manualmente. Este panel también sirve para invertir la dirección de un cierto motor.
- \item Pre-Flight Check es un marcador de posición por el momento.
- \item La calibración para la brújula y la profundidad cero también se encuentran en este panel.
+ \item Verificación manual los motores.
+ \item Si hay un error con la dirección de los motores se puede invertir desde este panel.
+ \item Pre-Flight Check, es el marcador de la posición actual.
 \end{itemize}
 
 \begin{figure} [hbtp]
 \begin{center}
-  \includegraphics[width=12cm]{img/cap3/3_5/services}
+  \includegraphics[width=15cm]{img/cap3/3_5/services}
 \end{center}
 \caption{Servicios}
 \label{fig:services}
@@ -473,84 +455,71 @@ El panel de configuración de OpenROV se encuentra en: 192.168.254.1
 
 Hay dos partes:
 \begin{itemize}
-\item[\textcolor{red}{\textbullet}]\textbf{Servicios}: puede reiniciar la cabina, ejecutar Cloud9 para editar el código e iniciar el recurso compartido de red para acceder a los archivos en el ROV.
-\item[\textcolor{orange}{\textbullet}]\textbf{Software}: puede determinar la versión de su software así como la actualización automática cuando esté conectado a Internet (software 30.0.3 y superior).
+\item[\textcolor{red}{\textbullet}]\textbf{Servicios}: Reiniciar la web del ROV.
+\item[\textcolor{orange}{\textbullet}]\textbf{Software}: Determinar la versión del software y puede ejecutar la actualización del software del ROV.
 \end{itemize}
 
 \subsection{Mantenimiento}
 \label{subsec:mantenimiento}
 
-Para que la vida útil del robot sea lo máximo posible, se deben seguir unas ciertas pautas de mantenimiento.
+Para que la vida útil del robot sea lo más larga posible, se deben seguir unas ciertas pautas de mantenimiento.
 
 \subsubsection{Enjuagar}
 \label{subsubsec:enjuagar}
-Una vez que hayamos utilizado el robot, debemos rociarlo en agua dulce después de cada inmersión, ya que es una excelente manera de mantenerlo limpio y libre de desechos y minerales.
-\\Cuanto más limpia sea el agua, mejor. En orden ascendente sería:
-\begin{itemize}
-\item El agua desionizada como mejor opción.
-\item El agua destilada.
-\item El agua dulce del grifo en tercer lugar.
-\end{itemize} 
+Una vez que hayamos utilizado el robot, tendremos que enjuagarlo en agua después de cada inmersión, para mantenerlo limpio y libre de desechos y minerales.
   
 \subsubsection{Mantenimiento de los motores}
 \label{subsubsec:mantenimiento}
-La parte más importante del mantenimiento posterior a la inmersión es limpiar los motores. Los imanes expuestos tienden a corroerse fácilmente. Los rodamientos también deben lubricarse y protegerse del óxido.
-\begin{itemize}
-\item Primero, enjuagamos los motores con agua fría.
-\item Secaremos bien los motores con aire comprimido (si está disponible).
-\item Inmediatamente después, volveremos a aplicar la lubricación con spray de silicona. Moveremos los motores con las manos durante algunas rotaciones para asegurarse de que los quede todo bien lubricados. Esto debe hacerse antes y después de cada inmersión.
-\end{itemize}
+Después de haber utilizado el robot en una inmersión, se debe limpiar los motores, ya que tienden a corroerse fácilmente. Se recomienda lubricarlos.
+Los pasos que debemos seguir son los siguientes:
+\begin{enumerate}
+\item Enjuagar los motores en agua fría.
+\item Secar los motores (Es recomendable usar una pistola de aire comprimido).
+\item Para finalizar el mantenimiento, lubricaremos los motores con un spray.
+\end{enumerate}
+Estos puntos deben hacerse antes y después de cada inmersión.
   
 \subsubsection{Secado}
 \label{subsubsec:secado}
-Debemos permitir que el OpenROV se seque completamente antes de guardarlo.
-Usar aire comprimido o enlatado puede ayudar.
-\\La apertura de los tubos de la batería y el tubo principal permitirá que el aire circule y secará la humedad que pueda haberse acumulado durante la inmersión.
+Antes de guardar el OpenROV en su maletín, debemos asegurarnos de que no queda ninguna pieza mojada.
+Para un mayor secado utilizaremos una pistola de aire comprimido y desmontaremos los tubos de las baterías y el tubo principal para cerciorarnos de que las baterías y el hardware están secos.
   
 \subsubsection{Carga de baterías}
 \label{subsubsec:bateria}
-Mantener las baterías en grupos de seis permitirá evitar problemas. Cargaremos los seis a la vez, y se usará todo el grupo por cada inmersión.
-\\Si alguna de las tres baterías en un tubo tiene un rendimiento bajo, se puede dañar las células. Para evitar esto, podemos comprobar las baterías con un polímetro después de que se hayan cargado para asegurarse de que se carguen completamente.
-\\Esto también permitirá saber cuándo es el momento de reemplazarlos, ya que eventualmente perderán su capacidad de cargar y descargar.
-\\Mantener las baterías secas siempre que sea posible y sin corrosión.
-
+El robot funciona con seis baterías, las cuales se cargarán a la vez, ya que se necesitan todas para el funcionamiento del robot.
+\\Cada tubo lleva tres baterías. Si se intuye que alguna tiene un rendimiento inferior, se verificará utilizando un polímetro.
+\\Es importante mantener las baterías secas y sin corrosión
 
 \subsection{Problemas}
 \label{subsec:problemas}
 
-Durante la vida útil del OpenROV pueden surgir ciertos imprevistos, a continuación se detallan los más probables y como se puede solucionar.
+Durante la vida útil del OpenROV pueden surgir ciertos imprevistos, a continuación se detallan los problemas más comunes y como solucionarlos.
 \begin{enumerate}
 \item \textbf{Vaho} durante todo el proceso de sumersión.
 
-Que el tubo principal se empañe es un problema común.
+El tubo principal puede empañarse tanto en la superficie (días soleados) como durante la sumersión.
 
-Algunas veces esta es la indicación de una fuga. Si se nota que el vaho aparece repentinamente o durante una inmersión, lo mejor será salir a la superficie y verificar si hay fugas.
+Si el problema ha surgido en la superficie, retiraremos el tubo principal y lo limpiaremos con un paño. Si se empaña durante la inmersión, lo más recomendable es salir a la superficie y verificar que no existe ninguna fuga en el tubo principal.
 
-El vaho se puede solucionar colocando una nueva bolsa de desecante en el tubo principal unas 1-2 horas antes de la inmersión.
+La forma de solucionar el vaho es a través de los productos anti-vaho, además de cerciorarnos de que el tubo es estanco.
 
-Los productos químicos anti-vaho también pueden ayudar. Estos están disponibles en cualquier tienda de buceo.
+\item \textbf{Vídeo}.
 
-\item \textbf{Video}.
+Otro de los problemas más comunes es un corte o apagón en el vídeo que reproduce el robot en el fondo oceánico. 
 
-Muchos problemas de video pueden ocurrir durante su inmersión.
-
-El más común es un corte o "apagón" del video. Esto se puede solucionar actualizando periódicamente la imagen del software en el BeagleBone.
+Para evitar este fallo, es recomendable actualizar periódicamente la imagen del software en el BeagleBone.
 
 \item \textbf{Control u otros problemas misceláneos}.
 
-Mientras está en el campo, es posible que necesite restablecer el OpenROV para remediar los errores extraños y aleatorios. Para este procedimiento se debe desenchufar el cable USB de la caja del PLC y volver a enchufarlo. Este método también funciona para otros problemas de control.
+En las situaciones en las que el error provenga del control o fallos ajenos, el procedimiento a seguir es reiniciar el robot desenchufando el clable USB del PLC y volver a conectarlo.
 
 \item \textbf{Pérdida aleatoria de energía de la batería}.
 
-A menudo, cuando hay problemas de energía, primeramente habrá que asegúrese de que todas las baterías estén en contacto entre sí y, si corresponde, el adaptador de la batería y los terminales positivo y negativo en el tubo de la batería.
+Si comprobamos que existen pérdidas de energía, primero comprobaremos que las baterías hacen contacto entre si y que están colocadas de la forma correcta.
 
-Verificar el voltaje a través de los pines correspondientes del conector DB-25. Para las baterías recomendadas, esto debería ser alrededor de 9V. Se comprobara la batería positivo y negativo de los cables: Naranja / Negro-Naranja y Verde claro / Negro-Verde claro. Un pequeño trozo de alambre puede ayudar a establecer una buena conexión con el polímetro.
+Si el fallo persiste, se verifica la potencia (alrededor de los 9V) a través de los pines correspondientes del conector DB-25.
 
-Además, puede verificar cada batería individual para asegurarse de que tenga el voltaje correcto.
-
-Hay que asegurarse de mover los cables alrededor o sacudir los tubos de la batería para identificar cualquier discontinuidad.
-
-Se puede quitar la envoltura de plástico en la parte inferior de las baterías para ayudar en un buen contacto.
+Además, se puede comprobar cada batería individual para asegurarse de que tenga el voltaje correcto a través de un polímetro.
 
 \begin{figure} [hbtp]
 \begin{center}
@@ -564,29 +533,23 @@ Se puede quitar la envoltura de plástico en la parte inferior de las baterías 
 
 \item \textbf{Enredos}.
 
-Los enredos es un problema muy comun que se encuentran en el este campo.
+Facilmente el robot puede quedar atrapado en el suelo oceánico por culpa de las algas u otros objetos o vegetales.
 
-El mejor remedio es evitar la situación en absoluto. Esto se puede hacer evitando bucear en vegetación pesada.
+Lo mejor es evitar pilotar el robot en un paisaje con una vegetación pesada.
 
-A veces puede ser necesario tirar el OpenROV a la superficie con la correa. La correa es fuerte y puede manejar una gran cantidad de fuerza.
-
-Hay que tener en cuenta que si se tira del OpenROV puede enredar el ROV, que es mucho más grande y difícil de desenredar. Si este es el caso, conduciremos el robot hasta nosotros o al menos hacia la superficie donde se puede recuperar. Luego, desconectaremos el cable USB del PLC y se tirará del ROV.
-
-Siempre podemos cortar y volver a soldar la correa utilizando un tubo termorretráctil si fuese necesario.
+Si comprobamos que no se puede sacar el OpenROV por medio de los comandos, tiraremos de la correa hasta la superficie. Aunque puede existir un momento en el que el robot no pueda ser recuperado por ese medio, en ese caso, se puede cortar la correa e ir a buscar al robot, ya que se puede volver a soldar la correa.
 
 \item \textbf{Inundación del tubo principal}.
 
-Este puede ser el mayor problema al que nos podemos enfrentar, por ello, lo primero que habría que realizar sería desconectar la alimentación del ROV (esto evitará que la electrólisis corroa los componentes electrónicos). Para hacer esto, desenchufamos el cable USB y retiraremos las baterías.
+El mayor problema al que nos podemos enfrentar, es que se inunde el tubo principal, que conllevaría al riesgo de perder el hardware del robot.
 
-Si el agua que inundó el tubo no era agua dulce, enjuagamos los componentes electrónicos que se mojaron en agua dulce (desionizada> destilada> agua del grifo) para diluir y eliminar los minerales del área que se inundó.
+Primero, se desconecta la alimentación del robot desenchufando el cable USB y seguidamente retiraremos las baterías.
 
-Quitaremos los componentes electrónicos para exponer tantas superficies como sea posible.
+Enjuagamos los componentes electrónicos que se mojaron en el agua para eliminar los residuos del hardware, desmontaremos los componentes electrónicos y volveremos a enjuagar.
 
-Se enjuagará las áreas afectadas una vez más.
+Secaremos bien cada una de las piezas de la electrónica. Lo más recomendable es usar una pistola de aire comprimido.
 
-Secaremos bien cada una de las piezas de la electrónica. El aire comprimido puede ayudar.
+Para finalizar, se colocaran todos los componentes electrónicos afectados en un lugar seco. Lo mejor es usar una bolsa de llena de arroz.
 
-Se colocaran todos los componentes electrónicos afectados en un lugar seco. Es útil tener una bolsa de llena de arroz o desecante.
-
-Cuando vuelva a armar todo, inspeccionamos para detectar corrosión. Si vemos alguno, a menudo se puede quitar con un cepillo de dientes. La corrosión no significa necesariamente un fallo, pero es bueno eliminar lo que se pueda.
+Cuando se vuelve a montar el robot, verificaremos que no exista corrosión. Si la hubiera, se intentará eliminar con un cepillo.
 \end{enumerate}

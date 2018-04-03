@@ -6,14 +6,14 @@ Tras haber presentado el contexto en el que se desarrollará este proyecto, en e
 
 El fondo oceánico es uno de los grandes misterios de la actualidad. La mayor parte del suelo oceánico no ha sido explorado, y eso supone un gran problema. Con este robot, podremos rozar un poco este mundo submarino tan fascinante, e intentar descubrir algunas de las magníficas maravillas que esconde.
 
-El robot contiene una cámara de alta visualización que permite realizar un análisis exhaustivo, y para entornos más oscuros precisaremos de las luces y los láseres incorporados, con ellos, podremos visualizar mejor el entorno y saber la distancia a la que se encuentren los objetos o animales. 
+El robot contiene una cámara de alta resolución que permite realizar un análisis exhaustivo, y para entornos más oscuros precisaremos de las luces y los láseres incorporados, con ellos, podremos visualizar mejor el entorno y saber la distancia a la que se encuentren los objetos, plantas o animales. 
 
 Los requisitos indispensables para realizar el proyecto son:
 \begin{enumerate}
 \item \textbf{Impermeabilidad} durante todo el proceso de sumersión
-\item \textbf{BeagleBone.} La placa en la que se instalará el software de OpenROV.
-\item \textbf{Herramientas de soldadura, montaje y sujeción.} 
-\item \textbf{Portatil.} Ejecutará el código para manejar el entorno del robot.
+\item \textbf{Conectividad.} El robot puede alcanzar una distancia de 100m sin que pierda señal.
+\item \textbf{Duración de las baterías.} El robot debe permanecer activo durante 6 horas. 
+\item \textbf{Web Cockpit.} Control del funcionamiento del robot.
 \end{enumerate}
 
 \section{Objetivo del proyecto}

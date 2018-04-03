@@ -3,8 +3,8 @@
 
 Los objetivos de este trabajo fueron dos: por un lado, presentar a los robots submarinos, en particular, OpenROV y por otro lado, la integración de ROS, el framework de robótica más extendido y utilizado con la tecnología del ROV.
 
-Tras finalizar el montaje y el sistema del OpenROV he aprendido a solventar imprevistos tanto de hardware como de software.
+Ha sido un trabajo entretenido ya que he tenido que realizar todo desde cero, y he podido aprender la tecnología del ROV, además de explorar los nodos de ROS.
 
-Ha sido un trabajo entretenido ya que se ha tenido que realizar todo desde cero, he podido aprender sobre la tecnología de ROV y explorar nodos de ROS.
+Tras finalizar el montaje y el sistema del OpenROV he aprendido a solventar imprevistos que no se contemplaban tanto de hardware como de software. En este aspecto, la comunidad de OpenROV ha sido de inestimable ayuda en algunos momentos.
 
 Los siguientes pasos de este divertido TFG es intentar comprobar si la leyenda de Nessie es cierta.
