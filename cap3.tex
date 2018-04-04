@@ -3,18 +3,19 @@
 
 \section{Robot Submarino OpenROV}
 \label{cap:Robot Submarino OpenROV}
-La robótica submarina lleva desarrollándose desde mediados de los años sesenta, aunque fuera una realidad desconocida para el gran público. Los robots submarinos costaban millones y tenían el tamaño de un todoterreno. Un robot con una cámara que se retransmite en directo a una página web. Su principal virtud es que OpenROV\cite{openrov} funciona con código abierto.
+La robótica submarina se lleva desarrollando desde mediados de los años sesenta. Los robots submarinos costaban millones, además de ser poco manejables, ya que tenían un tamaño similar al de un coche. 
+\\OpenROV\cite{openrov} es un robot con una cámara que se retransmite en directo a una página web. Su principal virtud es que estos robots funcionan con código abierto.
 
 En general, sus características entran dentro de los parámetros presentados a continuación:
 
   \begin{itemize}
-  \item \textbf{Cámara web de alta definición para video en vivo HD} Se transmite vídeo de alta definición a un portátil a través de un cable trenzado de dos hilos.
-  \item \textbf{Tres servomotores} Se utilizan para la movilidad del dispositivo. Son de muy bajo mantenimiento y puedan estar en contacto directamente con el agua.
-  \item \textbf{Flotabilidad neutra y altamente maniobrable} El diseño compacto y ligero permite una alta maniobrabilidad utilizando un diseño de tres actuadores. Se puede sumergir a una profundidad de 100 metros.
-  \item \textbf{Interfaz web fácil de usar} En ella se puede manipular la cámara, los láser, focos y motores. No necesita conexión a Internet, ni hay necesidad de instalar un software.
+  \item \textbf{Cámara web HD}, transmite un vídeo en alta definición a un portátil a través de un cable de par trenzado.
+  \item \textbf{Tres servomotores}, utilizados para maniobrar el robot.
+  \item \textbf{Flotabilidad y manejo}.
+  \item \textbf{Interfaz web de usuario}, en ella se puede manipular la cámara, los láser, focos y motores. Una de las principales ventajas de la web, es que no necesita conexión a Internet.
   \item \textbf{Soporte de la comunidad de OpenROV}.
   \end{itemize}
-
+Las siguientes imágenes muestran el OpenROV 2.8 en su parte frontal y trasera.
 \begin{figure}[hbtp]
   \begin{center}
     \subfigure[OpenROV parte frontal]{\includegraphics[width=6cm,height=5cm]{img/cap3/ROV_frontal}}
@@ -23,7 +24,7 @@ En general, sus características entran dentro de los parámetros presentados a 
   \caption{OpenROV}
   \label{fig:ROV-ej}
 \end{figure}
-
+\newpage
 \section{Estructura y Montaje}
 \label{cap:montaje}
 
@@ -44,8 +45,8 @@ Las herramientas necesarias son: guantes, gafas, cúter, cemento acrílico y peg
   \label{fig:piezas}
 \end{figure}
 
-Se separan las piezas para realizar su correcto montaje. Una vez localizadas las piezas para la estructura, se le quitará el papel protector a la pieza, lo cual la dejará de un color trasparente. 
-Iremos pegando y dejando secar para que la composición sea la correcta. 
+Se separan las piezas para realizar su correcto montaje. Una vez localizadas las piezas para la estructura, se le quitará el papel protector a la pieza. 
+Iremos pegando y dejando secar para que se adhiera correctamente. 
 Al final, quedará una estructura como la de la imagen.
 
 \begin{figure} [hbtp]
@@ -72,11 +73,11 @@ Para el montaje de la estructura del soporte de la cámara y el chasis de la ele
 
 Al igual  que en el punto anterior, antes de comenzar con el montaje de la tapa, se necesitarán ciertas herramientas para el correcto ensamblaje.
 
-Las herramientas necesarias son: guantes, gafas, cúter, cemento acrílico,  SuperGlue y epoxy (epoxy es un tipo de pegamento que soporta estar en contacto con el agua). Una vez hayamos obtenido todos los materiales empezaremos con el montaje.
+Las herramientas necesarias son: guantes, gafas, cúter, cemento acrílico, SuperGlue y epoxy (epoxy es un tipo de pegamento que soporta estar en contacto con el agua). Una vez hayamos obtenido todos los materiales empezaremos con el montaje.
 
 En este caso, existen dos tapas. En la primera (la superior), necesitaremos una jeringa proporcionada por la comunidad de OpenROV, la cual utilizaremos para preparar la impermeabilización y el sellado de los componentes software del robot.
 
-En la segunda tapa, está el conector DB-25, el cual, conecta todos los componentes eléctricos a la placa del controlador. Una vez realizado el montaje de la tapa, se pegará en el espacio sobrante el conector DB-25 y se colocarán los cables adecuadamente en el hueco de la tapa. Cuando esté todo debidamente colocado se pegará la tapa superior al montaje realizado, lo cual dejará todo debidamente sellado. Este hueco, se rellenará con el epoxy para que no entre agua por la ranura.
+En la segunda tapa, está el conector DB-25, el cual, conecta todos los componentes eléctricos. Una vez realizado el montaje de la tapa, se pegará en el espacio sobrante el conector DB-25 y se colocarán los cables adecuadamente en el hueco de la tapa. Cuando esté todo debidamente colocado se pegará la tapa superior al montaje realizado, lo cual dejará todo debidamente sellado.
 
 \begin{figure}[hbtp]
   \begin{center}
@@ -97,11 +98,9 @@ Al igual que en los apartados anteriores, necesitaremos material especial, entre
 Para empezar, desmontaremos los PLC para sacar el hardware, el cual utilizaremos más adelante.
 Uno de los PLC estará interno en el robot, y el otro, será el extremo conector que comunicará el ROV con el portátil.
 
-Continuaremos con el BeagleBone Black (BBB), el cual, es el procesador principal en el ROV. Funciona junto con un Ardunio en el tablero del controlador para controlar las muchas funciones del ROV.
+Continuaremos con la placa BeagleBone, que es el procesador principal en el ROV. Funciona junto con un Ardunio para controlar la mayoría de las funciones del ROV.
 
-El cable USB del BeagleBone lo utilizaremos más adelante.
-
-Una vez juntos el PLC, el BeagleBone y la placa del ROV, uniremos estos tres elementos para formar el hardware del robot. Se conectará primero la placa del ROV, en la que el conector RJ-45 irá conectado al hardware PLC. Una vez realizada esa conexión, procederemos a implantar en las ranuras el BeagleBone, y atornillaremos para obtener una mejor sujeción, como podemos comprobar en la imagen.
+Una vez juntos el PLC, el BeagleBone y la placa del ROV (Raspberry Pi), constituirán el hardware del robot. Estos elementos se atornillaran para obtener una mejor sujeción. El resultado final lo podemos observar en la siguiente imagen.
 
 \begin{figure} [hbtp]
   \begin{center}
@@ -111,7 +110,7 @@ Una vez juntos el PLC, el BeagleBone y la placa del ROV, uniremos estos tres ele
   \label{fig:electronica}
 \end{figure}
 
-Después, conectaremos el servo al chasis, el cual va a servir para mover la cámara verticalmente. Hay que asegurarse de que quede centrado.
+Después, conectaremos el servo al chasis, el cual va a servir para mover la cámara verticalmente.
 
 Continuaremos con la soldadura de los láser y unos cables a la placa de video del ROV.
 
@@ -125,7 +124,7 @@ Continuaremos con la soldadura de los láser y unos cables a la placa de video d
 
 Cuando estén debidamente soldados, se colocará el chasis de la cámara, junto con lo que acabamos de soldar y la cámara. A estos tres elementos los juntaremos con tornillos y tuercas. Para finalizar con este paso, comprobamos que hay un conector al cual enchufaremos un cable que irá directo a la placa principal del ROV.
 
-Para la sujeción de la cámara utilizaremos el chasis principal, al que atornillaremos para fijar la cámara. En la parte izquierda del chasis principal, existe un hueco en el que irá el motor servo, el cual ha sido modificado para esa ubicación, eliminándole una de las astas para que se quede fijo en una posición y pueda mover la cámara en el eje vertical.
+Para la sujeción de la cámara utilizaremos el chasis principal, al que atornillaremos para fijar la cámara. 
 
 Para finalizar este apartado, se conectará el hardware del robot en el lado opuesto de la cámara, y se fijará con tornillos. Se realizará la conexión de los cables a sus ranuras correspondientes.
 
@@ -148,24 +147,19 @@ Cada uno de los tres motores servo, lleva tres cables, los cuales soldaremos con
   \label{fig:soldar}
 \end{figure}
 
-Los diez cables sobrantes se sellarán, ya que servirían para sensores y luces extra que no  utilizaremos en este proyecto.
-
-Continuaremos con el montaje de los dos tubos de la batería. Primero, necesitaremos realizar el montaje de las piezas y soldaremos el muelle (borne) con un chip facilitado por la comunidad de ROV. Esta parte irá con el polo negativo de las baterías.
-En el extremo del cable sobrante, se rellenará el terminal con estaño y se soldará al cable formando la parte positiva en la que se conectará la batería.
+Continuaremos con el montaje de los dos tubos de la batería. Primero, necesitaremos realizar el montaje de las piezas y soldaremos el muelle (borne) con un chip facilitado por la comunidad de ROV. Esta será la parte negativa de las baterías.
+En el extremo del cable sobrante, se rellenará con estaño y se soldará al cable formando la parte positiva en la irá conectada la batería.
 
 \subsection{Final}
 \label{subsec:final}
 
 En la parte final del montaje, será necesaria una soldadura con el cable de par trenzado que es el encargado de mandar la señal al portátil.
 
-Para asegurar esa soldadura, utilizaremos una brida de un tamaño mayor a las usadas anteriormente, y soldaremos un cable preservado en el apartado anterior con el par trenzado.
+El otro extremo del cable de par trenzado irá conectado al PLC. Gracias a este cable, el robot puede sumergirse a una distancia de 100m. Usaremos una brida de mayor tamaño para fijar el cable y así obtener una mayor seguridad, ya que si el robot quedara expuesto a un problema en la inmersión, es probable que necesitaramos tirar de él.
 
-Este cable de par trenzado mide cien metros, el cual, en el extremo opuesto al ROV, irá conectado al PLC. Gracias a este cable, el robot se podrá sumergir a una distancia de cien metros. Por eso, y para mayor seguridad, usaremos la brida, enroscaremos el cable en ella y lo finalizaremos recubriéndolo con cinta adhesiva.
-En el cuerpo principal del ROV, sujetaremos con unas gomas los tubos que llevarán las baterías, y lo fijaremos en los extremos con dos varillas de metal.
-
-Aislaremos el hardware con un tubo cilíndrico trasparente de polimetilmetacrilato, pero antes de fijarlo, limaremos los extremos del cilindro para una mejor conexión con las tapas.
-
-Cuando todo el montaje esté terminado, pondremos más seguridad al hardware, añadiendo una cuerda que hará presión.
+En el cuerpo principal del robot, con unas gomas sujertaremos los tubos que llevarán las baterías y fijaremos los extremos con dos varillas de metal.
+\\Para aislar el hardware se usará un tubo cilíndrico trasparente de polimetilmetacrilato previamente limado en los extremos.
+\\Cuando todo el montaje esté terminado, pondremos más seguridad al hardware, añadiendo una cuerda que hará presión.
 
 Además, colocaremos dos pesas de 300 gr. en los brazos del ROV para que la sumersión sea más fácil y fiable.
 
@@ -186,7 +180,8 @@ Para encender el ROV, necesitaremos el cable mini USB y el cable ethernet debida
 \caption{PLC externo}
 \label{fig:plc_ext}
 \end{figure}
-  
+
+\newpage
 El conector USB actúa como interruptor de encendido/apagado del robot.
 
 El ROV tiene una dirección IP estática 192.168.254.1. Para conectarnos a la web del robot, la dirección ethernet de nuestro ordenador debe pertenecer a la misma subred, es decir, 192.168.254.2. La máscara de subred se establece en la dirección 255.255.255.0.
@@ -196,7 +191,7 @@ Pero para poder mostrar la página, antes debemos realizar una serie de pasos, e
 \begin{enumerate}
 \item Se descarga la imagen más reciente de OpenROV 2.8, en este caso, la versión es 30.0.3. Una vez descargado, se descomprime el archivo .zip, dejando en el directorio de descarga un ficherom con la extensión .img.
 \item Formateamos la tarjeta microSD, y montaremos la imagen descargada en la tarjeta. Una vez terminado el proceso, quitaremos la tarjeta del portátil.
-\item Conectamos la tarjeta microSD a el Beagle Bone, y conectamos el ROV con el cable USB para encenderlo. Los LED de la placa Beagle Bone parpadearán para mostrar que la imagen se está aplicando a la memoria de la placa. El proceso termina cuando los cuatro led se queden encendidos, si pasado un tiempo los cuatro leds no lucen, habría que repetir este punto.
+\item Conectamos la tarjeta microSD a el BeagleBone, y conectamos el ROV con el cable USB para encenderlo. Los LED de la placa Beagle Bone parpadearán para mostrar que la imagen se está aplicando a la memoria de la placa. El proceso termina cuando los cuatro led se queden encendidos, si pasado un tiempo los cuatro leds no lucen, habría que repetir este punto.
 
 Cuando esté completo, retiraremos el cable USB del portátil para desconectar el ROV y retiraremos la tarjeta microSD de la placa Beagle Bone.
 
@@ -482,7 +477,7 @@ Estos puntos deben hacerse antes y después de cada inmersión.
 \subsubsection{Secado}
 \label{subsubsec:secado}
 Antes de guardar el OpenROV en su maletín, debemos asegurarnos de que no queda ninguna pieza mojada.
-Para un mayor secado utilizaremos una pistola de aire comprimido y desmontaremos los tubos de las baterías y el tubo principal para cerciorarnos de que las baterías y el hardware están secos.
+Para un mayor secado utilizaremos una pistola de aire comprimido y desmontaremos los tubos de las baterías y el tubo principal para cerciorarnos de que las baterías y la electrónica están secos.
   
 \subsubsection{Carga de baterías}
 \label{subsubsec:bateria}

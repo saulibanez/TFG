@@ -68,10 +68,10 @@ Continuaremos instalando otras dependencias de Roslibjs, en este caso, npm, que 
 \\Para que no surjan errores con el proxy, debemos deshabilitarlo y realizar un reseteo del sistema. 
 \renewcommand{\lstlistingname}{}
 \begin{lstlisting}[caption=Dependencias Roslibjs, label={lst:roslibjs}]
-sudo /etc/init.d/openrov-proxy stop
-sudo /etc/init.d/openrov restart
-sudo chown -R $USER /usr/local 
-npm install canvas 
+$ sudo /etc/init.d/openrov-proxy stop
+$ sudo /etc/init.d/openrov restart
+$ sudo chown -R $USER /usr/local 
+$ npm install canvas 
 \end{lstlisting}
 
 \newpage
@@ -83,7 +83,11 @@ npm install canvas
   \label{fig:canvas}
 \end{figure}
 
-La última dependencia para el complemento es Roslibjs, lo instalaremos usando: npm install roslib
+La última dependencia para el complemento es Roslibjs, lo instalaremos usando: 
+\renewcommand{\lstlistingname}{}
+\begin{lstlisting}[caption=Roslib, label={lst:roslib}]
+$ npm install roslib
+\end{lstlisting}
 
 Dentro de la carpeta /opt/openrov/cockpit/src/plugins, creararems un directorio llamado ros (sudo mkdir ros) y en el, se creará un fichero llamado index.js, que ejecutará la conexión con el ROS Master localizado en el portátil.
 \newpage

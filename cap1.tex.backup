@@ -2,7 +2,7 @@
 
 En este capítulo se explicará el concepto de robótica móvil\cite{RoboticaMovil}.
 También se comentarán los robots submarinos, ya que en este proyecto, trataremos sobre uno de ellos, OpenROV.
-Hablaremos sobre ROS (Robot Operating System), que tiene un conjunto de herramientas y atajos que facilitan la comunicación y operabilidad de los robots porque en uno de los capítulos del proyecto, se expondrá la integración de este framework en el ROV.
+Hablaremos sobre ROS (Robot Operating System), que tiene un conjunto de herramientas y atajos que facilitan la comunicación y operabilidad de los robots, ya que en uno de los capítulos del proyecto, se expondrá la integración de este framework en el ROV.
 Para finalizar se describirá la estructura de la memoria y de los apartados que conlleva.
 
 \section{Robótica móvil}
@@ -15,18 +15,38 @@ Un robot móvil puede moverse sobre entornos no estructurados, de los cuales, no
 
 En general se considera que existen tres clases de robots:
 \begin{itemize}
-\item \textbf{Industriales}, son los de mayor difusión en tareas de alcance económico, formados por una estructura mecánica articulada, que se mueve adoptando distintas configuraciones por las órdenes recibidas de un equipo de control basado normalmente en un microprocesador.
-\item \textbf{Médicos}, para la rehabilitación de disminuidos físicos, se diseñan prótesis inteligentes. Se procura que tenga la estética correspondiente a la extremidad humana.
+\item \textbf{Industriales}, son los de mayor difusión en tareas de alcance económico, formados por una estructura mecánica articulada, que se mueve adoptando distintas configuraciones por las órdenes recibidas de un equipo de control, generalmente, un microprocesador.
+\item \textbf{Médicos}, se diseñan prótesis inteligentes para la rehabilitación de disminuidos físicos. Se procura que estas prótesis tengan la estética correspondiente a la extremidad perdida.
 \item \textbf{Móviles}, tienen una plataforma mecánica dotada de un sistema de locomoción capaz de navegar a través de un determinado ambiente de trabajo.
 
-Cuando un robot móvil opera en ambientes no estructurados se enfrenta con la incertidumbre de la posición e identificación de objetos. La complejidad es tal que, trasladarse desde un punto A hasta un punto B es una actividad arriesgada para un robot móvil.
-El principal problema a resolver en un robot móvil es generar trayectorias y guiar su movimiento.
 
-El robot móvil autónomo se caracteriza por una conexión inteligente entre las operaciones de percepción y acción, que define su comportamiento y le permite llegar a la consecución de los objetivos programados sobre entornos con cierta incertidumbre.
-  \begin{itemize}
-  \item \textbf{Percepción} La capacidad de percepción del robot móvil gestiona la información obtenida por los sensores, con el objeto de generar mapas globales y locales del entorno. 
-  \item \textbf{Actuación}  El robot móvil tiene que de decidir que acción es la idónea en cada momento, dependiendo del estado del robot y el de su entorno.
-  \end{itemize}
+Este tipo de robots estan dotados de un sistema de locomoción, el cual, es capaz de navegar en distintos entornos de trabajo. La locomoción puede estar diseñada con patas (equilibrio estático o dinámico) o con ruedas, que al final, son más eficientes que las piernas y son estáticamente estables. 
+
+El mayor inconveniente de la locomoción es el desplazamiento a un lugar concreto, planificar las trayectrias y seguir la una determinada trayectoria puede resultar imposible para algunos robots.
+
+Un robot móvil autónomo se caracteriza por una conexión inteligente entre las operaciones de percepción y actuación.
+\begin{itemize}
+\item \textbf{Percepción}, es la capacidad del robot móvil para gestionar la información obtenida a través de los sensores (u otros medios) con el objetivo de lograr una navegación global o local.
+   \begin{itemize}
+    \item Navegación global es aquella que se apoya en mapas (SLAM). Existen varios tipos entre los que encontramos:
+      \begin{enumerate}
+	\item Planificación de los caminos (planes clásicos (secuencia de subobjetivos) y planes con recursos (por donde se le recomienda ir)).
+	\item Navegación basada en mapas.
+	\item Listas de caminos, grafos de objetos o balizas.
+	\item Grafos de visibilidad.
+	\item Diagramas de Voroni.
+	\item Descomposición en celdas.
+	\item Planificación como descenso del gradiente.
+      \end{enumerate}
+    \item Navegación local es aquella que puede navegar si un mapa, y las tecnologías más usadas en ellas son:
+      \begin{enumerate}
+	\item Método de velocidad y curvatura (CVM), el cual, trabaja añadiendo restricciones al espacio de velocidad y escogiendo un punto del espacio que satisfaga todas las restricciones y maximice una función objetivo.
+	\item Método de carriles y velocidad (LVM), esta tecnología, divide el entorno en carriles para decidir cual es el mejor camino a seguir.
+	\item Método de fuerzas virturales (VFF), tanto los obstaculos como el destino ofrecen un tipo de fuerza, repulsiva y atractiva respectivamente. Al final, el movimiento del robot está gobernado por el sumatorio vectorial de dichas fuerzas.
+      \end{enumerate}
+   \end{itemize}
+\item \textbf{Actuación}, el robot móvil tiene que de decidir que acción es la idónea en cada momento, dependiendo del entorno y su estado.
+\end{itemize}
 \end{itemize}
 
 
@@ -113,7 +133,8 @@ ROS utiliza de topics como modelo de comunicación entre procesos, a los que se 
   A partir de ahora, el sistema ya sabe donde encontrar los comandos para ejecutar ROS.
   \item \textbf{Nodos (Node)}. Son procesos de comunicación. Por ejemplo, un nodo controla la cámara, otro nodo controla los motores, etc. En general, los nodos son ejecutables que se comunican con otros procesos, a los que denominamos tópicos.
   \item \textbf{Mensajes}. Son estructuras de datos compuestos (integer, float, string, arrays, etc).
-  \item \textbf{Tópicos (Topics)}. Es un canal de comunicación para transmitir los datos, el cual uiliza el modo de subscriptores y publicadores. Esto quiere decir, un nodo quiere subscribirse a un tópico
+  \item \textbf{Tópicos (Topics)}. Es un canal de comunicación para transmitir los datos, el cual uiliza el modo de suscriptor y publicador. Puede existir varios publicadores para un único tópico, al igual que un nodo puede publicar y/o suscribirse a múltiples tópicos.
+  Se transimite utilizando la tecnología de TCP/IP o UDP.
 \end{enumerate}
 
 

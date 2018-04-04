@@ -3,15 +3,16 @@
 
 \section{Robot Submarino OpenROV}
 \label{cap:Robot Submarino OpenROV}
-La robótica submarina lleva desarrollándose desde mediados de los años sesenta, aunque fuera una realidad desconocida para el gran público. Los robots submarinos costaban millones y tenían el tamaño de un todoterreno. Un robot con una cámara que se retransmite en directo a una página web. Su principal virtud es que OpenROV\cite{openrov} funciona con código abierto.
+La robótica submarina se lleva desarrollando desde mediados de los años sesenta. Los robots submarinos costaban millones, además de ser poco manejables, ya que tenían un tamaño similar al de un coche. 
+\\OpenROV\cite{openrov} es un robot con una cámara que se retransmite en directo a una página web. Su principal virtud es que estos robots funcionan con código abierto.
 
 En general, sus características entran dentro de los parámetros presentados a continuación:
 
   \begin{itemize}
-  \item \textbf{Cámara web de alta definición para video en vivo HD} Se transmite vídeo de alta definición a un portátil a través de un cable trenzado de dos hilos.
-  \item \textbf{Tres servomotores} Se utilizan para la movilidad del dispositivo. Son de muy bajo mantenimiento y puedan estar en contacto directamente con el agua.
-  \item \textbf{Flotabilidad neutra y altamente maniobrable} El diseño compacto y ligero permite una alta maniobrabilidad utilizando un diseño de tres actuadores. Se puede sumergir a una profundidad de 100 metros.
-  \item \textbf{Interfaz web fácil de usar} En ella se puede manipular la cámara, los láser, focos y motores. No necesita conexión a Internet, ni hay necesidad de instalar un software.
+  \item \textbf{Cámara web HD} Transmite un vídeo en alta definición a un portátil a través de un cable de par trenzado.
+  \item \textbf{Tres servomotores} Utilizados para maniobrar el robot.
+  \item \textbf{Flotabilidad y manejo}.
+  \item \textbf{Interfaz web de usuario} En ella se puede manipular la cámara, los láser, focos y motores. Una de las principales ventajas de la web, es que no necesita conexión a Internet.
   \item \textbf{Soporte de la comunidad de OpenROV}.
   \end{itemize}
 
@@ -44,8 +45,8 @@ Las herramientas necesarias son: guantes, gafas, cúter, cemento acrílico y peg
   \label{fig:piezas}
 \end{figure}
 
-Se separan las piezas para realizar su correcto montaje. Una vez localizadas las piezas para la estructura, se le quitará el papel protector a la pieza, lo cual la dejará de un color trasparente. 
-Iremos pegando y dejando secar para que la composición sea la correcta. 
+Se separan las piezas para realizar su correcto montaje. Una vez localizadas las piezas para la estructura, se le quitará el papel protector a la pieza. 
+Iremos pegando y dejando secar para que se adhiera correctamente. 
 Al final, quedará una estructura como la de la imagen.
 
 \begin{figure} [hbtp]
@@ -72,11 +73,11 @@ Para el montaje de la estructura del soporte de la cámara y el chasis de la ele
 
 Al igual  que en el punto anterior, antes de comenzar con el montaje de la tapa, se necesitarán ciertas herramientas para el correcto ensamblaje.
 
-Las herramientas necesarias son: guantes, gafas, cúter, cemento acrílico,  SuperGlue y epoxy (epoxy es un tipo de pegamento que soporta estar en contacto con el agua). Una vez hayamos obtenido todos los materiales empezaremos con el montaje.
+Las herramientas necesarias son: guantes, gafas, cúter, cemento acrílico, SuperGlue y epoxy (epoxy es un tipo de pegamento que soporta estar en contacto con el agua). Una vez hayamos obtenido todos los materiales empezaremos con el montaje.
 
 En este caso, existen dos tapas. En la primera (la superior), necesitaremos una jeringa proporcionada por la comunidad de OpenROV, la cual utilizaremos para preparar la impermeabilización y el sellado de los componentes software del robot.
 
-En la segunda tapa, está el conector DB-25, el cual, conecta todos los componentes eléctricos a la placa del controlador. Una vez realizado el montaje de la tapa, se pegará en el espacio sobrante el conector DB-25 y se colocarán los cables adecuadamente en el hueco de la tapa. Cuando esté todo debidamente colocado se pegará la tapa superior al montaje realizado, lo cual dejará todo debidamente sellado. Este hueco, se rellenará con el epoxy para que no entre agua por la ranura.
+En la segunda tapa, está el conector DB-25, el cual, conecta todos los componentes eléctricos. Una vez realizado el montaje de la tapa, se pegará en el espacio sobrante el conector DB-25 y se colocarán los cables adecuadamente en el hueco de la tapa. Cuando esté todo debidamente colocado se pegará la tapa superior al montaje realizado, lo cual dejará todo debidamente sellado. Este hueco, se rellenará con el epoxy para que no entre agua por la ranura.
 
 \begin{figure}[hbtp]
   \begin{center}
@@ -97,11 +98,9 @@ Al igual que en los apartados anteriores, necesitaremos material especial, entre
 Para empezar, desmontaremos los PLC para sacar el hardware, el cual utilizaremos más adelante.
 Uno de los PLC estará interno en el robot, y el otro, será el extremo conector que comunicará el ROV con el portátil.
 
-Continuaremos con el BeagleBone Black (BBB), el cual, es el procesador principal en el ROV. Funciona junto con un Ardunio en el tablero del controlador para controlar las muchas funciones del ROV.
+Continuaremos con la placa BeagleBone, que es el procesador principal en el ROV. Funciona junto con un Ardunio para controlar la mayoría de las funciones del ROV.
 
-El cable USB del BeagleBone lo utilizaremos más adelante.
-
-Una vez juntos el PLC, el BeagleBone y la placa del ROV, uniremos estos tres elementos para formar el hardware del robot. Se conectará primero la placa del ROV, en la que el conector RJ-45 irá conectado al hardware PLC. Una vez realizada esa conexión, procederemos a implantar en las ranuras el BeagleBone, y atornillaremos para obtener una mejor sujeción, como podemos comprobar en la imagen.
+Una vez juntos el PLC, el BeagleBone y la placa del ROV (Raspberry Pi), uniremos estos tres elementos para formar el hardware del robot. Se conectará primero la placa del ROV, en la que el conector RJ-45 irá conectado al hardware PLC. Una vez realizada esa conexión, procederemos a implantar en las ranuras el BeagleBone, y atornillaremos para obtener una mejor sujeción, como podemos comprobar en la imagen.
 
 \begin{figure} [hbtp]
   \begin{center}
@@ -535,27 +534,21 @@ Además, se puede comprobar cada batería individual para asegurarse de que teng
 
 Facilmente el robot puede quedar atrapado en el suelo oceánico por culpa de las algas u otros objetos o vegetales.
 
-El mejor remedio es evitar la situación en absoluto. Esto se puede hacer evitando bucear en vegetación pesada.
+Lo mejor es evitar pilotar el robot en un paisaje con una vegetación pesada.
 
-A veces puede ser necesario tirar el OpenROV a la superficie con la correa. La correa es fuerte y puede manejar una gran cantidad de fuerza.
-
-Hay que tener en cuenta que si se tira del OpenROV puede enredar el ROV, que es mucho más grande y difícil de desenredar. Si este es el caso, conduciremos el robot hasta nosotros o al menos hacia la superficie donde se puede recuperar. Luego, desconectaremos el cable USB del PLC y se tirará del ROV.
-
-Siempre podemos cortar y volver a soldar la correa utilizando un tubo termorretráctil si fuese necesario.
+Si comprobamos que no se puede sacar el OpenROV por medio de los comandos, tiraremos de la correa hasta la superficie. Aunque puede existir un momento en el que el robot no pueda ser recuperado por ese medio, en ese caso, se puede cortar la correa e ir a buscar al robot, ya que se puede volver a soldar la correa.
 
 \item \textbf{Inundación del tubo principal}.
 
-Este puede ser el mayor problema al que nos podemos enfrentar, por ello, lo primero que habría que realizar sería desconectar la alimentación del ROV (esto evitará que la electrólisis corroa los componentes electrónicos). Para hacer esto, desenchufamos el cable USB y retiraremos las baterías.
+El mayor problema al que nos podemos enfrentar, es que se inunde el tubo principal, que conllevaría al riesgo de perder el hardware del robot.
 
-Si el agua que inundó el tubo no era agua dulce, enjuagamos los componentes electrónicos que se mojaron en agua dulce (desionizada> destilada> agua del grifo) para diluir y eliminar los minerales del área que se inundó.
+Primero, se desconecta la alimentación del robot desenchufando el cable USB y seguidamente retiraremos las baterías.
 
-Quitaremos los componentes electrónicos para exponer tantas superficies como sea posible.
+Enjuagamos los componentes electrónicos que se mojaron en el agua para eliminar los residuos del hardware, desmontaremos los componentes electrónicos y volveremos a enjuagar.
 
-Se enjuagará las áreas afectadas una vez más.
+Secaremos bien cada una de las piezas de la electrónica. Lo más recomendable es usar una pistola de aire comprimido.
 
-Secaremos bien cada una de las piezas de la electrónica. El aire comprimido puede ayudar.
+Para finalizar, se colocaran todos los componentes electrónicos afectados en un lugar seco. Lo mejor es usar una bolsa de llena de arroz.
 
-Se colocaran todos los componentes electrónicos afectados en un lugar seco. Es útil tener una bolsa de llena de arroz o desecante.
-
-Cuando vuelva a armar todo, inspeccionamos para detectar corrosión. Si vemos alguno, a menudo se puede quitar con un cepillo de dientes. La corrosión no significa necesariamente un fallo, pero es bueno eliminar lo que se pueda.
+Cuando se vuelve a montar el robot, verificaremos que no exista corrosión. Si la hubiera, se intentará eliminar con un cepillo.
 \end{enumerate}
