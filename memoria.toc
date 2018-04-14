@@ -1,40 +1,40 @@
 \select@language {spanish}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}
-\contentsline {section}{\numberline {1.1}Rob\IeC {\'o}tica m\IeC {\'o}vil}{1}
+\contentsline {section}{\numberline {1.1}Rob\IeC {\'o}tica M\IeC {\'o}vil}{1}
 \contentsline {section}{\numberline {1.2}Robots Submarinos}{3}
 \contentsline {section}{\numberline {1.3}ROS}{5}
 \contentsline {section}{\numberline {1.4}Estructura de la memoria}{6}
-\contentsline {chapter}{\numberline {2}Objetivos y Metodolog\IeC {\'\i }a}{7}
-\contentsline {section}{\numberline {2.1}Descripci\IeC {\'o}n del problema y requisitos}{7}
-\contentsline {section}{\numberline {2.2}Objetivo del proyecto}{7}
-\contentsline {section}{\numberline {2.3}Metodolog\IeC {\'\i }a de desarrollo}{8}
-\contentsline {section}{\numberline {2.4}Plan de trabajo}{9}
-\contentsline {chapter}{\numberline {3}Plataforma OpenROV}{10}
-\contentsline {section}{\numberline {3.1}Robot Submarino OpenROV}{10}
-\contentsline {section}{\numberline {3.2}Estructura y Montaje}{11}
-\contentsline {subsection}{\numberline {3.2.1}Estructura de OpenROV}{11}
-\contentsline {subsection}{\numberline {3.2.2}Tapas del ch\IeC {\'a}sis}{12}
-\contentsline {subsection}{\numberline {3.2.3}Electr\IeC {\'o}nica}{13}
-\contentsline {subsection}{\numberline {3.2.4}Enrutamiento}{15}
-\contentsline {subsection}{\numberline {3.2.5}Final}{16}
-\contentsline {section}{\numberline {3.3}Conectividad OpenROV}{16}
-\contentsline {subsection}{\numberline {3.3.1}Dise\IeC {\~n}o de Conectividad}{16}
-\contentsline {subsection}{\numberline {3.3.2}Puesta a punto de los elementos}{20}
-\contentsline {subsubsection}{C\IeC {\'a}mara}{20}
-\contentsline {subsubsection}{L\IeC {\'a}ser}{20}
-\contentsline {subsubsection}{Motores}{21}
-\contentsline {subsubsection}{Tubo cil\IeC {\'\i }ndrico trasparente de polimetilmetacrilato}{22}
-\contentsline {subsubsection}{Tapa superior}{22}
-\contentsline {subsection}{\numberline {3.3.3}Web/Cockpit}{23}
-\contentsline {subsection}{\numberline {3.3.4}Mantenimiento}{27}
-\contentsline {subsubsection}{Enjuagar}{27}
-\contentsline {subsubsection}{Mantenimiento de los motores}{27}
-\contentsline {subsubsection}{Secado}{28}
-\contentsline {subsubsection}{Carga de bater\IeC {\'\i }as}{28}
-\contentsline {subsection}{\numberline {3.3.5}Problemas}{28}
-\contentsline {chapter}{\numberline {4}Integraci\IeC {\'o}n de ROS en OpenROV}{31}
-\contentsline {section}{\numberline {4.1}Configuraci\IeC {\'o}n del ROV}{31}
-\contentsline {section}{\numberline {4.2}Configuraci\IeC {\'o}n de ROS}{35}
-\contentsline {section}{\numberline {4.3}Conexi\IeC {\'o}n de ROS en OpenROV}{37}
-\contentsline {chapter}{\numberline {5}Pruebas de Campo}{41}
-\contentsline {chapter}{\numberline {6}Conclusiones}{45}
+\contentsline {chapter}{\numberline {2}Objetivos y Metodolog\IeC {\'\i }a}{8}
+\contentsline {section}{\numberline {2.1}Descripci\IeC {\'o}n del problema y requisitos}{8}
+\contentsline {section}{\numberline {2.2}Objetivo del proyecto}{8}
+\contentsline {section}{\numberline {2.3}Metodolog\IeC {\'\i }a de desarrollo}{9}
+\contentsline {section}{\numberline {2.4}Plan de trabajo}{10}
+\contentsline {chapter}{\numberline {3}Plataforma OpenROV}{11}
+\contentsline {section}{\numberline {3.1}Robot Submarino OpenROV}{11}
+\contentsline {section}{\numberline {3.2}Estructura y Montaje}{12}
+\contentsline {subsection}{\numberline {3.2.1}Estructura de OpenROV}{12}
+\contentsline {subsection}{\numberline {3.2.2}Tapas del ch\IeC {\'a}sis}{13}
+\contentsline {subsection}{\numberline {3.2.3}Electr\IeC {\'o}nica}{14}
+\contentsline {subsection}{\numberline {3.2.4}Enrutamiento}{16}
+\contentsline {subsection}{\numberline {3.2.5}Final}{17}
+\contentsline {section}{\numberline {3.3}Conectividad OpenROV}{17}
+\contentsline {subsection}{\numberline {3.3.1}Dise\IeC {\~n}o de Conectividad}{17}
+\contentsline {subsection}{\numberline {3.3.2}Puesta a punto de los elementos}{21}
+\contentsline {subsubsection}{C\IeC {\'a}mara}{21}
+\contentsline {subsubsection}{L\IeC {\'a}ser}{21}
+\contentsline {subsubsection}{Motores}{22}
+\contentsline {subsubsection}{Tubo cil\IeC {\'\i }ndrico trasparente de polimetilmetacrilato}{23}
+\contentsline {subsubsection}{Tapa superior}{23}
+\contentsline {subsection}{\numberline {3.3.3}Web/Cockpit}{24}
+\contentsline {subsection}{\numberline {3.3.4}Mantenimiento}{28}
+\contentsline {subsubsection}{Enjuagar}{28}
+\contentsline {subsubsection}{Mantenimiento de los motores}{28}
+\contentsline {subsubsection}{Secado}{29}
+\contentsline {subsubsection}{Carga de bater\IeC {\'\i }as}{29}
+\contentsline {subsection}{\numberline {3.3.5}Problemas}{29}
+\contentsline {chapter}{\numberline {4}Integraci\IeC {\'o}n de ROS en OpenROV}{32}
+\contentsline {section}{\numberline {4.1}Configuraci\IeC {\'o}n del ROV}{32}
+\contentsline {section}{\numberline {4.2}Configuraci\IeC {\'o}n de ROS}{36}
+\contentsline {section}{\numberline {4.3}Conexi\IeC {\'o}n de ROS en OpenROV}{38}
+\contentsline {chapter}{\numberline {5}Pruebas de Campo}{42}
+\contentsline {chapter}{\numberline {6}Conclusiones}{46}

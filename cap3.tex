@@ -189,9 +189,10 @@ El ROV tiene una dirección IP estática 192.168.254.1. Para conectarnos a la we
 Pero para poder mostrar la página, antes debemos realizar una serie de pasos, en la que necesitaremos una tarjeta microSD para realizar la configuración del ROV.
   
 \begin{enumerate}
-\item Se descarga la imagen más reciente de OpenROV 2.8, en este caso, la versión es 30.0.3. Una vez descargado, se descomprime el archivo .zip, dejando en el directorio de descarga un ficherom con la extensión .img.
-\item Formateamos la tarjeta microSD, y montaremos la imagen descargada en la tarjeta. Una vez terminado el proceso, quitaremos la tarjeta del portátil.
-\item Conectamos la tarjeta microSD a el BeagleBone, y conectamos el ROV con el cable USB para encenderlo. Los LED de la placa Beagle Bone parpadearán para mostrar que la imagen se está aplicando a la memoria de la placa. El proceso termina cuando los cuatro led se queden encendidos, si pasado un tiempo los cuatro leds no lucen, habría que repetir este punto.
+\item Se descarga la imagen más reciente de OpenROV 2.8, en este caso, la versión es 30.0.3. Una vez descargado se descomprime el archivo .zip, dejando en el directorio de descarga un ficherom con la extensión .img.
+\item Formateamos la tarjeta microSD y montaremos la imagen descargada en la tarjeta. Una vez terminado el proceso, quitaremos la tarjeta del portátil.
+\item Conectamos la tarjeta microSD a el BeagleBone, y conectamos el ROV con el cable USB para encenderlo. Los LED de la placa Beagle Bone parpadearán para mostrar que la imagen se está aplicando a la memoria de la placa. El proceso terminará cuando los cuatro leds estén encendido.
+Si pasado un tiempo no lucen los cuatro leds, habría que repetir este punto.
 
 Cuando esté completo, retiraremos el cable USB del portátil para desconectar el ROV y retiraremos la tarjeta microSD de la placa Beagle Bone.
 
@@ -530,9 +531,9 @@ Además, se puede comprobar cada batería individual para asegurarse de que teng
 
 Facilmente el robot puede quedar atrapado en el suelo oceánico por culpa de las algas u otros objetos o vegetales.
 
-Lo mejor es evitar pilotar el robot en un paisaje con una vegetación pesada.
+Lo mejor es evitar pilotar el robot en un paisaje con una vegetación densa.
 
-Si comprobamos que no se puede sacar el OpenROV por medio de los comandos, tiraremos de la correa hasta la superficie. Aunque puede existir un momento en el que el robot no pueda ser recuperado por ese medio, en ese caso, se puede cortar la correa e ir a buscar al robot, ya que se puede volver a soldar la correa.
+Si comprobamos que no se puede sacar el OpenROV por medio de los comandos, tiraremos de la correa hasta la superficie. Si aún así no podemos recuperar el robot, podemos cortar la correa e ir a buscarlo, ya que la correa puede volver a soldarse.
 
 \item \textbf{Inundación del tubo principal}.
 

@@ -9,7 +9,7 @@ Para ello, utilizaremos las bibliotecas de ROS Rosbridge y Roslibjs, que nos pro
 \label{cap:Configuracion del ROV}
 La electrónica de OpenROV se basa en un Arduino conectado a una placa BeagleBone, que ejecutará el software de OpenROV.
 
-Para la implementación de ROS con OpenROV se ha decidido implementar ROS en el portátil en lugar de en el ROV, ya que se necesita ejecutar un ROS Master. Si se hubiera realizado a la inversa, se necesitaría acceso al robot para ejecutar el ROS Master, por lo que una vez sumergido no podríamos utilizar ROS.
+Para la implementación de ROS con OpenROV se ha decidido instalar ROS en el portátil en lugar de en el ROV, ya que se necesita ejecutar un ROS Master. Si se hubiera realizado a la inversa, se necesitaría acceso al robot para ejecutar el ROS Master, por lo que una vez sumergido no podríamos utilizar ROS.
 
 El ROS Master se ejecutará en el portátil y será el que interactue con los nodos de ROS instalados, en este caso, Rosbridge.
 
@@ -148,7 +148,7 @@ Instalaremos Rosbridge
 sudo apt-get install ros-kinetic-rosbridge-server
 \end{lstlisting}
 
-Cuando se configuró ROS, creamos una carpeta llamada catkin\_ws, en ella, se creó también la carpeta src, en la que crearemos el directorio openrov el que debe contener un fichero CMakeLists.txt
+Cuando se configuró ROS, creamos una carpeta llamada catkin\_ws, en ella, se creó también la carpeta src. Dentro de la carpeta src, se creará el directorio openrov que debe contener un fichero CMakeLists.txt
 
 El archivo CMakeLists.txt es la entrada al sistema de compilación CMake. El código será:
 
@@ -259,7 +259,7 @@ También se comprobará en el terminal de OpenROV que la conexión se ha realiza
   \label{fig:conect_rov}
 \end{figure}
 
-Para asegurarse de que todo esté funcionando, abrimos otra pestaña en el terminal e ingresaremos:
+Para asegurarse de que todo esté funcionando, abrimos otra pestaña en el terminal e introduciremos:
 \begin{lstlisting}[caption=rostopic list, label={lst:list}]
 	$ rostopic list
 \end{lstlisting}

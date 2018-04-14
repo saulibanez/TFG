@@ -6,7 +6,7 @@ Tras haber presentado el contexto en el que se desarrollará este proyecto, en e
 
 El fondo oceánico es uno de los grandes misterios de la actualidad. La mayor parte del suelo oceánico no ha sido explorado, y eso supone un gran problema. Con este robot, podremos rozar un poco este mundo submarino tan fascinante, e intentar descubrir algunas de las magníficas maravillas que esconde.
 
-El robot contiene una cámara de alta resolución que permite realizar un análisis exhaustivo, y para entornos más oscuros precisaremos de las luces y los láseres incorporados, con ellos, podremos visualizar mejor el entorno y saber la distancia a la que se encuentren los objetos, plantas o animales. 
+El robot contiene una cámara de alta resolución que permite visualizar el suelo oceánico. Cuando la visión de la cámara sea baja o nula, precisaremos de las luces y los láseres incorporados, con ellos, podremos visualizar mejor el entorno y saber la distancia a la que se encuentren los objetos, plantas o animales. 
 
 Los requisitos indispensables para realizar el proyecto son:
 \begin{enumerate}
@@ -19,9 +19,9 @@ Los requisitos indispensables para realizar el proyecto son:
 \section{Objetivo del proyecto}
 \label{sec:objetivos}
 
-En este proyecto, se quiere acercar más al mundo el robot submarino OpenROV. La exploración del mundo submarino. 
-Se construirá de cero el robot submarino, utilizando los materiales dados por la comunidad de OpenROV. A la placa de OpenROV se le instalará un PLC para la comunicación del robot con el portátil y una BeagleBone, que llevará implantado el software necesario para la comunicación y funcionamiento con el robot.
-Además, se implantará una biblioteca de ROS dentro de OpenROV para que también se pueda comunicar a través del framework de robótica más famoso. Con esta biblioteca instalada y ejecutando el ROS Master en el portátil, se podrá realizar una comunicación.
+El objetivo del proyecto es el montaje, configuración del software de ROV y ROS, y unas pruebas de campo del robot submarino OpenROV. 
+\\Se montará de cero el robot submarino, utilizando los materiales dados por la comunidad de OpenROV. A la placa de OpenROV se le instalará un PLC para la comunicación del robot con el portátil y otra placa BeagleBone, que llevará implantado el software necesario para la comunicación y funcionamiento con el robot.
+\\Además, se implantará una biblioteca de ROS dentro de OpenROV para que también se pueda comunicar a través del framework de robótica más famoso. Con esta biblioteca instalada y ejecutando el ROS Master en el portátil, se podrá realizar una comunicación.
 
 \section{Metodología de desarrollo}
 \label{sec:metodologiadedesarrollo}
@@ -54,6 +54,6 @@ Para poder abordar el problema se han marcado una serie de objetivos a completar
 \item Estudio, comprensión y montaje del OpenROV 2.8.
 \item Una vez terminado el montaje, se realizará la conexión del ROV para comunicarse con el portátil.
 \item \textbf{Fase de pruebas}, se probará el robot en distintos entornos para comprobar su funcionamiento.
-\item Estudio y comprensión de los paquetes de ROS roslibjs\footnote{http://wiki.ros.org/roslibjs} y rosbridge\footnote{http://wiki.ros.org/rosbridge\_suite}
+\item Estudio y comprensión de los paquetes de ROS roslibjs\footnote{http://wiki.ros.org/roslibjs} (biblioteca de JavaScript para interactuar con ROS) y rosbridge\footnote{http://wiki.ros.org/rosbridge\_suite} (envía mensajes JSON para comunicarse con ros a través de websocket).
 \item Integración de ROS y OpenROV.
 \end{enumerate}
