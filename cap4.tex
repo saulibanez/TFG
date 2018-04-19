@@ -1,7 +1,7 @@
 \chapter{Integración de ROS en OpenROV}
 \label{cap:integracionROS}
 
-En este capítulo se va a describir como se ha realizado la integración de ROS con OpenROV\cite{ros_rov}.
+En este capítulo se va a describir cómo se ha realizado la integración de ROS con OpenROV\cite{ros_rov}.
 
 Para ello, utilizaremos las bibliotecas de ROS Rosbridge y Roslibjs, que nos proporcionarán la comunicación entre el ordenador y el robot OpenROV.
 
@@ -11,13 +11,13 @@ La electrónica de OpenROV se basa en un Arduino conectado a una placa BeagleBon
 
 Para la implementación de ROS con OpenROV se ha decidido instalar ROS en el portátil en lugar de en el ROV, ya que se necesita ejecutar un ROS Master. Si se hubiera realizado a la inversa, se necesitaría acceso al robot para ejecutar el ROS Master, por lo que una vez sumergido no podríamos utilizar ROS.
 
-El ROS Master se ejecutará en el portátil y será el que interactue con los nodos de ROS instalados, en este caso, Rosbridge.
+El ROS Master se ejecutará en el portátil y será el que interactúe con los nodos de ROS instalados, en este caso, Rosbridge.
 
-Para la comunicación de ROS y OpenROV usaremos el paquete Roslibjs el cual instalaremos dentro del software del robot. Roslibjs es la biblioteca que utiliza JavaScript para comunicarse con ROS. Roslibjs publicará y/o suscribirá a los mensajes de ROS.
+Para la comunicación de ROS y OpenROV usaremos el paquete Roslibjs, el cual instalaremos dentro del software del robot. Roslibjs es la biblioteca que utiliza JavaScript para comunicarse con ROS. Roslibjs publicará y/o suscribirá a los mensajes de ROS.
 
-Se utilizará el paquete de Rosbridge para traducir los mensajes JSON en mensajes ROS (OpenROv utiliza JSON para su comunicación). Este paquete actúa como un Nodo de ROS que puede publicar y/o suscribir a los mensajes.
+Se utilizará el paquete de Rosbridge para traducir los mensajes JSON en mensajes ROS (OpenROV utiliza JSON para su comunicación). Este paquete actúa como un Nodo de ROS que puede publicar y/o suscribir a los mensajes.
 
-En conclusión, la comunicación se realizara a través de una conexión Websocket (Rosbridge) y el paquete de Roslibjs.
+En conclusión, la comunicación se realizará a través de una conexión Websocket (Rosbridge) y el paquete de Roslibjs.
 
 La figura a continuación muestra la estructura básica de ROS para la integración de OpenROV.
 
@@ -29,7 +29,7 @@ La figura a continuación muestra la estructura básica de ROS para la integraci
   \label{fig:conect_ros_rov}
 \end{figure}
 
-Para configurar el robot se debe instalar el Roslibjs, sin embargo, este paquete necesita de varias dependencias.
+Para configurar el robot se debe instalar el Roslibjs. Sin embargo, este paquete necesita de varias dependencias.
 
 Comenzaremos configurando el BeagleBone a través de una conexión SSH, conectando un cable Ethernet entre el BeagleBone y el router.
 Para activar el hardware usaremos un cable miniUSB conectado entre el BeagleBone y el portátil.
@@ -38,7 +38,7 @@ Una vez realizadas las conexiones, haremos un SSH a la placa.
 \begin{lstlisting}[caption=SSH, label={lst:ssh}]
 $ ssh rov@192.168.7.2
 \end{lstlisting}
-cuando pida la contraseña, deberemos introducir “OpenROV”.
+Cuando pida la contraseña, deberemos introducir “OpenROV”.
 
 \begin{figure} [hbtp]
   \begin{center}
@@ -64,7 +64,7 @@ sudo apt-get install libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-
   \label{fig:Dependencias Roslibjs}
 \end{figure}
 \newpage
-Continuaremos instalando otras dependencias de Roslibjs, en este caso, npm, que es un gestor de paquetes que utiliza Node.js.
+Continuaremos instalando otras dependencias de Roslibjs. En este caso, npm, que es un gestor de paquetes que utiliza Node.js.
 \\Para que no surjan errores con el proxy, debemos deshabilitarlo y realizar un reseteo del sistema. 
 \renewcommand{\lstlistingname}{}
 \begin{lstlisting}[caption=Dependencias Roslibjs, label={lst:roslibjs}]
@@ -83,13 +83,13 @@ $ npm install canvas
   \label{fig:canvas}
 \end{figure}
 
-La última dependencia para el complemento es Roslibjs, lo instalaremos usando: 
+La última dependencia es Roslibjs, que lo instalaremos usando el siguiente comando: 
 \renewcommand{\lstlistingname}{}
 \begin{lstlisting}[caption=Roslib, label={lst:roslib}]
 $ npm install roslib
 \end{lstlisting}
 
-Dentro de la carpeta /opt/openrov/cockpit/src/plugins, creararems un directorio llamado ros (sudo mkdir ros) y en el, se creará un fichero llamado index.js, que ejecutará la conexión con el ROS Master localizado en el portátil.
+Dentro de la carpeta /opt/openrov/cockpit/src/plugins, crearemos un directorio llamado ros (sudo mkdir ros) y en él, se creará un fichero llamado index.js, que ejecutará la conexión con el ROS Master localizado en el portátil.
 \newpage
 \renewcommand{\lstlistingname}{}
 \begin{lstlisting}[caption=Conexión con ROS, label={lst:conection_ros}]
@@ -118,7 +118,7 @@ function ros(name, deps) {
 	module.exports = ros;
 \end{lstlisting}
 
-También se debe modificar el fichero hosts (sudo vim /etc/hosts) y en el realizaremos los siguientes cambios:
+También se debe modificar el fichero hosts (sudo vim /etc/hosts) y en él realizaremos los siguientes cambios:
 
 \begin{lstlisting}[caption=/etc/hosts, label={lst:hosts}]
 #127.0.1.1	OpenROV
@@ -148,7 +148,7 @@ Instalaremos Rosbridge
 sudo apt-get install ros-kinetic-rosbridge-server
 \end{lstlisting}
 
-Cuando se configuró ROS, creamos una carpeta llamada catkin\_ws, en ella, se creó también la carpeta src. Dentro de la carpeta src, se creará el directorio openrov que debe contener un fichero CMakeLists.txt
+Cuando configuramos ROS, creamos una carpeta llamada catkin\_ws. En ella, añadimos también la carpeta src. Dentro de la carpeta src, crearemos el directorio openrov que debe contener un fichero CMakeLists.txt.
 
 El archivo CMakeLists.txt es la entrada al sistema de compilación CMake. El código será:
 
@@ -197,7 +197,7 @@ include_directories(
 \end{lstlisting}
 
 
-Además, crearemos un directorio nombrado launch en el que se creará el fichero rosbridge.launch:
+Además, crearemos un directorio nombrado launch, en el que añadiremos el fichero rosbridge.launch:
 
 \begin{lstlisting}[caption=websocket.launch, label={lst:launch}]
 <launch>
@@ -219,9 +219,9 @@ Para finalizar, y antes de ejecutar el .launch, deberemos ejecutar otro fichero,
 
 Habiendo realizado todos los pasos anteriores, ya estamos preparados para realizar la conexión de ROS en OpenROV.
 
-Empezaremos conectando el OpenROV (solo con el cable MiniUSB en el portátil) abriremos un terminal y realizaremos un SSH a el BeagleBone (ssh rov@192.168.7.2).
+Empezaremos conectando el OpenROV (solo con el cable MiniUSB en el portátil), abriremos un terminal y realizaremos un SSH al BeagleBone (ssh rov@192.168.7.2).
 
-Una vez conectados, desactivaremos el proxy (sudo /etc/init.d/openrov-proxy stop) y reinicamos elrobot (sudo /etc/init.d/openrov restart).
+Una vez conectados, desactivaremos el proxy (sudo /etc/init.d/openrov-proxy stop) y reiniciaremos el robot (sudo /etc/init.d/openrov restart).
 
 En otro terminal, ejecutaremos un roscore, que iniciará el ROS Master.
 
@@ -234,9 +234,8 @@ En otro terminal, ejecutaremos un roscore, que iniciará el ROS Master.
 \end{figure}
 \newpage
 
-Continuaremos lanzando el programa rosbridge.launch, que inciará el nodo de rosbridge para comunicare con el robot.
+Continuaremos lanzando el programa rosbridge.launch, que inciará el nodo de rosbridge para comunicarse con el robot, ejecutando el siguiente comando:
 
-Ejecutando el código:
 \begin{lstlisting}[caption=launch, label={lst:launch}]
 	$ roslaunch openrov rosbridge.launch
 \end{lstlisting}
@@ -249,17 +248,17 @@ Ejecutando el código:
   \label{fig:websocket.launch}
 \end{figure}
 
-También se comprobará en el terminal de OpenROV que la conexión se ha realizado
+También se comprobará en el terminal de OpenROV que la conexión se ha realizado.
 
 \begin{figure} [hbtp]
   \begin{center}
-    \includegraphics[width=12cm]{img/cap4/conexion_ROV}
+    \includegraphics[width=14cm]{img/cap4/conexion_ROV}
   \end{center}
   \caption{Conexión en ROV}
   \label{fig:conect_rov}
 \end{figure}
 
-Para asegurarse de que todo esté funcionando, abrimos otra pestaña en el terminal e introduciremos:
+Para asegurarse de que todo esté funcionando, abriremos otra pestaña en el terminal e introduciremos:
 \begin{lstlisting}[caption=rostopic list, label={lst:list}]
 	$ rostopic list
 \end{lstlisting}
@@ -268,13 +267,13 @@ Esto mostrará una lista de los temas que están siendo publicados por el ROV, a
 
 \begin{figure} [hbtp]
   \begin{center}
-    \includegraphics[width=12cm]{img/cap4/rostopic_list}
+    \includegraphics[width=14cm]{img/cap4/rostopic_list}
   \end{center}
-  \caption{rostopic list}
+  \caption{Rostopic list}
   \label{fig:rostopic_list}
 \end{figure}
 
-Para ver información sobre el nodo en particular podremos ejecutar el comando: rostopic info.
+Para ver información sobre el nodo en particular, podremos ejecutar el comando: rostopic info.
 \begin{lstlisting}[caption=rostopic info, label={lst:info}]
 	$ rostopic info
 \end{lstlisting}
@@ -283,13 +282,13 @@ Para ver información sobre el nodo en particular podremos ejecutar el comando: 
   \begin{center}
     \includegraphics[width=12cm]{img/cap4/info1}
   \end{center}
-  \caption{rostopic info (1)}
+  \caption{Rostopic info (1)}
   \label{fig:rostopic_info}
 \end{figure}
 \begin{figure} [hbtp]
   \begin{center}
     \includegraphics[width=12cm]{img/cap4/info2}
   \end{center}
-  \caption{rostopic info (2)}
+  \caption{Rostopic info (2)}
   \label{fig:rostopic_info}
 \end{figure}

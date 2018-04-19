@@ -10,8 +10,8 @@ El robot contiene una cámara de alta resolución que permite visualizar el suel
 
 Los requisitos indispensables para realizar el proyecto son:
 \begin{enumerate}
-\item \textbf{Impermeabilidad} durante todo el proceso de sumersión
-\item \textbf{Conectividad.} El robot puede alcanzar una distancia de 100m sin que pierda señal.
+\item \textbf{Impermeabilidad} durante todo el proceso de sumersión.
+\item \textbf{Conectividad.} El robot puede alcanzar una distancia de 100 m sin que pierda señal.
 \item \textbf{Duración de las baterías.} El robot debe permanecer activo durante 6 horas. 
 \item \textbf{Web Cockpit.} Control del funcionamiento del robot.
 \end{enumerate}
@@ -28,7 +28,7 @@ El objetivo del proyecto es el montaje, configuración del software de ROV y ROS
 
 En el desarrollo del sistema descrito, el modelo de ciclo de vida utilizado ha sido el modelo Modelo en cascada\cite{cascada}.
 
-Es un proceso secuencial, fácil de desarrollo en el que los pasos de desarrollo son vistos hacia abajo (como en una cascada de agua) a través de las fases de análisis de las necesidades, el diseño, implantación, pruebas (validación), la integración, y mantenimiento. 
+Es un proceso secuencial (como en una cascada de agua) en el que se definen las fases de: análisis de las necesidades, diseño, implantación, validación, integración y mantenimiento. 
 
 Los principios básicos del modelo de cascada son los siguientes:
 \begin{figure} [hbtp]
@@ -38,12 +38,7 @@ Los principios básicos del modelo de cascada son los siguientes:
   \caption{Modelo en cascada.}
   \label{fig:Waterfall_model}
 \end{figure}
-
-\begin{itemize}
-\item El proyecto está dividido en fases secuenciales.
-\item Se hace hincapié en la planificación, los horarios, fechas, presupuestos y ejecución de todo un sistema de una sola vez.
-\item Se mantiene un estricto control durante la vida del proyecto a través de la utilización de una amplia documentación escrita.
-\end{itemize}
+\newpage
 
 \section{Plan de trabajo}
 \label{sec:plandetrabajo}
@@ -53,7 +48,7 @@ Para poder abordar el problema se han marcado una serie de objetivos a completar
 \begin{enumerate}
 \item Estudio, comprensión y montaje del OpenROV 2.8.
 \item Una vez terminado el montaje, se realizará la conexión del ROV para comunicarse con el portátil.
-\item \textbf{Fase de pruebas}, se probará el robot en distintos entornos para comprobar su funcionamiento.
-\item Estudio y comprensión de los paquetes de ROS roslibjs\footnote{http://wiki.ros.org/roslibjs} (biblioteca de JavaScript para interactuar con ROS) y rosbridge\footnote{http://wiki.ros.org/rosbridge\_suite} (envía mensajes JSON para comunicarse con ROS a través de websocket, además, controla la ejecución de los nodos).
+\item Fase de pruebas. Se probará el robot en distintos entornos para comprobar su funcionamiento.
+\item Estudio y comprensión de los paquetes de ROS roslibjs\footnote{http://wiki.ros.org/roslibjs} (biblioteca de JavaScript para interactuar con ROS) y rosbridge\footnote{http://wiki.ros.org/rosbridge\_suite} (envía mensajes JSON para comunicarse con ROS a través de websocket, además controla la ejecución de los nodos).
 \item Integración de ROS y OpenROV.
 \end{enumerate}

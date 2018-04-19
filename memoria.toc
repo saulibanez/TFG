@@ -13,10 +13,10 @@
 \contentsline {section}{\numberline {3.1}Robot Submarino OpenROV}{11}
 \contentsline {section}{\numberline {3.2}Estructura y Montaje}{12}
 \contentsline {subsection}{\numberline {3.2.1}Estructura de OpenROV}{12}
-\contentsline {subsection}{\numberline {3.2.2}Tapas del ch\IeC {\'a}sis}{13}
+\contentsline {subsection}{\numberline {3.2.2}Tapas del chasis}{13}
 \contentsline {subsection}{\numberline {3.2.3}Electr\IeC {\'o}nica}{14}
 \contentsline {subsection}{\numberline {3.2.4}Enrutamiento}{16}
-\contentsline {subsection}{\numberline {3.2.5}Final}{17}
+\contentsline {subsection}{\numberline {3.2.5}Final}{16}
 \contentsline {section}{\numberline {3.3}Conectividad OpenROV}{17}
 \contentsline {subsection}{\numberline {3.3.1}Dise\IeC {\~n}o de Conectividad}{17}
 \contentsline {subsection}{\numberline {3.3.2}Puesta a punto de los elementos}{21}
